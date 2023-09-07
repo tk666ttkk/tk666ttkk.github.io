@@ -8,18 +8,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>xc-plus-project</title>
-    <url>/2023/09/07/xc-plus-project/</url>
-    <content><![CDATA[<p>学成在线项目：之后再补</p>
-]]></content>
-      <categories>
-        <category>java项目</category>
-      </categories>
-      <tags>
-        <tag>mybatis,java,ssm.spring,</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>mybatis高级</title>
     <url>/2023/09/05/mybatis/</url>
     <content><![CDATA[<p>mybatis的相关博客，之后再补。</p>
@@ -29,6 +17,18 @@
       </categories>
       <tags>
         <tag>mybatis高级1</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>xc-plus-project</title>
+    <url>/2023/09/07/xc-plus-project/</url>
+    <content><![CDATA[<p>学成在线项目：之后再补</p>
+]]></content>
+      <categories>
+        <category>java项目</category>
+      </categories>
+      <tags>
+        <tag>mybatis,java,ssm.spring,</tag>
       </tags>
   </entry>
 </search>
