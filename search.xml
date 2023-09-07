@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hello World</title>
-    <url>/2023/09/04/hello-world/</url>
+    <title>mybatis高级</title>
+    <url>/2023/09/05/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
 
@@ -16,19 +16,54 @@
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-<p>this is my test.</p>
+<p>this is my test(<a href="http://www.baidu.com/">www.baidu.com</a> )</p>
 ]]></content>
+      <categories>
+        <category>mybatis高级2</category>
+      </categories>
+      <tags>
+        <tag>mybatis高级1</tag>
+      </tags>
   </entry>
   <entry>
     <title>spring</title>
     <url>/2023/09/05/test/</url>
     <content><![CDATA[<h1 id="欢迎来到我的博客"><a href="#欢迎来到我的博客" class="headerlink" title="欢迎来到我的博客"></a>欢迎来到我的博客</h1><p>这是我的第一篇博客文章，欢迎访问我的博客！</p>
 <h2 id="代码示例"><a href="#代码示例" class="headerlink" title="代码示例"></a>代码示例</h2><p>以下是一个简单的Python代码示例：</p>
-<pre><code class="python">def greet(name):
-    print(f&quot;Hello, &#123;name&#125;!&quot;)
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">greet</span>(<span class="params">name</span>):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&quot;Hello, <span class="subst">&#123;name&#125;</span>!&quot;</span>)</span><br><span class="line"></span><br><span class="line">greet(<span class="string">&quot;Alice&quot;</span>)</span><br></pre></td></tr></table></figure>
 
-greet(&quot;Alice&quot;)
-</code></pre>
+
+
+<hr>
+<table>
+<thead>
+<tr>
+<th>1</th>
+<th>1</th>
+<th>12</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>2</td>
+<td>1</td>
+<td>312</td>
+</tr>
+<tr>
+<td>3</td>
+<td>1223</td>
+<td>3123</td>
+</tr>
+<tr>
+<td>4</td>
+<td>123</td>
+<td>123s</td>
+</tr>
+</tbody></table>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.*;</span><br></pre></td></tr></table></figure>
+
+<p>[TOC]</p>
+<p>asd</p>
+<p>dasd</p>
 ]]></content>
       <categories>
         <category>spring高级2</category>
