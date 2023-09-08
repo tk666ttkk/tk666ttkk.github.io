@@ -1,18 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>mybatis高级</title>
-    <url>/2023/09/05/mybatis/</url>
-    <content><![CDATA[<p>mybatis的相关博客，之后再补。</p>
-]]></content>
-      <categories>
-        <category>mybatis高级2</category>
-      </categories>
-      <tags>
-        <tag>mybatis高级1</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>driverlicense</title>
     <url>/2023/09/07/drivelicense/</url>
     <content><![CDATA[<h1 id="简简单单的练车日记"><a href="#简简单单的练车日记" class="headerlink" title="简简单单的练车日记"></a>简简单单的练车日记</h1><h2 id="科目一"><a href="#科目一" class="headerlink" title="科目一"></a>科目一</h2><p>哦对对对，科目一花了三天刷题，一天时间来模拟。91分飘过。</p>
@@ -29,6 +17,18 @@
       </categories>
       <tags>
         <tag>mybatis,java,ssm.spring,</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>mybatis高级</title>
+    <url>/2023/09/05/mybatis/</url>
+    <content><![CDATA[<p>mybatis的相关博客，之后再补。</p>
+]]></content>
+      <categories>
+        <category>mybatis高级2</category>
+      </categories>
+      <tags>
+        <tag>mybatis高级1</tag>
       </tags>
   </entry>
 </search>
