@@ -1,6 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>driverlicense</title>
+    <url>/2023/09/07/drivelicense/</url>
+    <content><![CDATA[<h1 id="简简单单的练车日记"><a href="#简简单单的练车日记" class="headerlink" title="简简单单的练车日记"></a>简简单单的练车日记</h1><h2 id="科目一"><a href="#科目一" class="headerlink" title="科目一"></a>科目一</h2><p>哦对对对，科目一花了三天刷题，一天时间来模拟。91分飘过。</p>
+<h2 id="科目二"><a href="#科目二" class="headerlink" title="科目二"></a>科目二</h2><p>8.31号开始练车，第一天熟悉地形和开车的手感，然后练了两天的侧方位，练了一天的直角转弯和曲线行驶，(<em>这里的一天指单指的45分钟或一小时</em>) ,约了18号的科二，2个星期搞定。一个星期也就练车3天，一天45分钟，但是一人一车是真的爽，教练就指导你一个，但是这教练仅仅只教了一遍点位，（此处省略C语言），抽烟，脾气不是一般的暴躁，不得不说这很符合教练的刻板印象。收了我100空调费。还是说全国的驾校教练都是统一的吗?但是总归来说，正常的教练还是希望你考证过的，不然一堆人堆积在那，驾校领导以为这个教练水平有问题，带个学员没几个考证的，可能考证之后还会有绩效什么之类的，总的来说还是希望你考过的，但是这过程注定不是轻松的。</p>
+<p>倒库教了一遍就会了，9.8号所有科目都会了，再模拟几遍即可。</p>
+<h3 id="技巧篇"><a href="#技巧篇" class="headerlink" title="技巧篇"></a>技巧篇</h3><p>1.车速一定是慢的，快了不好调整回来。</p>
+<p>2.打方向盘一定要快，车速慢，方向盘必须快。</p>
+<p>3.记点位即可，科二都是点位的。</p>
+<p>4.科三还没练，不知道技巧。</p>
+<h3 id="侧方位停车"><a href="#侧方位停车" class="headerlink" title="侧方位停车"></a>侧方位停车</h3><p>1.挂倒档 看右边 直角消失右边打满<br>2.看左边 看到第一个角 左边半圈 第二个角 左边回一圈 后车轮压压线 左边打满<br>3.倒到车身平行 然后左转向灯 挂D1档<br>4.车左角压线 右回半圈 雨刮器压线右边两圈<br>车身平行往左边回一圈回正</p>
+<p>车子不要踩死 要压着</p>
+<h3 id="直角转弯"><a href="#直角转弯" class="headerlink" title="直角转弯"></a>直角转弯</h3><p>1.雨刷器的右边沿着边线的左边<br>2.打左转向灯 门把手垂直那根线 左边打满<br>3.等车头对准s弯道中间 往右边回正<br>4.车头最左角碰右边的线 左边一圈<br>5.出去带80度 左角带进来了30厘米80度就回掉<br>6.左角刚好要碰左边的线 右边一圈<br>7.雨刹器刚好碰过线 右边一圈<br>右边出去了大于一个拳头 就带右边50度<br>人对准中间那棵树 回正方向盘</p>
+<h3 id="左边倒车入库"><a href="#左边倒车入库" class="headerlink" title="左边倒车入库"></a>左边倒车入库</h3><p>1.左边后视镜离线刚要碰上线立马往左边方向盘打死<br>2.左边后视镜 车屁股遮住第一二条虚线 在第三条虚线中间时回 半圈 觉得宽了就往左边加<br>3.看右边后视镜 直角出来一个拳头了边倒右边回一圈<br>4.倒车到那根线与自己身子一样<br>5.出库  左边一圈加九十度 左边后视镜快碰到第一根虚线 回九十度 车身一平行 回正</p>
+<h3 id="右边出库"><a href="#右边出库" class="headerlink" title="右边出库"></a>右边出库</h3><p>1.车出去 车侧边三分之一到线 右边一圈加九十度<br>2.一直不动到肩膀超过左边的那根线 肩膀平行过一点 停下倒车<br>3.倒车到直角的时候 右边打满 车屁股到最后一根虚线一半的地方 左边回半圈<br>4.看左边后视镜 直到平行多出一个拳头 左边回一圈<br>5.倒车到那根线与自己身子一样 到进库的地方停车</p>
+<p>看左边是一个拳头回正<br>看右边是大半个拳头回正</p>
+<h2 id="科目三"><a href="#科目三" class="headerlink" title="科目三"></a>科目三</h2><h2 id="科目四"><a href="#科目四" class="headerlink" title="科目四"></a>科目四</h2>]]></content>
+      <categories>
+        <category>日常生活</category>
+      </categories>
+  </entry>
+  <entry>
     <title>linux</title>
     <url>/2023/09/08/linux/</url>
     <content><![CDATA[<h1 id="一-：开始："><a href="#一-：开始：" class="headerlink" title="一 ：开始："></a>一 ：开始：</h1><p>操作ctrl+alt+f2:进入shell界面 ctrl+alt+f1:进入图像界面ls &#x2F;usr&#x2F;sbin&#x2F; | grep service 查找子文件是否存在</p>
@@ -27,25 +48,34 @@
       </tags>
   </entry>
   <entry>
-    <title>driverlicense</title>
-    <url>/2023/09/07/drivelicense/</url>
-    <content><![CDATA[<h1 id="简简单单的练车日记"><a href="#简简单单的练车日记" class="headerlink" title="简简单单的练车日记"></a>简简单单的练车日记</h1><h2 id="科目一"><a href="#科目一" class="headerlink" title="科目一"></a>科目一</h2><p>哦对对对，科目一花了三天刷题，一天时间来模拟。91分飘过。</p>
-<h2 id="科目二"><a href="#科目二" class="headerlink" title="科目二"></a>科目二</h2><p>8.31号开始练车，第一天熟悉地形和开车的手感，然后练了两天的侧方位，练了一天的直角转弯和曲线行驶，(<em>这里的一天指单指的45分钟或一小时</em>) ,约了18号的科二，2个星期搞定。一个星期也就练车3天，一天45分钟，但是一人一车是真的爽，教练就指导你一个，但是这教练仅仅只教了一遍点位，（此处省略C语言），抽烟，脾气不是一般的暴躁，不得不说这很符合教练的刻板印象。收了我100空调费。还是说全国的驾校教练都是统一的吗?但是总归来说，正常的教练还是希望你考证过的，不然一堆人堆积在那，驾校领导以为这个教练水平有问题，带个学员没几个考证的，可能考证之后还会有绩效什么之类的，总的来说还是希望你考过的，但是这过程注定不是轻松的。</p>
-<p>倒库教了一遍就会了，9.8号所有科目都会了，再模拟几遍即可。</p>
-<h3 id="技巧篇"><a href="#技巧篇" class="headerlink" title="技巧篇"></a>技巧篇</h3><p>1.车速一定是慢的，快了不好调整回来。</p>
-<p>2.打方向盘一定要快，车速慢，方向盘必须快。</p>
-<p>3.记点位即可，科二都是点位的。</p>
-<p>4.科三还没练，不知道技巧。</p>
-<h3 id="侧方位停车"><a href="#侧方位停车" class="headerlink" title="侧方位停车"></a>侧方位停车</h3><p>1.挂倒档 看右边 直角消失右边打满<br>2.看左边 看到第一个角 左边半圈 第二个角 左边回一圈 后车轮压压线 左边打满<br>3.倒到车身平行 然后左转向灯 挂D1档<br>4.车左角压线 右回半圈 雨刮器压线右边两圈<br>车身平行往左边回一圈回正</p>
-<p>车子不要踩死 要压着</p>
-<h3 id="直角转弯"><a href="#直角转弯" class="headerlink" title="直角转弯"></a>直角转弯</h3><p>1.雨刷器的右边沿着边线的左边<br>2.打左转向灯 门把手垂直那根线 左边打满<br>3.等车头对准s弯道中间 往右边回正<br>4.车头最左角碰右边的线 左边一圈<br>5.出去带80度 左角带进来了30厘米80度就回掉<br>6.左角刚好要碰左边的线 右边一圈<br>7.雨刹器刚好碰过线 右边一圈<br>右边出去了大于一个拳头 就带右边50度<br>人对准中间那棵树 回正方向盘</p>
-<h3 id="左边倒车入库"><a href="#左边倒车入库" class="headerlink" title="左边倒车入库"></a>左边倒车入库</h3><p>1.左边后视镜离线刚要碰上线立马往左边方向盘打死<br>2.左边后视镜 车屁股遮住第一二条虚线 在第三条虚线中间时回 半圈 觉得宽了就往左边加<br>3.看右边后视镜 直角出来一个拳头了边倒右边回一圈<br>4.倒车到那根线与自己身子一样<br>5.出库  左边一圈加九十度 左边后视镜快碰到第一根虚线 回九十度 车身一平行 回正</p>
-<h3 id="右边出库"><a href="#右边出库" class="headerlink" title="右边出库"></a>右边出库</h3><p>1.车出去 车侧边三分之一到线 右边一圈加九十度<br>2.一直不动到肩膀超过左边的那根线 肩膀平行过一点 停下倒车<br>3.倒车到直角的时候 右边打满 车屁股到最后一根虚线一半的地方 左边回半圈<br>4.看左边后视镜 直到平行多出一个拳头 左边回一圈<br>5.倒车到那根线与自己身子一样 到进库的地方停车</p>
-<p>看左边是一个拳头回正<br>看右边是大半个拳头回正</p>
-<h2 id="科目三"><a href="#科目三" class="headerlink" title="科目三"></a>科目三</h2><h2 id="科目四"><a href="#科目四" class="headerlink" title="科目四"></a>科目四</h2>]]></content>
+    <title>lqb</title>
+    <url>/2023/09/08/lq/</url>
+    <content><![CDATA[<h1 id="近几年的题目分类："><a href="#近几年的题目分类：" class="headerlink" title="近几年的题目分类："></a>近几年的题目分类：</h1><h2 id="2022填空："><a href="#2022填空：" class="headerlink" title="2022填空："></a>2022填空：</h2><p>1.大数（BigInteger）2.回文字串（String.compareTo（new StringBuider().reverse().toString()）&#x3D;&#x3D;0 ）只有String之间才能进行比较3.次数最多的字母(HashMap List Collections)Collections.sort(list);桶排序   4.数组排序数组（非常好用）：Arrays.sort();<br>6.最大子矩阵暴力循环（四重循环）左上角开始循环矩阵，寻找子矩阵中的最大值最小值，计算limit，每次记录矩阵的最大面积，最后遍历结束即可输出最大的子矩阵；<br>7.</p>
+<h2 id="2021"><a href="#2021" class="headerlink" title="2021"></a>2021</h2><p>1.ASCII码2.卡片拼数字  数位拆分：Arrays.fill(a,2021);3.直线:Set 不含重复元素的集合(纯纯考数学，不写了)4.货物摆放：ArrayList保存因子，暴力</p>
+<h2 id="2020"><a href="#2020" class="headerlink" title="2020"></a>2020</h2><p>1.ASCII码(译码 -&gt; 编码)2.纪念日( 日期)3.核酸4.分配口罩（位运算）1&lt;&lt;5 &#x3D; 将二进制下的1左移5位 即 2^6i &amp; (1&lt;&lt;j) :i &amp; (2^6) 表示i和2^6的按位与，即检测i的j位是否为1 ,为1给第一家，为0给第二家 i&#x3D;5 101 : for(j:0循环) i &amp; (1&lt;&lt;j) i &amp;(1) 101                                     1 数位相同，结果为1，分配给第一家医院 )    </p>
+<h2 id="2019"><a href="#2019" class="headerlink" title="2019"></a>2019</h2><p>1.组队（签到题）2.不同的字串（HashSet）3.数列求值（开long，取余）4.数的分解（排列组合）</p>
+<h2 id="2018"><a href="#2018" class="headerlink" title="2018"></a>2018</h2><p>（只会写第一题，好难！！！s）1.签到题2.求圆内的小方格(模拟坐标，判断直线)数学题3.复数（纯纯数学。。。。。）4.测试次数（二分 + 动态规划 ）</p>
+<h1 id="按照题型分类的考点"><a href="#按照题型分类的考点" class="headerlink" title="按照题型分类的考点:"></a>按照题型分类的考点:</h1><p>题目的数据范围决定了变量的数据类型</p>
+<h2 id="快读"><a href="#快读" class="headerlink" title="快读:"></a>快读:</h2><p> BufferedReader in &#x3D; new BufferedReader(new InputStreamReader(System.in));读数据：long n &#x3D; Long.parseLong(in.readLine());字符串 : String str &#x3D; in.readLine(); 数组 :String nums[] &#x3D; in.readLine().split(“ “)；   int[] arr &#x3D; new int[nums.length];   for (int i &#x3D; 0; i &lt; nums.length; i++) {  arr[i] &#x3D; Integer.parseInt(nums[i]);} 多个数据：      String nums[] &#x3D; in.readLine().split(“ “)； int n &#x3D; Integer.parseInt(nums[0]);  int m &#x3D; Integer.parseInt(nums[1]);  多行输入：StringBuilder sb &#x3D; new StringBuilder();String line;while ((line &#x3D; in.readLine()) !&#x3D; null &amp;&amp; !line.isEmpty()) {  sb.append(line).append(“\n”);}String input &#x3D; sb.toString();</p>
+<h2 id="快写"><a href="#快写" class="headerlink" title="快写:"></a>快写:</h2><p> PrintWriter out &#x3D; new PrintWriter(new OutputStreamWriter(System.out));out.print(n);out.flush();</p>
+<h2 id="1-搜索spfa（路径）"><a href="#1-搜索spfa（路径）" class="headerlink" title="1.搜索spfa（路径）"></a>1.搜索spfa（路径）</h2><p>求单源起点到任意点的距离，图的权值有题目决定设置中间节点和距离简单的dfs（灌溉，长草，扫雷,受伤的皇后）板子题难一点的dfs（全球变暖，滑雪，剪格子）滑雪：dp数组保存最大的距离     剪格子：回溯，剪枝全球变暖：简单的bfs（迷宫带路径输出，01迷宫）队列操作，取节点，用节点，进节点难一点的bfs（青蛙跳杯子）每次比较队列里的不同的字符串，字符串保存在set集合中，每次bfs和当前两串‘*’之间的距离，</p>
+<h2 id="2-字符串StringBuilder"><a href="#2-字符串StringBuilder" class="headerlink" title="2.字符串StringBuilder"></a>2.字符串StringBuilder</h2><p>StringBuffer 回文：String.compareto (StringB(String str).reverse.toString) &#x3D;&#x3D; 0;桶排序：记录每个字符串中每个字母出现的次数int book []&#x3D;new int [26];for(int i:n){book[str.charAt(i)-‘A’]++;}sysout((char)(‘A’+i));取所有子串：for(int i&#x3D;0;i&lt;n;i++){for(int j&#x3D;i;j&lt;n;j++){ String str &#x3D; s.subString(i,j+1);}}是否单调递增：abb型：最长平衡子串：Excel：卡片：数组存放每一张卡片，循环字符串数组减去。删除字符：留下的字典序最小，while(t&gt;0){ 每次比较两个字符即可; t–;}</p>
+<h2 id="3-数论欧拉筛"><a href="#3-数论欧拉筛" class="headerlink" title="3.数论欧拉筛"></a>3.数论欧拉筛</h2><p>– 求解范围内的质数以及判断某个数是否是质数：private static boolean isprime(int n){  if(n&lt;2){return false;}<br>  boolean [] isprime &#x3D; new boolean[n+1];  Arrays.fill(isprime,true);    &#x2F;&#x2F;通过标记每个质数的倍数来筛选出所有的合数，如果一个数没有  for(int i&#x3D;2;i * i &lt;&#x3D; n;i++){    if(isprime[i]){    for(int j&#x3D; i * i;j&lt;&#x3D;n;j+&#x3D;i){      isprime[j] &#x3D; false;    }  }}  return isprime[n];}因子&#x2F;质因子分解–求解质因子个数：private static int zyfj(int n) {  if(n&lt;2) {    return 0;  }  int count&#x3D;0;  for(int i&#x3D;2;i<em>i&lt;&#x3D;n;i++){    while(n % i&#x3D;&#x3D;0) {      count++;      n&#x2F;&#x3D;i;    }  }  if(n&gt;1) {    count++;  }  return count;}唯一分解定理–求解约数个数：private static int wyfj(int n) {  int count &#x3D;1;  for(int i&#x3D;2;i</em>i&lt;&#x3D;n;i++) {    int ans &#x3D;0;    while(n % i &#x3D;&#x3D;0) {      ans++;      n&#x2F;&#x3D;i;    }    if(ans&gt;0) {      count *&#x3D; (ans+1);    }  }  if(n&gt;1) {    count *&#x3D;2;  }  return count;}<br>仓库：所有的因子添加到集合中，遍历找答案纯质数：数位拆分判断每一位是否为质数，boolean数组保存0-9[]的数是否为质数大数：BigInteger,含有mod，mutiply，divide，pow, abs, 利用大数的gcd求(1-n的)lcm：等差数列：d &#x3D; (an - a1) &#x2F; (n-1); Sn &#x3D; n * (an+a1) &#x2F; 2;等比数列：q &#x3D; an &#x2F; a1 ^ (1&#x2F;(n-1)); Sn &#x3D; a1 * (1-q^n) &#x2F; (1-q); 斐波那契数列：每60项数字的余数形成一个周期；分数的表示：printf(“%d &#x2F; %d”,a,b);小数的表示：printf(“%.2f”,（double) a);阶乘约数：求100!有多少个约数，(1-100)的唯一分解定理，桶排序存放因子的出现的次数；等差素数数列：模拟数字和公差 ,while(isp(a+j)){a &#x3D; a+j; cnt++;}寻找10个连续素数的公差 约数个数：取sqrt，每次+2；大数取余，%即可取后n位；</p>
+<h2 id="4-日期判断日期的合法性以及模拟一个日期："><a href="#4-日期判断日期的合法性以及模拟一个日期：" class="headerlink" title="4.日期判断日期的合法性以及模拟一个日期："></a>4.日期判断日期的合法性以及模拟一个日期：</h2><p>记得重置二月份的天数：day[2] &#x3D; 28;格式化日期：SimpleDateFormat sdf &#x3D; new SDF(“yyyy-MM-dd HH:mm:ss”);将long-&gt;Date : Date d &#x3D; new Date(long start);将Date-&gt;long : long start &#x3D; sdf.parse(“2023-04-08 00:00:00”).getTime();跑步锻炼：每天星期一跑步：new Date(long start).toString.contains(“01 “); – 1后面含空格</p>
+<h2 id="5-模拟枚举枚举："><a href="#5-模拟枚举枚举：" class="headerlink" title="5.模拟枚举枚举："></a>5.模拟枚举枚举：</h2><p>顺子日期：刷题统计：每天打卡题数形成数组，模拟天数（注意i++的位置）和日期换瓶盖：模拟瓶盖数和饮料总数<br>模拟：天干地支：两个数组分别存放天干地支，分别模拟1960年前后的年份，前面天干地支–，后面天干地支++，注意达到数组界限时，天干地支取数组上界或下界；玩具：直接找规律模拟即可纸张尺寸：A1，for(int i&#x3D;48;i&lt;c[1];i++){ } – 太妙了，模拟的是Ax尺寸的尺寸的次数翻硬币：两个数组，遍历，若元素不同则翻动两个硬币，三元符号表示： c[i] &#x3D;&#x3D;’<em>‘?’o’:’</em>‘;</p>
+<h2 id="6-二分贪心贪心"><a href="#6-二分贪心贪心" class="headerlink" title="6.二分贪心贪心:"></a>6.二分贪心贪心:</h2><p>答疑：题目要求的是在中间时刻开始时，(即前一次答疑结束到下一次答疑的开始)，数组含多个元素的快速排序：Arrays.sort(nums,(a,b) -&gt; (a[0]+a[1]+a[2]) - (b[0]+b[1]+b[2]))for(int i&#x3D;0;i&lt;n;i++){for(int j&#x3D;0;j&lt;3;j++){ sum+&#x3D;nums[i][j]; if(j &#x3D;&#x3D; 1) ans+&#x3D;sum; }}谈判：付账：判断一个人的钱乘以n是否恰好等于总数   money *(n-1)&lt;s?需要付完 : 选择方差最小的金额付款; </p>
+<p>二分：int l&#x3D;0,r &#x3D; 10000;while(l&lt;&#x3D;r){  int mid &#x3D; (l+r)&gt;&gt;1;  if(check()){ ret &#x3D; mid ; r &#x3D; mid -1;}else{ l &#x3D; mid+1;}} ret即是答案递增三元组：双指针，a和c数组分别模拟一个指针的移动，遍历b数组，直到找到满足条件的下标；数组a找最后一个，数组c找第一个分巧克力：按题目要求是分成正方形,即二分的题目求出符合题意的check()即可，count +&#x3D; (ab[i][0] &#x2F; mid) * (ab[i][1] &#x2F; mid );路标：两个路标之间的距离&lt;mid,不需要设置，否则在当前路标设置一个距离为mid的路标，不断重复模拟合适的mid。</p>
+<h2 id="7-基础知识"><a href="#7-基础知识" class="headerlink" title="7.基础知识"></a>7.基础知识</h2><p>拷贝：答案存在小数+1的情况；ASCII码:’0’:48 A’65’ a’97’进制转换：Integer.toHex &#x2F; toOct &#x2F; toBina (将十进制转化为16 &#x2F; 8 &#x2F; 2 进制)一次向List添加多个数据ArrayList&lt;&gt;list &#x3D; new ; list.addAll(Arrays.asList(2,3,23,32,32,23,32));读文件 String Path &#x3D; “D:\lq\b.txt”;BuffR in &#x3D; new br(new inps(new fileinpt(new file(Path))));String line &#x3D; “”; while(){(line &#x3D; in.readline())!&#x3D; null}</p>
+<h2 id="8-暴力位运算："><a href="#8-暴力位运算：" class="headerlink" title="8.暴力位运算："></a>8.暴力位运算：</h2><p>(左移)两家医院分15批口罩，求分得的口罩数的差值尽可能的小&#x2F;&#x2F;模拟1-2^15种所有的可能sfor(int i&#x3D;0;i&lt;(1&lt;&lt;15);i++) {      int sum1&#x3D;0;int sum2&#x3D;0;      &#x2F;&#x2F;j表示枚举每次的口罩将给那一家医院，在15位二进制数的      &#x2F;&#x2F;情况下，1给第一家,0给第二家      for(int j&#x3D;0;j&lt;15;j++) {        if( (i &amp; (1&lt;&lt;j) ) !&#x3D;0) {          sum1 +&#x3D;nums[j];        }else {          sum2 +&#x3D;nums[j];        }      }      &#x2F;&#x2F;每一种情况下，两家医院口罩数量的差值，保留最小的na一个      ans &#x3D; Math.min(ans, Math.abs(sum1 -sum2));    }<br>倍数问题：一个数组找三个数，是k的倍数，求三数之和从尾部开始暴力，for(int i&#x3D;n-1;i&gt;&#x3D;2;i–) {                for(int j&#x3D;i-1;j&gt;&#x3D;1;j–) {                  for(int q &#x3D; j-1;q&gt;&#x3D;0;q–) {                     &#x2F;&#x2F;剪枝 if(sum&lt;ans) break;                           &#x2F;&#x2F;后面都小于，不必再判断                           if(a[i]+a[j]+a[j-1]&lt;ans) {                             break;}}                           &#x2F;&#x2F;后面都小于，不必再判断                             if(a[i]+a[i-1]+a[i-2]&lt;ans) {                               break;                                    }&#x2F;&#x2F;(60%)<br>灯塔：暴力枚举每个点，计算它到灯塔的距离是否小于半径，即可判断能否被照到递增序列：暴力枚举每个点的中心散发的左下，右上，右下，同一行，同一列的直线是否递增<br>真-暴力: &#x2F;&#x2F;直接暴力三重循环  int count &#x3D; 0;  for (int i &#x3D; 0; i &lt; 30; i++) {    for (int j &#x3D; 0; j &lt; 50; j++) {        int num &#x3D; a[i][j];        &#x2F;&#x2F;每一行        for(int t &#x3D; i+1;t&lt;30;t++) {          if(num&lt;a[t][j]) {            count++;          }        }                &#x2F;&#x2F;每一列        for(int t&#x3D;j+1;t&lt;50;t++) {          if(num&lt;a[i][t]) {            count++;          }        }        &#x2F;&#x2F;左下斜线        for(int t &#x3D; i+1,tt &#x3D;j-1;t&lt;30&amp;&amp;tt&gt;&#x3D;0;t++,tt–){          if(num&lt;a[t][tt]) {            count++;          }        }        &#x2F;&#x2F;右上斜线        for(int t &#x3D; i-1,tt&#x3D;j+1;t&gt;&#x3D;0&amp;&amp;tt&lt;50;t–,tt++) {          if(num&lt;a[t][tt]) {            count++;          }        }        &#x2F;&#x2F;右下斜线        for(int t&#x3D;i+1,tt&#x3D;j+1;t&lt;30&amp;&amp;tt&lt;50;t++,tt++) {          if(num&lt;a[t][tt]) {            count++;          }        }      }    }<br>2019分解： 分解为3个不同数的和，有顺序：i取前1&#x2F;3,j取i后面，k取j后面，能保证取到的数不重复for(int i&#x3D;1;i&lt;s&#x2F;3+1;i++) {      for(int j&#x3D;i+1;j&lt;s;j++) {        for(int k&#x3D;j+1;k&lt;s;k++) {<br>卡片：三种卡片有6个不同的组合，n人至少需要i个：两层循环解决；4平方和：拉格朗日定理可以取相同的数：20 &#x3D; 0 0 2 4，后面的数一定是最大的，for (int i1&#x3D;0;i1<em>i1&lt;&#x3D;n;i1++)     for (int i2&#x3D;i1;i2</em>i2&lt;&#x3D;n;i2++)       for (int i3&#x3D;i2;i3<em>i3&lt;&#x3D;n;i3++)         for (int i4&#x3D;i3;i4</em>i4&lt;&#x3D;n;i4++)           if (i1<em>i1+i2</em>i2+i3<em>i3+i4</em>i4&#x3D;&#x3D;n) {</p>
+<p>字母阵列：求中心散射的八个方向直线上形成”lanqiao”直接枚举8个点的方向：for(int i&#x3D;0;i&lt;n;i++) {        for(int j&#x3D;0;j&lt;n;j++) {          if(zhi[i][j]&#x3D;&#x3D;’L’) {&#x2F;&#x2F;向8个方向寻找搜索            if(j+6&lt;n&amp;&amp;zhi[i][j+1]&#x3D;&#x3D;’A’&amp;&amp;zhi[i][j+2]&#x3D;&#x3D;’N’&amp;&amp;zhi[i][j+3]&#x3D;&#x3D;’Q’&amp;&amp;zhi[i][j+4]&#x3D;&#x3D;’I’&amp;&amp;zhi[i][j+5]&#x3D;&#x3D;’A’&amp;&amp;zhi[i][j+6]&#x3D;&#x3D;’O’) {              num++;&#x2F;&#x2F;向右寻找            }            if(i+6&lt;n&amp;&amp;zhi[i+1][j]&#x3D;&#x3D;’A’&amp;&amp;zhi[i+2][j]&#x3D;&#x3D;’N’&amp;&amp;zhi[i+3][j]&#x3D;&#x3D;’Q’&amp;&amp;zhi[i+4][j]&#x3D;&#x3D;’I’&amp;&amp;zhi[i+5][j]&#x3D;&#x3D;’A’&amp;&amp;zhi[i+6][j]&#x3D;&#x3D;’O’) {              num++;&#x2F;&#x2F;向下寻找            }            if(j-6&gt;&#x3D;0&amp;&amp;zhi[i][j-1]&#x3D;&#x3D;’A’&amp;&amp;zhi[i][j-2]&#x3D;&#x3D;’N’&amp;&amp;zhi[i][j-3]&#x3D;&#x3D;’Q’&amp;&amp;zhi[i][j-4]&#x3D;&#x3D;’I’&amp;&amp;zhi[i][j-5]&#x3D;&#x3D;’A’&amp;&amp;zhi[i][j-6]&#x3D;&#x3D;’O’) {              num++;&#x2F;&#x2F;向左寻找            }            if(i-6&gt;&#x3D;0&amp;&amp;zhi[i-1][j]&#x3D;&#x3D;’A’&amp;&amp;zhi[i-2][j]&#x3D;&#x3D;’N’&amp;&amp;zhi[i-3][j]&#x3D;&#x3D;’Q’&amp;&amp;zhi[i-4][j]&#x3D;&#x3D;’I’&amp;&amp;zhi[i-5][j]&#x3D;&#x3D;’A’&amp;&amp;zhi[i-6][j]&#x3D;&#x3D;’O’) {              num++;&#x2F;&#x2F;向上寻找            }            if(j+6&lt;n&amp;&amp;i+6&lt;n&amp;&amp;zhi[i+1][j+1]&#x3D;&#x3D;’A’&amp;&amp;zhi[i+2][j+2]&#x3D;&#x3D;’N’&amp;&amp;zhi[i+3][j+3]&#x3D;&#x3D;’Q’&amp;&amp;zhi[i+4][j+4]&#x3D;&#x3D;’I’&amp;&amp;zhi[i+5][j+5]&#x3D;&#x3D;’A’&amp;&amp;zhi[i+6][j+6]&#x3D;&#x3D;’O’) {              num++;&#x2F;&#x2F;向右下寻找            }            if(j-6&gt;&#x3D;0&amp;&amp;i+6&lt;n&amp;&amp;zhi[i+1][j-1]&#x3D;&#x3D;’A’&amp;&amp;zhi[i+2][j-2]&#x3D;&#x3D;’N’&amp;&amp;zhi[i+3][j-3]&#x3D;&#x3D;’Q’&amp;&amp;zhi[i+4][j-4]&#x3D;&#x3D;’I’&amp;&amp;zhi[i+5][j-5]&#x3D;&#x3D;’A’&amp;&amp;zhi[i+6][j-6]&#x3D;&#x3D;’O’) {              num++;&#x2F;&#x2F;向左下寻找            }            if(i-6&gt;&#x3D;0&amp;&amp;j-6&gt;&#x3D;0&amp;&amp;zhi[i-1][j-1]&#x3D;&#x3D;’A’&amp;&amp;zhi[i-2][j-2]&#x3D;&#x3D;’N’&amp;&amp;zhi[i-3][j-3]&#x3D;&#x3D;’Q’&amp;&amp;zhi[i-4][j-4]&#x3D;&#x3D;’I’&amp;&amp;zhi[i-5][j-5]&#x3D;&#x3D;’A’&amp;&amp;zhi[i-6][j-6]&#x3D;&#x3D;’O’) {              num++;&#x2F;&#x2F;向左上寻找            }            if(i-6&gt;&#x3D;0&amp;&amp;j+6&lt;n&amp;&amp;zhi[i-1][j+1]&#x3D;&#x3D;’A’&amp;&amp;zhi[i-2][j+2]&#x3D;&#x3D;’N’&amp;&amp;zhi[i-3][j+3]&#x3D;&#x3D;’Q’&amp;&amp;zhi[i-4][j+4]&#x3D;&#x3D;’I’&amp;&amp;zhi[i-5][j+5]&#x3D;&#x3D;’A’&amp;&amp;zhi[i-6][j+6]&#x3D;&#x3D;’O’) {              num++;&#x2F;&#x2F;向右上寻找            }<br>最大子矩阵：四层循环遍历矩阵，从左上角遍历到右下角,每次取不同的子块来遍历，子矩阵最大最小值&lt;limit     for(int i&#x3D;N;i&gt;0;i–) {      for(int j&#x3D;M;j&gt;0;j–) { &#x2F;&#x2F; i*j的矩阵(右下角的坐标)        for(int x&#x3D;0;x&lt;&#x3D;N-i;x++) {          for(int y&#x3D;0;y&lt;&#x3D;M-j;y++) { &#x2F;&#x2F;左上角坐标            int max &#x3D; find_max(i,j,x,y);            int min &#x3D; find_min(i,j,x,y);<br>private static int find_max(int i, int j, int x, int y) {    &#x2F;&#x2F; 寻找最大值    int res &#x3D; Integer.MIN_VALUE;    for(int n&#x3D;x;n&lt;x+i;n++) {      for(int m&#x3D;y;m&lt;y+j;m++) {        res &#x3D; Math.max(res, arr[n][m]);      }    }    return res;  }</p>
+<h1 id="其他知识点："><a href="#其他知识点：" class="headerlink" title="其他知识点："></a>其他知识点：</h1><p>1M&#x3D;1024kb 1kb&#x3D;1024字节 1字节&#x3D;8bit ASCII码：A:65 a:97<br>计算机算法：枚举、排序、搜索、计数、贪心、动态规划、图论、数论、博弈论<em>、概率论</em>、计算几何<em>、字符串算法等。数据结构：数组、对象&#x2F;结构、字符串、队列、栈、树、图、堆、平衡树&#x2F;线段树、复杂数据结构</em>、嵌套数据结构<em>等 暴力枚举需要注意变量的重置为0，即枚举下一个新的数时，需要将之前计算的值清零<br>ArrayList.addAll(Arrays.aslist(xx,xx,xx))ArrayList<Integer> arr &#x3D; new ArrayList<E>();添加数据到数组中，多用于求因子类的题目 remove()去掉首项 get()[从0开始]取元素Arrays.sort(数组自然排序)<br>基础：1.数位拆分 x % y x &#x2F; y &#x2F;&#x2F;计算一个数字每个位数之和public static int getsum(int num){int sum&#x3D;0;while(num !&#x3D;0){  sum +&#x3D; num %10;  num &#x2F;&#x3D;10;}return sum;}&#x2F;&#x2F;模拟字母public static String gename(int n){StringBuilder sb &#x3D; new StringBuilder();while(n&gt;0){n–;sb.append((char)(‘A’ + n % 26));n &#x2F;&#x3D;26;     }return sb.reverse().toString();   }}2.进制模拟String hexNum &#x3D; Integer.toHexString(var).toUpperCase();&#x2F;&#x2F;将十进制转化为十六进制且全部字母都为大写 Integer.toBinaryString(var) 十进制转为二进制 Integer.toOctalString(var)十进制转化八进制 匹配二进制 “^[01]+$” 八进制 “^[0-7]+$” 十六进制 “^[a-fA-F0-9]+$”<br>其他进制转化为十进制String Bin &#x3D; “01”;int x &#x3D; Integrt.parseInt(binary,2);int y &#x3D; Integer.parseInt(octal,8);String Hex &#x3D; “ABD”;int z &#x3D; Integer.parseInt(hex,16);<br>3.最大公约数 &amp; 最小公倍数public static int gcd(int x,int y) {      return y&#x3D;&#x3D;0?x:gcd(y,x % y);    }public static int lcm(int x,int y){    return x * y &#x2F; gcd(x,y);}4.位运算：if(i &amp; (1&gt;&gt;j) )!&#x3D;0 {};5.高精度模拟：printf(“%.2f”,a);6.素数初步： private static boolean isP(int num){  if(num &lt;&#x3D;1){  return false;} for(int i&#x3D;2;i&lt;&#x3D;Math.sqrt(num);i++){if(num % i &#x3D;&#x3D;0){return false;}}return true;}<br>7.余数及相关：%8.大数系列：BigInteger类大数可以+-<em>&#x2F; % 等操作(一般对数字进行的操作都会有)add,subtract,mod,BigInteger num &#x3D; new BigIntger(“20”);BigInteger ans &#x3D; new BigInteger(“1”);for(int i&#x3D;1;i&lt;&#x3D;22;i++){     ans &#x3D; ans.mutiply(num);}9.唯一分解定理：10.日期类：&#x2F;&#x2F;判断是否是闰年public static boolean isLeap(int year){ return (year % 4 &#x3D;&#x3D;0 &amp;&amp; year % 100 !&#x3D;0) || year % 400 &#x3D;&#x3D;0};&#x2F;&#x2F;计算某个月的天数public static int getDays(int year,int month){if(month &#x3D;&#x3D;2){  return isLeap(year)?29:28;}else if(month &#x3D;&#x3D; 4||month &#x3D;&#x3D;6||month&#x3D;&#x3D;9||month&#x3D;&#x3D;11){  return 30;}else{ return 31;}}<br>runningMax:例子SimpleDateformatlong (模拟毫秒数，以毫秒为单位模拟一天的增加)日期之间不能比较。但是转换为毫秒数之后可以相比Date(模拟日期) d &#x3D; new Date(long);SimpleDateFormat sdf &#x3D; new SimpleDateFormat(“yyyy-HH-dd hh:mm:ss”);用来格式化日期的格式，即题目给的日期格式Long start &#x3D; sdf.parse(“2022-02-02 02:02:02”).getTime(); &#x2F;&#x2F;将指定的格式化日期转化为相应的毫秒数Date d &#x3D; new Date(start);&#x2F;&#x2F;再将指定的毫秒数转为对应的日期sysout d.toString();&#x2F;&#x2F;输出日期&#x2F;&#x2F;模拟一天过去start &#x3D; new Date(start).getTime() + 24<em>60<em>60</em>1000L;<br>Calender(模拟日期)<br>字符串：<br> &#x2F;&#x2F;取一个字符串的所有的子串        for(int i&#x3D;0 ; i&lt;str.length(); i++){          for(int k&#x3D; i; k&lt;str.length(); k++){            String res &#x3D; str.substring(i,k+1);            System.<strong>out**.println(res)          }        }回文字符串使用一个方法private static boolean ishuiwen(String str){  int left &#x3D;0;int right &#x3D;str.length()-1;while(left &lt; right){if(str.charAt(leftt) !&#x3D; str.charAt(right)){  return false;}left++;right–;}sreturn true;}简单字符串统计：桶排序：int []a &#x3D; new int [n];char [] c &#x3D; a.tocharArray();a[(chatAt(c) - ‘A’)]++&#x2F;&#x2F;得出相应字母在数组中保存的数量(char)( i + ‘A’) &#x2F;&#x2F; 输出相对应的字母String 1.比较：compareTo() 返回0 表示相等2.String[] arr &#x3D; str.split(“”);切割字符串,形成字符串数组<br>Stringbuffer StringBuilder (反转：reverse())String 转型 int : str.valueOf();int 转型 String : 1 +“ ”   有字串的题目可以使用老白嫖方法-》》详情见字串分值<br>解密：模拟：周期串：困难串：<br>OJ几类格式训练：字符串hash+二分：正则表达式：<br>排序：冒泡+插入+选择+希尔+计数+堆排序….java对象排序：<br>数据结构：栈和队列：链表：Set<String> set &#x3D; new HashSet&lt;&gt;();set.add();set.contains();去重:(求不同的字符串子串）HashMap&lt;Character,Integer&gt; map &#x3D; new HashMap&lt;&gt;();(本质就是一个函数映射的关系，一个值对应一个数量,如 a ：2 ，b : 3）求出现字符最多的次数map.put( c , map.getorDefalut(c,0) +1);map.get(Object o);&#x2F;&#x2F;求一个值的数量循环map中的元素for(char c : map.keyset(){  map.get(c) ;}ArrayList<Integer> list &#x3D; new ArrayList&lt;&gt;();Collections.sort(list);&#x2F;&#x2F;运用集合对动态数组进行排序TreeMap 哈希表<br>穷举-模拟：   百钱白鸡凶手分糖果接雨水<br>递归：汉诺塔连分数<br>分治：归并快排快速幂<br>搜索：DFS:矩阵搜索，最短路径，迷宫1.设置矩阵的范围2.访问数组 visited[] ，访问一个位置后，修改它的值3.初始化需要求的数值（面积，数的和等）4.上下左右四个方向递归BFS<br>回溯剪枝<br>贪心：找零动态规划：1.返回值（避免重复遍历，只要dp[i][j] !&#x3D;0）if(dp[i][j!&#x3D;0]){return dp[i][j];}2.设置初值int max &#x3D;1;3.模拟每个位置的上下左右移动for(int k&#x3D;0;k&lt;4;k++){int x &#x3D; i+dx[k]; int y &#x3D; j + dy[k];}4.判断条件if(不符合的情况){continue;}5.状态转移方程(注意是否要+1)是取最大值还是数的和6.保存所求值LCSLISLPS最大子矩阵背包专题<br>二叉树：前中后层次遍历建树遍历二叉树还原字典树哈夫曼编码并查集<br>图：图的存储1.邻接矩阵2.邻接表<br>DFS<br>BFS最小生成树最短路径：有模板Dijkstra 算法是一种贪心算法，用于求加权图的单源最短路径问题，其中所有边的权重都必须是非负数。这个算法的基本思路是从起点开始，先确定起点到所有点的最短路径，然后不断扩大已确定最短路径的节点集合，直到到达终点。<br>难点：素数进阶矩阵快速幂前缀和与差分具体题目：</strong>“k倍区间”</em></em></em><em>一维数组的前缀和数组a[1,2,3,4,5] 前缀和sum[1,3,6,10,15] 余数[1,1,0,0,1] 余数(数量)[2,3];&#x2F;&#x2F;余数等于数组相应下标的个数</em>*   **余数为0的自成一个k倍区间 count+&#x3D;v[0];**<strong>余数不为0(余数相同)1.存储余数的数量。两两组合(求和公式)可以构成一个k倍区间 count+&#x3D;(v[i] *( v[ i ] - 1 ) ) &#x2F;2</strong> **2.存储余数。的根据同余定理，如果两个前缀和对 k 取余数的结果相同，那么它们的差or和一定是 k 的倍数(23%2 &#x3D; 1 ;13% 2&#x3D;&#x3D;1；|(13+-23)| %2 &#x3D;&#x3D;0)**小木棍 - 剪枝过关数位DPs区间DP状压DP线段树</p>
+]]></content>
       <categories>
-        <category>日常生活</category>
+        <category>lqb</category>
       </categories>
+      <tags>
+        <tag>lqb</tag>
+      </tags>
   </entry>
   <entry>
     <title>面试题</title>
@@ -233,47 +263,89 @@
 <p>1）数据库约束，比如：唯一索引，主键。同一个主键不可能两次插入成功。</p>
 <p>2）唯一序列号,请求前生成唯一序列号，携带序列号去请求，执行时在redis记录该序列号，表示该序列号已经请求过了，如果请求携带的是redis中已经存有的序列号，说明该次请求是重复的。</p>
 <p>3）乐观锁，常用于数据库，更新数据时根据乐观锁的状态去更新。</p>
-<p>​     通常，它使用版本号或时间戳字段来检测并发修改，并确保在多个并发更新尝试中只有一个成功</p>
+<p>什么是乐观锁、悲观锁？synchronized是一种悲观锁，在执行被synchronized包裹的代码时需要首先获取锁，没有拿到锁则无法执行，是总悲观的认为别的线程会去抢，所以要悲观锁。乐观锁的思想是它不认为会有线程去争抢，尽管去执行，如果没有执行成功就再去重试。    </p>
+<p>通常，它使用版本号或时间戳字段来检测并发修改，并确保在多个并发更新尝试中只有一个成功</p>
 <figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="number">1</span><span class="keyword">UPDATE</span> media_process m</span><br><span class="line"><span class="keyword">SET</span> m.status<span class="operator">=</span><span class="string">&#x27;4&#x27;</span></span><br><span class="line"><span class="keyword">WHERE</span> (m.status<span class="operator">=</span><span class="string">&#x27;1&#x27;</span> <span class="keyword">OR</span> m.status<span class="operator">=</span><span class="string">&#x27;3&#x27;</span>)</span><br><span class="line"><span class="keyword">AND</span> m.fail_count <span class="operator">&lt;</span> <span class="number">3</span></span><br><span class="line"><span class="keyword">AND</span> m.id<span class="operator">=</span>?</span><br><span class="line"></span><br><span class="line"><span class="number">2</span><span class="keyword">UPDATE</span> media_process t</span><br><span class="line"><span class="keyword">SET</span> t.count <span class="operator">=</span> t.count <span class="operator">+</span> <span class="number">1</span>, t.version<span class="operator">=</span><span class="number">2</span></span><br><span class="line"><span class="keyword">WHERE</span> t.version <span class="operator">=</span> <span class="number">1</span></span><br></pre></td></tr></table></figure>
 
 <p>1这个UPDATE语句将名为<code>media_process</code>的表中的记录的<code>status</code>字段设置为’4’，条件是当前<code>status</code>字段的值为’1’或’3’，<code>fail_count</code>字段的值小于3，且满足指定的<code>id</code>条件。这个操作将满足条件的记录的<code>status</code>字段更新为’4’，表示这些记录已经被处理。</p>
 <p>2这个UPDATE语句将名为<code>media_process</code>的表中的记录的<code>count</code>字段递增1，同时将<code>version</code>字段更新为2，条件是当前<code>version</code>字段的值为1。这个操作通常用于对某些记录进行计数或标记，确保在并发情况下不会出现竞态条件</p>
+<h2 id="9-分布式事务："><a href="#9-分布式事务：" class="headerlink" title="9.分布式事务："></a>9.分布式事务：</h2><h3 id="本地事务"><a href="#本地事务" class="headerlink" title="本地事务"></a>本地事务</h3><p>是在单一数据库或数据源上执行的事务操作，它具有ACID特性，适用于单一数据源的业务逻辑。</p>
+<ol>
+<li><strong>单一数据源</strong>：本地事务发生在单一的数据库或数据源上，所有的数据库操作都在同一个事务中进行。</li>
+<li><strong>ACID特性</strong>：本地事务通常遵循ACID（原子性、一致性、隔离性和持久性）特性。这意味着事务要么完全成功，要么完全失败，并且在事务期间数据库保持一致性状态。</li>
+<li><strong>事务管理</strong>：在本地事务中，通常需要事务管理器或编程框架（例如JDBC、Hibernate等）来管理事务的开始、提交、回滚和异常处理。</li>
+<li><strong>锁定和隔离级别</strong>：本地事务中，可以使用锁定和隔离级别来控制并发访问数据库的方式，以确保事务的隔离性。</li>
+<li><strong>性能和吞吐量</strong>：本地事务通常具有较高的性能和吞吐量，因为它们涉及的是单一数据源，没有涉及网络通信或多个系统之间的协调。</li>
+<li><strong>适用性</strong>：本地事务适用于那些不需要跨多个数据源或数据库的业务逻辑，例如传统的单体应用程序。</li>
+</ol>
+<h3 id="分布式事务："><a href="#分布式事务：" class="headerlink" title="分布式事务："></a>分布式事务：</h3><p><img src="/img/fbs.png"></p>
+<p>分布式事务是指涉及多个独立的数据源、系统或服务的事务操作。这些数据源、系统或服务可以位于不同的地理位置、运行在不同的计算机或容器中，可能使用不同的技术栈和编程语言。分布式事务的目标是确保在分布式环境下的多个操作能够以事务的方式一起成功或失败，以维护数据的一致性和可靠性。</p>
+<ol>
+<li><strong>多个参与者</strong>：分布式事务通常涉及多个事务参与者，每个参与者负责管理自己的数据源或系统。</li>
+<li><strong>全局事务协调器</strong>：在分布式事务中，需要有一个全局事务协调器（也称为事务管理器或协调者），它负责协调各个参与者的事务操作，确保它们的状态一致。</li>
+<li><strong>事务的隔离性</strong>：与本地事务一样，分布式事务也需要遵循ACID特性，包括事务的隔离性，以确保数据一致性。</li>
+<li><strong>事务的提交和回滚</strong>：全局事务协调器负责决定是否提交或回滚整个分布式事务，这意味着所有参与者要么都提交成功，要么都回滚失败。</li>
+<li><strong>两阶段提交（2PC）</strong>：2PC是一种常见的分布式事务协议，它包括两个阶段：准备阶段（协调者询问参与者是否可以提交事务）和提交阶段（如果准备阶段成功，则协调者通知所有参与者提交事务）。</li>
+<li><strong>补偿事务</strong>：在分布式环境中，由于网络故障或参与者故障，可能会发生部分参与者已经提交而另一部分参与者未提交的情况。为了处理这种情况，可以使用补偿事务来回滚已经提交的部分。</li>
+<li><strong>幂等性</strong>：为了确保分布式事务的幂等性，操作必须能够多次执行而不会产生不一致的结果。这对于处理重试和失败恢复非常重要。</li>
+<li><strong>分布式事务模型</strong>：不同的分布式事务模型（例如XA事务、TCC事务、SAGA事务等）提供不同的机制和适用性，可以根据业务需求选择合适的模型。</li>
+<li><strong>性能和复杂性权衡</strong>：分布式事务通常比本地事务更复杂，因为需要处理网络通信、故障恢复和协调多个参与者。因此，需要权衡性能和复杂性</li>
+</ol>
+<h3 id="CAP理论"><a href="#CAP理论" class="headerlink" title="CAP理论"></a>CAP理论</h3><p> CAP 定理，CAP 是 Consistency（一致性）、Availability（可用性）、Partition tolerance（分区容忍性）的缩写，</p>
+<ol>
+<li><strong>一致性（Consistency）</strong>：所有节点在同一时间点看到相同的数据视图。这意味着无论在哪个节点上进行读取操作，都应该获得最新的数据，并且写入操作应该立即反映在所有节点上。</li>
+<li><strong>可用性（Availability）</strong>：每个请求都必须得到响应，无论它是否成功。即使系统的一部分节点故障，仍然需要继续提供服务。</li>
+<li><strong>分区容忍性（Partition tolerance）</strong>：系统可以在网络分区或节点故障的情况下继续工作。分区容忍性意味着系统的某些部分无法与其他部分通信，但仍然可以继续运行。</li>
+</ol>
+<p>只能满足AP或CP</p>
+<ol>
+<li><p><strong>CP（一致性和分区容忍性）</strong>：如果系统选择了 CP，这意味着在面临网络分区时，系统会牺牲可用性以保持数据的一致性。这意味着系统可能在分区发生时停止接受新的请求，以确保数据的一致性。</p>
+<p><em><strong>例如 ： 银行转账，开户操作</strong></em></p>
+</li>
+<li><p><strong>AP（可用性和分区容忍性）</strong>：如果系统选择了 AP，这意味着在面临网络分区时，系统会牺牲一致性以保持可用性。这意味着系统可能在分区发生时继续提供服务，但数据可能会处于不一致状态，直到分区恢复。</p>
+</li>
+</ol>
+<p>​		<em><strong>例如：订单退款，注册送积分，支付短信通知</strong></em></p>
+<h3 id="BASE理论："><a href="#BASE理论：" class="headerlink" title="BASE理论："></a>BASE理论：</h3><p>BASE 是一个分布式系统的理论模型，与 ACID（原子性、一致性、隔离性和持久性）相对立。</p>
+<ol>
+<li><strong>基本可用性（Basic Availability）</strong>：BASE 要求系统在面临故障或分区的情况下仍然能够保持基本的可用性。这意味着系统在一些部分或节点出现故障时，仍然可以继续提供有限的服务。</li>
+<li><strong>软状态（Soft State）</strong>：BASE 接受系统在某一时刻的状态可能是不一致的，也就是说，在分布式系统中，一些数据的状态可能因为数据同步延迟或其他原因而有所不同。</li>
+<li><strong>最终一致性（Eventually Consistency）</strong>：BASE 强调系统的一致性是最终达到的，而不需要实时保持一致。分布式系统可以在一段时间内处于不一致状态，但最终会收敛到一致状态。</li>
+</ol>
+<h3 id="分布式事务控制有哪些常用的方式："><a href="#分布式事务控制有哪些常用的方式：" class="headerlink" title="分布式事务控制有哪些常用的方式："></a>分布式事务控制有哪些常用的方式：</h3><ol>
+<li><p><strong>实现CP - 一致性和分区容忍性</strong>：</p>
+<p>a. <strong>Seata框架基于AT模式实现</strong>：</p>
+<ul>
+<li>Seata 是一个开源的分布式事务框架，支持多种事务模式，包括AT（原子性事务）。使用AT模式，Seata能够协调多个参与者，以实现分布式事务的一致性和分区容忍性。</li>
+<li>AT模式基于两阶段提交（2PC）协议，确保在所有参与者上的操作要么全部提交成功，要么全部回滚失败。这可以实现强一致性。</li>
+</ul>
+<p>b. <strong>Seata框架基于TCC模式实现</strong>：</p>
+<ul>
+<li>除了AT模式，Seata还支持TCC（Try-Confirm-Cancel）模式，它通过预备、确认和取消三个阶段来实现分布式事务。TCC模式可以提供更大的灵活性和定制化，以满足特定的业务需求。</li>
+</ul>
+</li>
+<li><p><strong>实现AP - 最终数据一致性</strong>：</p>
+<p>a. <strong>使用消息队列通知的方式</strong>：</p>
+<ul>
+<li>在分布式系统中，可以使用消息队列来实现最终一致性。当需要跨多个数据存储或服务时，将数据更改的通知发布到消息队列，其他系统可以订阅这些通知并在本地进行处理。</li>
+<li>为了实现可用性，可以配置消息队列以自动重试通知，直到达到最大失败次数。如果通知在一段时间内无法成功传递，可以进行人工处理。</li>
+</ul>
+<p>b. <strong>使用任务调度的方案</strong>：</p>
+<ul>
+<li>另一种实现最终一致性的方法是使用任务调度。例如，定期启动任务调度来将数据从一个数据库同步到其他数据存储或服务，以确保数据一致性。</li>
+<li>这种方式通常需要开发者编写和管理同步任务，确保数据按计划同步。</li>
+</ul>
+</li>
+</ol>
+<p><img src="/img/fbs1.png"></p>
+<p>本地消息表（mq_message表）+任务调度的机制</p>
+<p><img src="/img/fbs2.png"></p>
 ]]></content>
       <categories>
         <category>面试题</category>
       </categories>
       <tags>
         <tag>面试题</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>lqb</title>
-    <url>/2023/09/08/lq/</url>
-    <content><![CDATA[<h1 id="近几年的题目分类："><a href="#近几年的题目分类：" class="headerlink" title="近几年的题目分类："></a>近几年的题目分类：</h1><h2 id="2022填空："><a href="#2022填空：" class="headerlink" title="2022填空："></a>2022填空：</h2><p>1.大数（BigInteger）2.回文字串（String.compareTo（new StringBuider().reverse().toString()）&#x3D;&#x3D;0 ）只有String之间才能进行比较3.次数最多的字母(HashMap List Collections)Collections.sort(list);桶排序   4.数组排序数组（非常好用）：Arrays.sort();<br>6.最大子矩阵暴力循环（四重循环）左上角开始循环矩阵，寻找子矩阵中的最大值最小值，计算limit，每次记录矩阵的最大面积，最后遍历结束即可输出最大的子矩阵；<br>7.</p>
-<h2 id="2021"><a href="#2021" class="headerlink" title="2021"></a>2021</h2><p>1.ASCII码2.卡片拼数字  数位拆分：Arrays.fill(a,2021);3.直线:Set 不含重复元素的集合(纯纯考数学，不写了)4.货物摆放：ArrayList保存因子，暴力</p>
-<h2 id="2020"><a href="#2020" class="headerlink" title="2020"></a>2020</h2><p>1.ASCII码(译码 -&gt; 编码)2.纪念日( 日期)3.核酸4.分配口罩（位运算）1&lt;&lt;5 &#x3D; 将二进制下的1左移5位 即 2^6i &amp; (1&lt;&lt;j) :i &amp; (2^6) 表示i和2^6的按位与，即检测i的j位是否为1 ,为1给第一家，为0给第二家 i&#x3D;5 101 : for(j:0循环) i &amp; (1&lt;&lt;j) i &amp;(1) 101                                     1 数位相同，结果为1，分配给第一家医院 )    </p>
-<h2 id="2019"><a href="#2019" class="headerlink" title="2019"></a>2019</h2><p>1.组队（签到题）2.不同的字串（HashSet）3.数列求值（开long，取余）4.数的分解（排列组合）</p>
-<h2 id="2018"><a href="#2018" class="headerlink" title="2018"></a>2018</h2><p>（只会写第一题，好难！！！s）1.签到题2.求圆内的小方格(模拟坐标，判断直线)数学题3.复数（纯纯数学。。。。。）4.测试次数（二分 + 动态规划 ）</p>
-<h1 id="按照题型分类的考点"><a href="#按照题型分类的考点" class="headerlink" title="按照题型分类的考点:"></a>按照题型分类的考点:</h1><p>题目的数据范围决定了变量的数据类型</p>
-<h2 id="快读"><a href="#快读" class="headerlink" title="快读:"></a>快读:</h2><p> BufferedReader in &#x3D; new BufferedReader(new InputStreamReader(System.in));读数据：long n &#x3D; Long.parseLong(in.readLine());字符串 : String str &#x3D; in.readLine(); 数组 :String nums[] &#x3D; in.readLine().split(“ “)；   int[] arr &#x3D; new int[nums.length];   for (int i &#x3D; 0; i &lt; nums.length; i++) {  arr[i] &#x3D; Integer.parseInt(nums[i]);} 多个数据：      String nums[] &#x3D; in.readLine().split(“ “)； int n &#x3D; Integer.parseInt(nums[0]);  int m &#x3D; Integer.parseInt(nums[1]);  多行输入：StringBuilder sb &#x3D; new StringBuilder();String line;while ((line &#x3D; in.readLine()) !&#x3D; null &amp;&amp; !line.isEmpty()) {  sb.append(line).append(“\n”);}String input &#x3D; sb.toString();</p>
-<h2 id="快写"><a href="#快写" class="headerlink" title="快写:"></a>快写:</h2><p> PrintWriter out &#x3D; new PrintWriter(new OutputStreamWriter(System.out));out.print(n);out.flush();</p>
-<h2 id="1-搜索spfa（路径）"><a href="#1-搜索spfa（路径）" class="headerlink" title="1.搜索spfa（路径）"></a>1.搜索spfa（路径）</h2><p>求单源起点到任意点的距离，图的权值有题目决定设置中间节点和距离简单的dfs（灌溉，长草，扫雷,受伤的皇后）板子题难一点的dfs（全球变暖，滑雪，剪格子）滑雪：dp数组保存最大的距离     剪格子：回溯，剪枝全球变暖：简单的bfs（迷宫带路径输出，01迷宫）队列操作，取节点，用节点，进节点难一点的bfs（青蛙跳杯子）每次比较队列里的不同的字符串，字符串保存在set集合中，每次bfs和当前两串‘*’之间的距离，</p>
-<h2 id="2-字符串StringBuilder"><a href="#2-字符串StringBuilder" class="headerlink" title="2.字符串StringBuilder"></a>2.字符串StringBuilder</h2><p>StringBuffer 回文：String.compareto (StringB(String str).reverse.toString) &#x3D;&#x3D; 0;桶排序：记录每个字符串中每个字母出现的次数int book []&#x3D;new int [26];for(int i:n){book[str.charAt(i)-‘A’]++;}sysout((char)(‘A’+i));取所有子串：for(int i&#x3D;0;i&lt;n;i++){for(int j&#x3D;i;j&lt;n;j++){ String str &#x3D; s.subString(i,j+1);}}是否单调递增：abb型：最长平衡子串：Excel：卡片：数组存放每一张卡片，循环字符串数组减去。删除字符：留下的字典序最小，while(t&gt;0){ 每次比较两个字符即可; t–;}</p>
-<h2 id="3-数论欧拉筛"><a href="#3-数论欧拉筛" class="headerlink" title="3.数论欧拉筛"></a>3.数论欧拉筛</h2><p>– 求解范围内的质数以及判断某个数是否是质数：private static boolean isprime(int n){  if(n&lt;2){return false;}<br>  boolean [] isprime &#x3D; new boolean[n+1];  Arrays.fill(isprime,true);    &#x2F;&#x2F;通过标记每个质数的倍数来筛选出所有的合数，如果一个数没有  for(int i&#x3D;2;i * i &lt;&#x3D; n;i++){    if(isprime[i]){    for(int j&#x3D; i * i;j&lt;&#x3D;n;j+&#x3D;i){      isprime[j] &#x3D; false;    }  }}  return isprime[n];}因子&#x2F;质因子分解–求解质因子个数：private static int zyfj(int n) {  if(n&lt;2) {    return 0;  }  int count&#x3D;0;  for(int i&#x3D;2;i<em>i&lt;&#x3D;n;i++){    while(n % i&#x3D;&#x3D;0) {      count++;      n&#x2F;&#x3D;i;    }  }  if(n&gt;1) {    count++;  }  return count;}唯一分解定理–求解约数个数：private static int wyfj(int n) {  int count &#x3D;1;  for(int i&#x3D;2;i</em>i&lt;&#x3D;n;i++) {    int ans &#x3D;0;    while(n % i &#x3D;&#x3D;0) {      ans++;      n&#x2F;&#x3D;i;    }    if(ans&gt;0) {      count *&#x3D; (ans+1);    }  }  if(n&gt;1) {    count *&#x3D;2;  }  return count;}<br>仓库：所有的因子添加到集合中，遍历找答案纯质数：数位拆分判断每一位是否为质数，boolean数组保存0-9[]的数是否为质数大数：BigInteger,含有mod，mutiply，divide，pow, abs, 利用大数的gcd求(1-n的)lcm：等差数列：d &#x3D; (an - a1) &#x2F; (n-1); Sn &#x3D; n * (an+a1) &#x2F; 2;等比数列：q &#x3D; an &#x2F; a1 ^ (1&#x2F;(n-1)); Sn &#x3D; a1 * (1-q^n) &#x2F; (1-q); 斐波那契数列：每60项数字的余数形成一个周期；分数的表示：printf(“%d &#x2F; %d”,a,b);小数的表示：printf(“%.2f”,（double) a);阶乘约数：求100!有多少个约数，(1-100)的唯一分解定理，桶排序存放因子的出现的次数；等差素数数列：模拟数字和公差 ,while(isp(a+j)){a &#x3D; a+j; cnt++;}寻找10个连续素数的公差 约数个数：取sqrt，每次+2；大数取余，%即可取后n位；</p>
-<h2 id="4-日期判断日期的合法性以及模拟一个日期："><a href="#4-日期判断日期的合法性以及模拟一个日期：" class="headerlink" title="4.日期判断日期的合法性以及模拟一个日期："></a>4.日期判断日期的合法性以及模拟一个日期：</h2><p>记得重置二月份的天数：day[2] &#x3D; 28;格式化日期：SimpleDateFormat sdf &#x3D; new SDF(“yyyy-MM-dd HH:mm:ss”);将long-&gt;Date : Date d &#x3D; new Date(long start);将Date-&gt;long : long start &#x3D; sdf.parse(“2023-04-08 00:00:00”).getTime();跑步锻炼：每天星期一跑步：new Date(long start).toString.contains(“01 “); – 1后面含空格</p>
-<h2 id="5-模拟枚举枚举："><a href="#5-模拟枚举枚举：" class="headerlink" title="5.模拟枚举枚举："></a>5.模拟枚举枚举：</h2><p>顺子日期：刷题统计：每天打卡题数形成数组，模拟天数（注意i++的位置）和日期换瓶盖：模拟瓶盖数和饮料总数<br>模拟：天干地支：两个数组分别存放天干地支，分别模拟1960年前后的年份，前面天干地支–，后面天干地支++，注意达到数组界限时，天干地支取数组上界或下界；玩具：直接找规律模拟即可纸张尺寸：A1，for(int i&#x3D;48;i&lt;c[1];i++){ } – 太妙了，模拟的是Ax尺寸的尺寸的次数翻硬币：两个数组，遍历，若元素不同则翻动两个硬币，三元符号表示： c[i] &#x3D;&#x3D;’<em>‘?’o’:’</em>‘;</p>
-<h2 id="6-二分贪心贪心"><a href="#6-二分贪心贪心" class="headerlink" title="6.二分贪心贪心:"></a>6.二分贪心贪心:</h2><p>答疑：题目要求的是在中间时刻开始时，(即前一次答疑结束到下一次答疑的开始)，数组含多个元素的快速排序：Arrays.sort(nums,(a,b) -&gt; (a[0]+a[1]+a[2]) - (b[0]+b[1]+b[2]))for(int i&#x3D;0;i&lt;n;i++){for(int j&#x3D;0;j&lt;3;j++){ sum+&#x3D;nums[i][j]; if(j &#x3D;&#x3D; 1) ans+&#x3D;sum; }}谈判：付账：判断一个人的钱乘以n是否恰好等于总数   money *(n-1)&lt;s?需要付完 : 选择方差最小的金额付款; </p>
-<p>二分：int l&#x3D;0,r &#x3D; 10000;while(l&lt;&#x3D;r){  int mid &#x3D; (l+r)&gt;&gt;1;  if(check()){ ret &#x3D; mid ; r &#x3D; mid -1;}else{ l &#x3D; mid+1;}} ret即是答案递增三元组：双指针，a和c数组分别模拟一个指针的移动，遍历b数组，直到找到满足条件的下标；数组a找最后一个，数组c找第一个分巧克力：按题目要求是分成正方形,即二分的题目求出符合题意的check()即可，count +&#x3D; (ab[i][0] &#x2F; mid) * (ab[i][1] &#x2F; mid );路标：两个路标之间的距离&lt;mid,不需要设置，否则在当前路标设置一个距离为mid的路标，不断重复模拟合适的mid。</p>
-<h2 id="7-基础知识"><a href="#7-基础知识" class="headerlink" title="7.基础知识"></a>7.基础知识</h2><p>拷贝：答案存在小数+1的情况；ASCII码:’0’:48 A’65’ a’97’进制转换：Integer.toHex &#x2F; toOct &#x2F; toBina (将十进制转化为16 &#x2F; 8 &#x2F; 2 进制)一次向List添加多个数据ArrayList&lt;&gt;list &#x3D; new ; list.addAll(Arrays.asList(2,3,23,32,32,23,32));读文件 String Path &#x3D; “D:\lq\b.txt”;BuffR in &#x3D; new br(new inps(new fileinpt(new file(Path))));String line &#x3D; “”; while(){(line &#x3D; in.readline())!&#x3D; null}</p>
-<h2 id="8-暴力位运算："><a href="#8-暴力位运算：" class="headerlink" title="8.暴力位运算："></a>8.暴力位运算：</h2><p>(左移)两家医院分15批口罩，求分得的口罩数的差值尽可能的小&#x2F;&#x2F;模拟1-2^15种所有的可能sfor(int i&#x3D;0;i&lt;(1&lt;&lt;15);i++) {      int sum1&#x3D;0;int sum2&#x3D;0;      &#x2F;&#x2F;j表示枚举每次的口罩将给那一家医院，在15位二进制数的      &#x2F;&#x2F;情况下，1给第一家,0给第二家      for(int j&#x3D;0;j&lt;15;j++) {        if( (i &amp; (1&lt;&lt;j) ) !&#x3D;0) {          sum1 +&#x3D;nums[j];        }else {          sum2 +&#x3D;nums[j];        }      }      &#x2F;&#x2F;每一种情况下，两家医院口罩数量的差值，保留最小的na一个      ans &#x3D; Math.min(ans, Math.abs(sum1 -sum2));    }<br>倍数问题：一个数组找三个数，是k的倍数，求三数之和从尾部开始暴力，for(int i&#x3D;n-1;i&gt;&#x3D;2;i–) {                for(int j&#x3D;i-1;j&gt;&#x3D;1;j–) {                  for(int q &#x3D; j-1;q&gt;&#x3D;0;q–) {                     &#x2F;&#x2F;剪枝 if(sum&lt;ans) break;                           &#x2F;&#x2F;后面都小于，不必再判断                           if(a[i]+a[j]+a[j-1]&lt;ans) {                             break;}}                           &#x2F;&#x2F;后面都小于，不必再判断                             if(a[i]+a[i-1]+a[i-2]&lt;ans) {                               break;                                    }&#x2F;&#x2F;(60%)<br>灯塔：暴力枚举每个点，计算它到灯塔的距离是否小于半径，即可判断能否被照到递增序列：暴力枚举每个点的中心散发的左下，右上，右下，同一行，同一列的直线是否递增<br>真-暴力: &#x2F;&#x2F;直接暴力三重循环  int count &#x3D; 0;  for (int i &#x3D; 0; i &lt; 30; i++) {    for (int j &#x3D; 0; j &lt; 50; j++) {        int num &#x3D; a[i][j];        &#x2F;&#x2F;每一行        for(int t &#x3D; i+1;t&lt;30;t++) {          if(num&lt;a[t][j]) {            count++;          }        }                &#x2F;&#x2F;每一列        for(int t&#x3D;j+1;t&lt;50;t++) {          if(num&lt;a[i][t]) {            count++;          }        }        &#x2F;&#x2F;左下斜线        for(int t &#x3D; i+1,tt &#x3D;j-1;t&lt;30&amp;&amp;tt&gt;&#x3D;0;t++,tt–){          if(num&lt;a[t][tt]) {            count++;          }        }        &#x2F;&#x2F;右上斜线        for(int t &#x3D; i-1,tt&#x3D;j+1;t&gt;&#x3D;0&amp;&amp;tt&lt;50;t–,tt++) {          if(num&lt;a[t][tt]) {            count++;          }        }        &#x2F;&#x2F;右下斜线        for(int t&#x3D;i+1,tt&#x3D;j+1;t&lt;30&amp;&amp;tt&lt;50;t++,tt++) {          if(num&lt;a[t][tt]) {            count++;          }        }      }    }<br>2019分解： 分解为3个不同数的和，有顺序：i取前1&#x2F;3,j取i后面，k取j后面，能保证取到的数不重复for(int i&#x3D;1;i&lt;s&#x2F;3+1;i++) {      for(int j&#x3D;i+1;j&lt;s;j++) {        for(int k&#x3D;j+1;k&lt;s;k++) {<br>卡片：三种卡片有6个不同的组合，n人至少需要i个：两层循环解决；4平方和：拉格朗日定理可以取相同的数：20 &#x3D; 0 0 2 4，后面的数一定是最大的，for (int i1&#x3D;0;i1<em>i1&lt;&#x3D;n;i1++)     for (int i2&#x3D;i1;i2</em>i2&lt;&#x3D;n;i2++)       for (int i3&#x3D;i2;i3<em>i3&lt;&#x3D;n;i3++)         for (int i4&#x3D;i3;i4</em>i4&lt;&#x3D;n;i4++)           if (i1<em>i1+i2</em>i2+i3<em>i3+i4</em>i4&#x3D;&#x3D;n) {</p>
-<p>字母阵列：求中心散射的八个方向直线上形成”lanqiao”直接枚举8个点的方向：for(int i&#x3D;0;i&lt;n;i++) {        for(int j&#x3D;0;j&lt;n;j++) {          if(zhi[i][j]&#x3D;&#x3D;’L’) {&#x2F;&#x2F;向8个方向寻找搜索            if(j+6&lt;n&amp;&amp;zhi[i][j+1]&#x3D;&#x3D;’A’&amp;&amp;zhi[i][j+2]&#x3D;&#x3D;’N’&amp;&amp;zhi[i][j+3]&#x3D;&#x3D;’Q’&amp;&amp;zhi[i][j+4]&#x3D;&#x3D;’I’&amp;&amp;zhi[i][j+5]&#x3D;&#x3D;’A’&amp;&amp;zhi[i][j+6]&#x3D;&#x3D;’O’) {              num++;&#x2F;&#x2F;向右寻找            }            if(i+6&lt;n&amp;&amp;zhi[i+1][j]&#x3D;&#x3D;’A’&amp;&amp;zhi[i+2][j]&#x3D;&#x3D;’N’&amp;&amp;zhi[i+3][j]&#x3D;&#x3D;’Q’&amp;&amp;zhi[i+4][j]&#x3D;&#x3D;’I’&amp;&amp;zhi[i+5][j]&#x3D;&#x3D;’A’&amp;&amp;zhi[i+6][j]&#x3D;&#x3D;’O’) {              num++;&#x2F;&#x2F;向下寻找            }            if(j-6&gt;&#x3D;0&amp;&amp;zhi[i][j-1]&#x3D;&#x3D;’A’&amp;&amp;zhi[i][j-2]&#x3D;&#x3D;’N’&amp;&amp;zhi[i][j-3]&#x3D;&#x3D;’Q’&amp;&amp;zhi[i][j-4]&#x3D;&#x3D;’I’&amp;&amp;zhi[i][j-5]&#x3D;&#x3D;’A’&amp;&amp;zhi[i][j-6]&#x3D;&#x3D;’O’) {              num++;&#x2F;&#x2F;向左寻找            }            if(i-6&gt;&#x3D;0&amp;&amp;zhi[i-1][j]&#x3D;&#x3D;’A’&amp;&amp;zhi[i-2][j]&#x3D;&#x3D;’N’&amp;&amp;zhi[i-3][j]&#x3D;&#x3D;’Q’&amp;&amp;zhi[i-4][j]&#x3D;&#x3D;’I’&amp;&amp;zhi[i-5][j]&#x3D;&#x3D;’A’&amp;&amp;zhi[i-6][j]&#x3D;&#x3D;’O’) {              num++;&#x2F;&#x2F;向上寻找            }            if(j+6&lt;n&amp;&amp;i+6&lt;n&amp;&amp;zhi[i+1][j+1]&#x3D;&#x3D;’A’&amp;&amp;zhi[i+2][j+2]&#x3D;&#x3D;’N’&amp;&amp;zhi[i+3][j+3]&#x3D;&#x3D;’Q’&amp;&amp;zhi[i+4][j+4]&#x3D;&#x3D;’I’&amp;&amp;zhi[i+5][j+5]&#x3D;&#x3D;’A’&amp;&amp;zhi[i+6][j+6]&#x3D;&#x3D;’O’) {              num++;&#x2F;&#x2F;向右下寻找            }            if(j-6&gt;&#x3D;0&amp;&amp;i+6&lt;n&amp;&amp;zhi[i+1][j-1]&#x3D;&#x3D;’A’&amp;&amp;zhi[i+2][j-2]&#x3D;&#x3D;’N’&amp;&amp;zhi[i+3][j-3]&#x3D;&#x3D;’Q’&amp;&amp;zhi[i+4][j-4]&#x3D;&#x3D;’I’&amp;&amp;zhi[i+5][j-5]&#x3D;&#x3D;’A’&amp;&amp;zhi[i+6][j-6]&#x3D;&#x3D;’O’) {              num++;&#x2F;&#x2F;向左下寻找            }            if(i-6&gt;&#x3D;0&amp;&amp;j-6&gt;&#x3D;0&amp;&amp;zhi[i-1][j-1]&#x3D;&#x3D;’A’&amp;&amp;zhi[i-2][j-2]&#x3D;&#x3D;’N’&amp;&amp;zhi[i-3][j-3]&#x3D;&#x3D;’Q’&amp;&amp;zhi[i-4][j-4]&#x3D;&#x3D;’I’&amp;&amp;zhi[i-5][j-5]&#x3D;&#x3D;’A’&amp;&amp;zhi[i-6][j-6]&#x3D;&#x3D;’O’) {              num++;&#x2F;&#x2F;向左上寻找            }            if(i-6&gt;&#x3D;0&amp;&amp;j+6&lt;n&amp;&amp;zhi[i-1][j+1]&#x3D;&#x3D;’A’&amp;&amp;zhi[i-2][j+2]&#x3D;&#x3D;’N’&amp;&amp;zhi[i-3][j+3]&#x3D;&#x3D;’Q’&amp;&amp;zhi[i-4][j+4]&#x3D;&#x3D;’I’&amp;&amp;zhi[i-5][j+5]&#x3D;&#x3D;’A’&amp;&amp;zhi[i-6][j+6]&#x3D;&#x3D;’O’) {              num++;&#x2F;&#x2F;向右上寻找            }<br>最大子矩阵：四层循环遍历矩阵，从左上角遍历到右下角,每次取不同的子块来遍历，子矩阵最大最小值&lt;limit     for(int i&#x3D;N;i&gt;0;i–) {      for(int j&#x3D;M;j&gt;0;j–) { &#x2F;&#x2F; i*j的矩阵(右下角的坐标)        for(int x&#x3D;0;x&lt;&#x3D;N-i;x++) {          for(int y&#x3D;0;y&lt;&#x3D;M-j;y++) { &#x2F;&#x2F;左上角坐标            int max &#x3D; find_max(i,j,x,y);            int min &#x3D; find_min(i,j,x,y);<br>private static int find_max(int i, int j, int x, int y) {    &#x2F;&#x2F; 寻找最大值    int res &#x3D; Integer.MIN_VALUE;    for(int n&#x3D;x;n&lt;x+i;n++) {      for(int m&#x3D;y;m&lt;y+j;m++) {        res &#x3D; Math.max(res, arr[n][m]);      }    }    return res;  }</p>
-<h1 id="其他知识点："><a href="#其他知识点：" class="headerlink" title="其他知识点："></a>其他知识点：</h1><p>1M&#x3D;1024kb 1kb&#x3D;1024字节 1字节&#x3D;8bit ASCII码：A:65 a:97<br>计算机算法：枚举、排序、搜索、计数、贪心、动态规划、图论、数论、博弈论<em>、概率论</em>、计算几何<em>、字符串算法等。数据结构：数组、对象&#x2F;结构、字符串、队列、栈、树、图、堆、平衡树&#x2F;线段树、复杂数据结构</em>、嵌套数据结构<em>等 暴力枚举需要注意变量的重置为0，即枚举下一个新的数时，需要将之前计算的值清零<br>ArrayList.addAll(Arrays.aslist(xx,xx,xx))ArrayList<Integer> arr &#x3D; new ArrayList<E>();添加数据到数组中，多用于求因子类的题目 remove()去掉首项 get()[从0开始]取元素Arrays.sort(数组自然排序)<br>基础：1.数位拆分 x % y x &#x2F; y &#x2F;&#x2F;计算一个数字每个位数之和public static int getsum(int num){int sum&#x3D;0;while(num !&#x3D;0){  sum +&#x3D; num %10;  num &#x2F;&#x3D;10;}return sum;}&#x2F;&#x2F;模拟字母public static String gename(int n){StringBuilder sb &#x3D; new StringBuilder();while(n&gt;0){n–;sb.append((char)(‘A’ + n % 26));n &#x2F;&#x3D;26;     }return sb.reverse().toString();   }}2.进制模拟String hexNum &#x3D; Integer.toHexString(var).toUpperCase();&#x2F;&#x2F;将十进制转化为十六进制且全部字母都为大写 Integer.toBinaryString(var) 十进制转为二进制 Integer.toOctalString(var)十进制转化八进制 匹配二进制 “^[01]+$” 八进制 “^[0-7]+$” 十六进制 “^[a-fA-F0-9]+$”<br>其他进制转化为十进制String Bin &#x3D; “01”;int x &#x3D; Integrt.parseInt(binary,2);int y &#x3D; Integer.parseInt(octal,8);String Hex &#x3D; “ABD”;int z &#x3D; Integer.parseInt(hex,16);<br>3.最大公约数 &amp; 最小公倍数public static int gcd(int x,int y) {      return y&#x3D;&#x3D;0?x:gcd(y,x % y);    }public static int lcm(int x,int y){    return x * y &#x2F; gcd(x,y);}4.位运算：if(i &amp; (1&gt;&gt;j) )!&#x3D;0 {};5.高精度模拟：printf(“%.2f”,a);6.素数初步： private static boolean isP(int num){  if(num &lt;&#x3D;1){  return false;} for(int i&#x3D;2;i&lt;&#x3D;Math.sqrt(num);i++){if(num % i &#x3D;&#x3D;0){return false;}}return true;}<br>7.余数及相关：%8.大数系列：BigInteger类大数可以+-<em>&#x2F; % 等操作(一般对数字进行的操作都会有)add,subtract,mod,BigInteger num &#x3D; new BigIntger(“20”);BigInteger ans &#x3D; new BigInteger(“1”);for(int i&#x3D;1;i&lt;&#x3D;22;i++){     ans &#x3D; ans.mutiply(num);}9.唯一分解定理：10.日期类：&#x2F;&#x2F;判断是否是闰年public static boolean isLeap(int year){ return (year % 4 &#x3D;&#x3D;0 &amp;&amp; year % 100 !&#x3D;0) || year % 400 &#x3D;&#x3D;0};&#x2F;&#x2F;计算某个月的天数public static int getDays(int year,int month){if(month &#x3D;&#x3D;2){  return isLeap(year)?29:28;}else if(month &#x3D;&#x3D; 4||month &#x3D;&#x3D;6||month&#x3D;&#x3D;9||month&#x3D;&#x3D;11){  return 30;}else{ return 31;}}<br>runningMax:例子SimpleDateformatlong (模拟毫秒数，以毫秒为单位模拟一天的增加)日期之间不能比较。但是转换为毫秒数之后可以相比Date(模拟日期) d &#x3D; new Date(long);SimpleDateFormat sdf &#x3D; new SimpleDateFormat(“yyyy-HH-dd hh:mm:ss”);用来格式化日期的格式，即题目给的日期格式Long start &#x3D; sdf.parse(“2022-02-02 02:02:02”).getTime(); &#x2F;&#x2F;将指定的格式化日期转化为相应的毫秒数Date d &#x3D; new Date(start);&#x2F;&#x2F;再将指定的毫秒数转为对应的日期sysout d.toString();&#x2F;&#x2F;输出日期&#x2F;&#x2F;模拟一天过去start &#x3D; new Date(start).getTime() + 24<em>60<em>60</em>1000L;<br>Calender(模拟日期)<br>字符串：<br> &#x2F;&#x2F;取一个字符串的所有的子串        for(int i&#x3D;0 ; i&lt;str.length(); i++){          for(int k&#x3D; i; k&lt;str.length(); k++){            String res &#x3D; str.substring(i,k+1);            System.<strong>out**.println(res)          }        }回文字符串使用一个方法private static boolean ishuiwen(String str){  int left &#x3D;0;int right &#x3D;str.length()-1;while(left &lt; right){if(str.charAt(leftt) !&#x3D; str.charAt(right)){  return false;}left++;right–;}sreturn true;}简单字符串统计：桶排序：int []a &#x3D; new int [n];char [] c &#x3D; a.tocharArray();a[(chatAt(c) - ‘A’)]++&#x2F;&#x2F;得出相应字母在数组中保存的数量(char)( i + ‘A’) &#x2F;&#x2F; 输出相对应的字母String 1.比较：compareTo() 返回0 表示相等2.String[] arr &#x3D; str.split(“”);切割字符串,形成字符串数组<br>Stringbuffer StringBuilder (反转：reverse())String 转型 int : str.valueOf();int 转型 String : 1 +“ ”   有字串的题目可以使用老白嫖方法-》》详情见字串分值<br>解密：模拟：周期串：困难串：<br>OJ几类格式训练：字符串hash+二分：正则表达式：<br>排序：冒泡+插入+选择+希尔+计数+堆排序….java对象排序：<br>数据结构：栈和队列：链表：Set<String> set &#x3D; new HashSet&lt;&gt;();set.add();set.contains();去重:(求不同的字符串子串）HashMap&lt;Character,Integer&gt; map &#x3D; new HashMap&lt;&gt;();(本质就是一个函数映射的关系，一个值对应一个数量,如 a ：2 ，b : 3）求出现字符最多的次数map.put( c , map.getorDefalut(c,0) +1);map.get(Object o);&#x2F;&#x2F;求一个值的数量循环map中的元素for(char c : map.keyset(){  map.get(c) ;}ArrayList<Integer> list &#x3D; new ArrayList&lt;&gt;();Collections.sort(list);&#x2F;&#x2F;运用集合对动态数组进行排序TreeMap 哈希表<br>穷举-模拟：   百钱白鸡凶手分糖果接雨水<br>递归：汉诺塔连分数<br>分治：归并快排快速幂<br>搜索：DFS:矩阵搜索，最短路径，迷宫1.设置矩阵的范围2.访问数组 visited[] ，访问一个位置后，修改它的值3.初始化需要求的数值（面积，数的和等）4.上下左右四个方向递归BFS<br>回溯剪枝<br>贪心：找零动态规划：1.返回值（避免重复遍历，只要dp[i][j] !&#x3D;0）if(dp[i][j!&#x3D;0]){return dp[i][j];}2.设置初值int max &#x3D;1;3.模拟每个位置的上下左右移动for(int k&#x3D;0;k&lt;4;k++){int x &#x3D; i+dx[k]; int y &#x3D; j + dy[k];}4.判断条件if(不符合的情况){continue;}5.状态转移方程(注意是否要+1)是取最大值还是数的和6.保存所求值LCSLISLPS最大子矩阵背包专题<br>二叉树：前中后层次遍历建树遍历二叉树还原字典树哈夫曼编码并查集<br>图：图的存储1.邻接矩阵2.邻接表<br>DFS<br>BFS最小生成树最短路径：有模板Dijkstra 算法是一种贪心算法，用于求加权图的单源最短路径问题，其中所有边的权重都必须是非负数。这个算法的基本思路是从起点开始，先确定起点到所有点的最短路径，然后不断扩大已确定最短路径的节点集合，直到到达终点。<br>难点：素数进阶矩阵快速幂前缀和与差分具体题目：</strong>“k倍区间”</em></em></em><em>一维数组的前缀和数组a[1,2,3,4,5] 前缀和sum[1,3,6,10,15] 余数[1,1,0,0,1] 余数(数量)[2,3];&#x2F;&#x2F;余数等于数组相应下标的个数</em>*   **余数为0的自成一个k倍区间 count+&#x3D;v[0];**<strong>余数不为0(余数相同)1.存储余数的数量。两两组合(求和公式)可以构成一个k倍区间 count+&#x3D;(v[i] *( v[ i ] - 1 ) ) &#x2F;2</strong> **2.存储余数。的根据同余定理，如果两个前缀和对 k 取余数的结果相同，那么它们的差or和一定是 k 的倍数(23%2 &#x3D; 1 ;13% 2&#x3D;&#x3D;1；|(13+-23)| %2 &#x3D;&#x3D;0)**小木棍 - 剪枝过关数位DPs区间DP状压DP线段树</p>
-]]></content>
-      <categories>
-        <category>lqb</category>
-      </categories>
-      <tags>
-        <tag>lqb</tag>
       </tags>
   </entry>
   <entry>
@@ -296,18 +368,143 @@
 <p>11.rabbitmq消息队列，处理每个任务之间的逻辑，当前一个任务完成的时候，在队列中通知下一个任务的可以进行</p>
 <p>10.在前端修改上传文件的大小和浏览器设置上传文件的服务器设置</p>
 <p>11代理对象，事务控制(事务优化，代理对象处理事务需要在方法上添加@Transaction注解)</p>
-<h1 id="详细技术介绍："><a href="#详细技术介绍：" class="headerlink" title="详细技术介绍："></a>详细技术介绍：</h1><h2 id="0-gogs"><a href="#0-gogs" class="headerlink" title="0 gogs"></a>0 gogs</h2><p>相当于git</p>
-<h2 id="1swagger-ui"><a href="#1swagger-ui" class="headerlink" title="1swagger-ui"></a>1swagger-ui</h2><p>写接口文档的，也可拿来测试接口</p>
-<h2 id="2nacos"><a href="#2nacos" class="headerlink" title="2nacos"></a>2nacos</h2><p>配置项目的网关，</p>
-<h2 id="3minio"><a href="#3minio" class="headerlink" title="3minio"></a>3minio</h2><p>文件中转站和存储站</p>
-<h2 id="5xxl-job"><a href="#5xxl-job" class="headerlink" title="5xxl-job"></a>5xxl-job</h2><p>任务处理，任务调度，什么是乐观锁、悲观锁？synchronized是一种悲观锁，在执行被synchronized包裹的代码时需要首先获取锁，没有拿到锁则无法执行，是总悲观的认为别的线程会去抢，所以要悲观锁。乐观锁的思想是它不认为会有线程去争抢，尽管去执行，如果没有执行成功就再去重试。 update media_process m set m.status&#x3D;’4’ where (m.status&#x3D;’1’ or m.status&#x3D;’3’) and m.fail_count&lt;3 and m.id&#x3D;?update media_process t set t.count &#x3D; t.count + 1,t.version&#x3D;2 where t.version &#x3D; 1</p>
-<h2 id="6nginx"><a href="#6nginx" class="headerlink" title="6nginx:"></a>6nginx:</h2><p>网页前端页面，部署网页的位置，config文件，配置网页，拿图片，视频</p>
-<h2 id="7freemarker"><a href="#7freemarker" class="headerlink" title="7freemarker:"></a>7freemarker:</h2><p>动态模板拿数据，从数据库拿数据展示到网页<a href="http://freemarker.foofun.cn/ref_directives.html">http://freemarker.foofun.cn/ref_directives.html</a></p>
+<h1 id="详细技术介绍："><a href="#详细技术介绍：" class="headerlink" title="详细技术介绍："></a>详细技术介绍：</h1><h2 id="0-gogs"><a href="#0-gogs" class="headerlink" title="0 gogs"></a>0 gogs</h2><p>相当于git,Gogs是一个简单而功能齐全的自托管Git服务，适用于小型团队和个人开发者，帮助他们管理和协作开发代码项目。</p>
+<ol>
+<li><strong>轻量级和易于安装</strong>：Gogs以轻量级和快速部署为设计目标，可以在各种操作系统上安装和运行，包括Linux、Windows、macOS等。</li>
+<li><strong>自托管</strong>：您可以在自己的服务器上搭建Gogs，完全掌握代码托管的控制权，而无需依赖第三方服务。</li>
+<li><strong>Web界面</strong>：Gogs提供了一个直观的Web界面，允许用户创建和管理Git仓库、查看提交历史、管理问题和PR、设置Web钩子等。</li>
+<li><strong>多用户支持</strong>：Gogs支持多用户和组织，可以创建和管理不同用户的账户，进行协作开发。</li>
+<li><strong>Web钩子和集成</strong>：Gogs支持Web钩子，可以与CI&#x2F;CD工具、问题跟踪系统和通知服务集成，实现自动化和通知。</li>
+<li><strong>访问控制</strong>：Gogs提供了丰富的访问控制选项，包括仓库级别和组织级别的权限管理，以确保代码的安全性和隐私性。</li>
+<li><strong>问题跟踪和PR</strong>：Gogs具有内置的问题跟踪系统和Pull Request（PR）功能，方便团队协作和代码审查。</li>
+<li><strong>自动备份和迁移</strong>：Gogs支持自动备份和迁移，确保代码不会丢失。</li>
+<li><strong>多语言支持</strong>：Gogs支持多种语言，包括英语、中文、日语等，以满足全球用户的需求。</li>
+</ol>
+<h2 id="1swagger-ui"><a href="#1swagger-ui" class="headerlink" title="1swagger-ui"></a>1swagger-ui</h2><p>Swagger UI 使 API 开发变得更加高效和可视化，同时提供了强大的工具来创建、测试和文档化 RESTful API。它已经成为了许多开发者和团队在构建和维护 API 时的首选工具之一。通过提供可视化的 API 文档和测试界面，Swagger UI 提高了 API 的可用性和可维护性。</p>
+<ol>
+<li><strong>自动生成文档</strong>：Swagger UI 可以自动从 API 的注释、注解和代码中生成 API 文档。开发者无需手动编写文档，只需在代码中添加适当的注释和注解。</li>
+<li><strong>交互式界面</strong>：Swagger UI 提供了一个交互式的 Web 界面，允许开发者浏览 API 的端点、请求参数、响应数据等信息。这有助于更好地理解和测试 API。</li>
+<li><strong>支持多种编程语言</strong>：Swagger UI 支持多种编程语言和框架，包括 Java、Python、Node.js、Ruby 等。这意味着您可以在不同的编程环境中使用 Swagger UI。</li>
+<li><strong>在线 API 测试</strong>：Swagger UI 允许开发者在界面中直接测试 API 端点，输入参数并查看响应，以确保 API 正确工作。</li>
+<li><strong>生成客户端代码</strong>：Swagger UI 可以生成用于调用 API 的客户端代码，这些客户端代码可以用于不同编程语言，帮助开发者更轻松地与 API 进行交互。</li>
+<li><strong>可自定义</strong>：Swagger UI 具有可自定义的界面，您可以根据自己的需求进行样式和布局的调整，以适应项目的设计风格。</li>
+<li><strong>整合现有项目</strong>：您可以将 Swagger UI 集成到现有的 Web 项目中，以提供 API 文档和测试的功能。</li>
+<li><strong>安全性</strong>：Swagger UI 支持 API 安全性的设置和测试，可以模拟授权和认证过程。</li>
+</ol>
+<h2 id="2nacos-Ali"><a href="#2nacos-Ali" class="headerlink" title="2nacos(Ali)"></a>2nacos(Ali)</h2><p>​	Nacos 是一个功能强大的分布式配置和服务发现系统，适用于构建和管理微服务架构的应用程序</p>
+<ol>
+<li><strong>配置管理</strong>：Nacos 允许开发者集中管理配置，包括应用程序的配置文件、环境变量、数据库连接等。配置可以动态刷新，无需重启应用程序。</li>
+<li><strong>服务发现</strong>：Nacos 提供了服务注册和发现功能，使微服务之间可以轻松地发现和通信。它支持多种负载均衡算法。</li>
+<li><strong>动态DNS</strong>：Nacos 支持动态DNS，允许为服务分配动态的域名和IP地址。</li>
+<li><strong>多环境支持</strong>：Nacos 支持多个环境（如开发、测试、生产）的配置管理，可以在不同环境中使用不同的配置。</li>
+<li><strong>分布式存储</strong>：Nacos 使用分布式存储来保证高可用性和数据的一致性，支持多种存储后端，包括MySQL、Redis等。</li>
+<li><strong>健康检查</strong>：Nacos 提供了健康检查机制，允许检测服务的健康状态并自动剔除不健康的实例。</li>
+<li><strong>灰度发布</strong>：Nacos 支持灰度发布，允许逐步将新版本的服务引入生产环境，减小风险。</li>
+<li><strong>多语言支持</strong>：Nacos 提供多种编程语言的客户端 SDK，可以与多种编程语言的应用程序集成。</li>
+<li><strong>集成Spring Cloud</strong>：Nacos 可以与Spring Cloud框架集成，使得在微服务架构中更容易实现配置管理和服务发现。</li>
+</ol>
+<h2 id="3minio"><a href="#3minio" class="headerlink" title="3minio"></a>3minio</h2><p>MinIO 是一个开源的对象存储服务器，用于存储和管理大规模的数据，通常被用于构建分布式存储、备份和数据湖等应用。</p>
+<ol>
+<li><strong>开源和免费</strong>：MinIO 是一个完全开源的项目，使用Apache License 2.0许可，允许您免费使用、修改和分发它。</li>
+<li><strong>对象存储</strong>：MinIO 提供了对象存储的功能，您可以将数据以对象的形式存储在 MinIO 中，并使用唯一的键来检索它们。</li>
+<li><strong>高性能</strong>：MinIO 被设计成高性能的存储系统，可以处理大规模的数据并提供低延迟的读写操作。</li>
+<li><strong>可扩展性</strong>：MinIO 可以轻松地水平扩展，以应对不断增长的存储需求。您可以添加新的MinIO实例，构建集群来实现高可用性和负载均衡。</li>
+<li><strong>S3兼容</strong>：MinIO 提供了与Amazon S3兼容的API，这意味着您可以使用现有的S3客户端和工具与MinIO进行交互，而无需修改代码。</li>
+<li><strong>安全性</strong>：MinIO 提供了数据加密、访问控制、身份验证和安全传输等安全特性，以确保您的数据安全。</li>
+<li><strong>版本控制</strong>：MinIO 具备版本控制的功能，允许您保留和管理多个对象版本，以便回溯或还原数据。</li>
+<li><strong>分布式存储</strong>：MinIO 支持分布式存储，可以将数据分散存储在多个地点，以提高可用性和数据冗余。</li>
+<li><strong>容器化部署</strong>：MinIO 可以轻松部署到容器化环境中，例如Kubernetes，以便在容器编排平台上管理和扩展。</li>
+<li><strong>监控和日志</strong>：MinIO 提供了监控和日志记录功能，可以用于监视存储使用情况和性能，并进行故障排除。</li>
+</ol>
+<h2 id="5xxl-job-ALi"><a href="#5xxl-job-ALi" class="headerlink" title="5xxl-job(ALi)"></a>5xxl-job(ALi)</h2><p>XXL-Job 是一个非常有用的任务调度平台，特别适用于需要管理和调度大量定时任务的场景，如数据处理、数据导入、定时报表生成等。</p>
+<ol>
+<li><strong>分布式任务调度</strong>：XXL-Job 可以在多台服务器上分布式执行定时任务，确保任务的高可用性和负载均衡。</li>
+<li><strong>多语言支持</strong>：支持多种编程语言（如Java、Python、Shell等）编写任务执行器，使用户能够使用不同的编程语言编写任务逻辑。</li>
+<li><strong>任务调度管理</strong>：XXL-Job 提供了任务调度管理的功能，包括任务新增、编辑、删除、暂停、恢复等。</li>
+<li><strong>任务依赖</strong>：支持任务之间的依赖关系，可以配置任务的执行顺序和触发条件。</li>
+<li><strong>分片执行</strong>：任务可以分片执行，每个分片可以在不同的执行器上并行执行，提高任务执行效率。</li>
+<li><strong>任务日志和监控</strong>：XXL-Job 提供了任务执行日志记录和监控功能，可以查看任务的执行日志和状态。</li>
+<li><strong>动态参数</strong>：支持动态参数传递，任务执行时可以动态传递参数，提高任务的通用性。</li>
+<li><strong>报警机制</strong>：XXL-Job 支持任务执行失败时的报警通知，可以配置邮件报警、钉钉报警等。</li>
+<li><strong>定时任务</strong>：支持定时任务的配置，可以按照固定的时间点触发任务执行。</li>
+<li><strong>API接口</strong>：提供了API接口，可以与其他系统集成，实现任务的自动化管理和调度。</li>
+<li><strong>任务执行日志</strong>：任务执行后，可以查看任务的详细执行日志，有助于故障排查和任务监控。</li>
+<li><strong>分布式调度中心</strong>：支持将任务调度中心部署在多个节点，以实现高可用性和负载均衡。</li>
+</ol>
+<h2 id="6nginx"><a href="#6nginx" class="headerlink" title="6nginx:"></a>6nginx:</h2><p>Nginx（发音为 “engine x”）是一个高性能的开源Web服务器，也可以用作反向代理服务器、负载均衡器和HTTP缓存服务器。</p>
+<p>网页前端页面，部署网页的位置，config文件，配置网页，拿图片，视频</p>
+<ol>
+<li><strong>高性能</strong>：Nginx 是为高并发和高负载设计的，能够处理数千个并发连接而不会过度消耗系统资源。</li>
+<li><strong>反向代理</strong>：Nginx 可以用作反向代理服务器，将客户端的请求代理到后端服务器，以实现负载均衡、安全性和性能优化。</li>
+<li><strong>负载均衡</strong>：Nginx 支持负载均衡，可以将请求分发到多个后端服务器，提高系统的可用性和性能。</li>
+<li><strong>静态文件服务</strong>：Nginx 可以高效地提供静态文件服务，例如HTML、CSS、JavaScript、图像等，从而减轻后端服务器的负担。</li>
+<li><strong>HTTP缓存</strong>：Nginx 具有内置的HTTP缓存支持，可以缓存静态和动态内容，提高响应速度。</li>
+<li><strong>SSL&#x2F;TLS支持</strong>：Nginx 支持SSL&#x2F;TLS加密，可以保护数据传输的安全性，用于HTTPS协议。</li>
+<li><strong>虚拟主机</strong>：Nginx 支持虚拟主机配置，允许在同一服务器上托管多个域名或应用程序。</li>
+<li><strong>模块化架构</strong>：Nginx 的模块化架构使得可以根据需求添加各种功能和扩展，以满足不同场景的需求。</li>
+<li><strong>动态模块加载</strong>：Nginx 支持动态模块加载，可以在运行时加载或卸载模块，无需重新编译和部署。</li>
+<li><strong>日志记录</strong>：Nginx 提供强大的日志记录功能，可以记录访问日志、错误日志等，有助于监控和故障排查。</li>
+<li><strong>反爬虫和安全性</strong>：Nginx 可以配置反爬虫规则、访问控制、DDoS防护等安全性功能。</li>
+<li><strong>可扩展性</strong>：Nginx 可以与其他服务和技术集成，如FastCGI、uWSGI、PHP-FPM等，以构建复杂的Web应用和微服务架构。</li>
+</ol>
+<h2 id="7freemarker"><a href="#7freemarker" class="headerlink" title="7freemarker:"></a>7freemarker:</h2><p>FreeMarker（全名 “FreeMarker Template Engine”）是一个开源的模板引擎，用于生成动态文本输出，通常用于在Web应用程序中生成HTML、XML、JSON等格式的内容。</p>
+<ol>
+<li><p><strong>模板引擎</strong>：FreeMarker 是一个模板引擎，允许开发者将静态模板和动态数据结合起来生成动态内容。</p>
+</li>
+<li><p><strong>模板语言</strong>：FreeMarker 提供了一种简单而强大的模板语言，支持条件语句、循环、变量定义、宏等功能，以便更好地控制模板生成的内容。</p>
+</li>
+<li><p><strong>分离视图和数据</strong>：FreeMarker 鼓励将视图（模板）和数据（模型）分离，以提高代码的可维护性和可重用性。</p>
+</li>
+<li><p><strong>强大的表达式</strong>：FreeMarker 支持表达式，可以进行各种操作，如字符串拼接、数学运算、日期格式化等。</p>
+</li>
+<li><p><strong>多用途</strong>：FreeMarker 不仅可以用于生成HTML页面，还可以用于生成XML文档、JSON数据、配置文件等各种类型的文本输出。</p>
+</li>
+<li><p><strong>可扩展性</strong>：FreeMarker 是可扩展的，允许开发者编写自定义指令和函数，以适应不同的需求。</p>
+</li>
+<li><p><strong>跨平台</strong>：由于FreeMarker是Java编写的，因此可以在各种操作系统上运行，并且易于与Java应用程序集成。</p>
+</li>
+<li><p><strong>开源</strong>：FreeMarker 是一个开源项目，使用Apache License 2.0许可，可以免费使用和修改。</p>
+</li>
+<li><p><strong>模板缓存</strong>：FreeMarker 支持模板缓存，可以提高模板渲染的性能，避免每次请求都重新解析模板。</p>
+</li>
+<li><p><strong>国际化支持</strong>：FreeMarker 支持国际化和本地化，可以轻松处理多语言和不同地区的内容生成。</p>
+<p><img src="/img/free.png"></p>
+<p>我有一个静态化页面的模版，course_template.ftl  每次生成页面都会根据这模版来生成，动态模板拿数据，从数据库拿数据展示到网页<a href="http://freemarker.foofun.cn/ref_directives.html">http://freemarker.foofun.cn/ref_directives.html</a></p>
+<p>课程预览的时候会提前在缓存中加载好静态化的页面模版，每次新的课程生成新的页面时，会动态拿一些数据再结合静态化模版生成新的页面</p>
+<p>course_template.ftl.：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;banner-left&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>$&#123;model.courseBase.mtName&#125;<span class="tag">&lt;<span class="name">span</span>&gt;</span>\ $&#123;model.courseBase.stName&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;tit&quot;</span>&gt;</span>$&#123;model.courseBase.name&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;pic&quot;</span>&gt;</span></span><br><span class="line">        &lt;#if model.courseBase.charge==&#x27;201000&#x27;&gt;</span><br><span class="line">            <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;new-pic&quot;</span>&gt;</span>免费<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">        &lt;#else&gt;</span><br><span class="line">            <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;new-pic&quot;</span>&gt;</span>特惠价格￥$&#123;model.courseBase.price!&#x27;&#x27;&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;old-pic&quot;</span>&gt;</span>原价￥$&#123;model.courseBase.originalPrice!&#x27;&#x27;&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">        &lt;/#if&gt;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//课程预览</span></span><br><span class="line"><span class="meta">@GetMapping(&quot;/coursepreview/&#123;courseId&#125;&quot;)</span></span><br><span class="line"><span class="keyword">public</span> ModelAndView <span class="title function_">preview</span><span class="params">(<span class="meta">@PathVariable(&quot;courseId&quot;)</span> Long courseId)</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="type">ModelAndView</span> <span class="variable">modelAndView</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ModelAndView</span>();</span><br><span class="line">    <span class="comment">//查询课程的信息作为模型数据</span></span><br><span class="line">    <span class="type">CoursePreviewDto</span> <span class="variable">coursePreviewInfo</span> <span class="operator">=</span> coursePublishService.getCoursePreviewInfo(courseId);</span><br><span class="line">    <span class="comment">//指定模型</span></span><br><span class="line">    modelAndView.addObject(<span class="string">&quot;model&quot;</span>, coursePreviewInfo);</span><br><span class="line">    <span class="comment">//指定模板</span></span><br><span class="line">    modelAndView.setViewName(<span class="string">&quot;course_template&quot;</span>);<span class="comment">//根据视图名称加.ftl找到模板</span></span><br><span class="line">    <span class="keyword">return</span> modelAndView;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
 <h2 id="8-fallbackfactory"><a href="#8-fallbackfactory" class="headerlink" title="8.fallbackfactory"></a>8.fallbackfactory</h2><p>页面静态化，雪崩需要，熔断处理，，上游降级处理</p>
 <h2 id="9elasticsearch"><a href="#9elasticsearch" class="headerlink" title="9elasticsearch"></a>9elasticsearch</h2><p>作为索引及搜索服务。kibana 是 ELK（Elasticsearch , Logstash, Kibana ）之一，kibana 一款开源的数据分析和可视化平台，通过可视化界面访问elasticsearch的索引库，并可以生成一个数据报表。开发中主要使用kibana通过api对elasticsearch进行索引和搜索操作，<em>docker-compose up：安装docker-compose.yml中的配置启动kibana和ela</em></p>
 <h2 id="10redis"><a href="#10redis" class="headerlink" title="10redis"></a>10redis</h2><p>存储验证码调用redis需要再bootstrap.yml文件中调用nacos中的配置，还有pom.xml文件中引入相关的依赖。</p>
 <h2 id="11rabbitmq"><a href="#11rabbitmq" class="headerlink" title="11rabbitmq"></a>11rabbitmq</h2><h2 id="12-canal"><a href="#12-canal" class="headerlink" title="12 canal"></a>12 canal</h2><p> 数据实时同步：即改动数据库需要像mysql,elasticsearch等实时更新，采用binary log 的方法，[ mysql() – binary log ]  –&gt; canal -&gt; ela </p>
-<h2 id="14spring-cloud"><a href="#14spring-cloud" class="headerlink" title="14spring cloud,"></a>14spring cloud,</h2><h2 id="15spring-security："><a href="#15spring-security：" class="headerlink" title="15spring security："></a>15spring security：</h2><p>进行认证授权认证框架，就是需要登录。授权模式：就是给谁访问什么资源的权限。过滤器拦截请求，OAuth2：授权码模式，携带授权码申请令牌，code&#x3D;TBiipf; acess_code &#x3D; ;         密码模式，loadusername：连接数据库认证 userdetailservice: 单点登录 统一认证入口:账号密码，微信，手机验证码 1.认证请求参数，2.屏蔽密码校验 自定义 DaoAuthenticationProvider3.自定义实现方法exeute();登录成功有cookie<br>在WebSecurityConfig中设置一下，disable掉csrf保护就可以了，因为post等会更改服务器内的状态的方法会触发跨站请求保护。@OverRideprotected void configure(HttpSecurity http) throws Exception {http.csrf().disable().authorizeRequests().anyRequest().permitAll().and().formLogin().successForwardUrl(“&#x2F;login-success”);</p>
+<h2 id="14spring-cloud："><a href="#14spring-cloud：" class="headerlink" title="14spring cloud："></a>14spring cloud：</h2><p>Spring Cloud是一个用于构建分布式系统和微服务架构的开源框架，它基于Spring Boot构建，提供了一系列工具和库，用于快速开发和部署分布式应用程序。Spring Cloud使开发人员能够轻松处理分布式系统中的常见问题，如配置管理、服务发现、负载均衡、断路器、分布式数据、消息传递等。</p>
+<ol>
+<li><strong>服务注册与发现</strong>：Spring Cloud提供了服务注册与发现机制，使微服务能够自动注册和发现其他微服务。Eureka和Consul是常见的服务注册与发现组件。</li>
+<li><strong>负载均衡</strong>：Spring Cloud支持负载均衡，可以在多个实例之间分发请求，提高系统的性能和可用性。Ribbon是用于负载均衡的组件。</li>
+<li><strong>断路器</strong>：Spring Cloud提供了断路器模式，可以防止故障的微服务影响整个系统。Hystrix是一个常用的断路器库。</li>
+<li><strong>配置管理</strong>：Spring Cloud Config允许将配置中心化管理，实现配置的集中存储和动态刷新。</li>
+<li><strong>API网关</strong>：Spring Cloud Gateway和Zuul是用于构建API网关的组件，用于处理请求路由、认证、授权、日志记录等功能。</li>
+<li><strong>分布式消息传递</strong>：Spring Cloud Stream和Apache Kafka等允许微服务之间进行异步通信，以支持事件驱动架构。</li>
+<li><strong>分布式追踪和监控</strong>：Spring Cloud Sleuth和Zipkin等工具用于分布式系统的追踪和监控，帮助诊断性能问题。</li>
+<li><strong>批处理和任务调度</strong>：Spring Cloud Data Flow和Spring Cloud Task支持批处理和任务调度。</li>
+<li><strong>安全性</strong>：Spring Cloud Security提供了安全性和认证授权的功能，可以用于保护微服务和API。</li>
+<li><strong>分布式数据存储</strong>：Spring Cloud提供了对分布式数据存储的支持，如Spring Cloud Data Redis和Spring Cloud Data MongoDB。</li>
+</ol>
+<h2 id="15spring-security："><a href="#15spring-security：" class="headerlink" title="15spring security："></a>15spring security：</h2><p>进行认证授权认证框架，就是需要登录。授权模式：就是给谁访问什么资源的权限。过滤器拦截请求，</p>
+<p>OAuth2：</p>
+<p>授权码模式，携带授权码申请令牌，code&#x3D;TBiipf; acess_code &#x3D; ;        </p>
+<p>密码模式，loadusername：连接数据库认证 userdetailservice: </p>
+<p>单点登录 统一认证入口:账号密码，微信，手机验证码 </p>
+<p>1.认证请求参数，</p>
+<p>2.屏蔽密码校验 自定义 DaoAuthenticationProvider</p>
+<p>3.自定义实现方法exeute();登录成功有cookie<br>在WebSecurityConfig中设置一下，disable掉csrf保护就可以了，因为post等会更改服务器内的状态的方法会触发跨站请求保护。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@OverRideprotected</span> <span class="keyword">void</span> <span class="title function_">configure</span><span class="params">(HttpSecurity http)</span> <span class="keyword">throws</span> Exception &#123;http.csrf().disable().authorizeRequests().anyRequest().permitAll().and().formLogin().successForwardUrl(<span class="string">&quot;/login-success&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+
+
 <h2 id="16JWT"><a href="#16JWT" class="headerlink" title="16JWT"></a>16JWT</h2><p>(JSON web Token)令牌：自验证令牌合法性，客户端(申请令牌) – 认证服务（签名生成JWT令牌） – 资源服务（当客户端携带jwt令牌访问资源时，检验令牌合法性）对称加密。对资源进管控。</p>
 <h2 id="17微信第三方登录"><a href="#17微信第三方登录" class="headerlink" title="17微信第三方登录"></a>17微信第三方登录</h2><p>code + appid +appsecret 换取access_token 用户授权同意，申请令牌，发放令牌，保存用户，自动登录，认证通过。RestTemplate第三方远程调用 , 收到code调用微信接口申请access_token，哪access_token查询用户信息，将用户信息保存到数据库代理对象控制事务，</p>
 <p>1改nacos(填写appid和secret)weixin:appid: wxed9954c01bb89b47secret: a7482517235173ddb4083788de60b90e</p>
