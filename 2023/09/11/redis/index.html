@@ -1,0 +1,803 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>redis | Hxtk_blog</title><meta name="author" content="Hxtk"><meta name="copyright" content="Hxtk"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="redis">
+<meta property="og:type" content="article">
+<meta property="og:title" content="redis">
+<meta property="og:url" content="https://tk666ttkk.github.io/2023/09/11/redis/index.html">
+<meta property="og:site_name" content="Hxtk_blog">
+<meta property="og:description" content="redis">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://tk666ttkk.github.io/img/redis.png">
+<meta property="article:published_time" content="2023-09-11T02:54:52.000Z">
+<meta property="article:modified_time" content="2023-09-11T02:55:11.000Z">
+<meta property="article:author" content="Hxtk">
+<meta property="article:tag" content="redis">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://tk666ttkk.github.io/img/redis.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://tk666ttkk.github.io/2023/09/11/redis/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"top_n_per_article":1,"unescape":true,"languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":100,"languages":{"author":"作者: Hxtk","link":"链接: ","source":"来源: Hxtk_blog","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"top-center"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'redis',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-09-11 10:55:11'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><!-- hexo injector head_end start --><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-artitalk-pro/lib/card.css" media="defer" onload="this.media='all'"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><script>(()=>{
+  const $loadingBox = document.getElementById('loading-box')
+  const $body = document.body
+  const preloader = {
+    endLoading: () => {
+      $body.style.overflow = ''
+      $loadingBox.classList.add('loaded')
+    },
+    initLoading: () => {
+      $body.style.overflow = 'hidden'
+      $loadingBox.classList.remove('loaded')
+    }
+  }
+
+  preloader.initLoading()
+  window.addEventListener('load',() => { preloader.endLoading() })
+
+  if (false) {
+    document.addEventListener('pjax:send', () => { preloader.initLoading() })
+    document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+  }
+})()</script><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">7</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">6</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 文章</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 目录</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 资源</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url('/img/redis.png')"><nav id="nav"><span id="blog-info"><a href="/" title="Hxtk_blog"><span class="site-name">Hxtk_blog</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 文章</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 目录</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 资源</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">redis</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-09-11T02:54:52.000Z" title="发表于 2023-09-11 10:54:52">2023-09-11</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-09-11T02:55:11.000Z" title="更新于 2023-09-11 10:55:11">2023-09-11</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/redis/">redis</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">4.3k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>15分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="redis"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="Redis"><a href="#Redis" class="headerlink" title="Redis"></a>Redis</h1><p>Nosql，非结构化语言,无关联的，非SQL，BASE</p>
+<p>键值性：redis，文档：mangodb，列表：HBase；GRaph ：Neo4j</p>
+<p>SQL，结构化，关联，SQL查询，ACID</p>
+<p>REDIS:远程词典服务器：基于内存的键值型NoSQL数据库</p>
+<p>key-value，value支持不同的数据结构</p>
+<p>单线程，每个命令具备原子性，</p>
+<p>低延迟，速度快，（基于内存，io多路复用，良好的编码）</p>
+<p>支持数据持久化</p>
+<p>支持主从集群，分片集群</p>
+<p>支持多语言客户端</p>
+<h2 id="数据结构："><a href="#数据结构：" class="headerlink" title="数据结构："></a>数据结构：</h2><table>
+<thead>
+<tr>
+<th>String</th>
+<th>hello world</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Hash</td>
+<td>{name:”jack”,age:21}</td>
+</tr>
+<tr>
+<td>List</td>
+<td>[A-&gt;B-&gt;C-&gt;C]</td>
+</tr>
+<tr>
+<td>Set</td>
+<td>{A,B,C}</td>
+</tr>
+<tr>
+<td>SortedSet</td>
+<td>{A:1,B:2,C:3}</td>
+</tr>
+<tr>
+<td>GEO</td>
+<td>{A:(120.3,30.5)}</td>
+</tr>
+<tr>
+<td>BitMap</td>
+<td>0110110101110101011</td>
+</tr>
+<tr>
+<td>HyperLog</td>
+<td>0110110101110101011</td>
+</tr>
+</tbody></table>
+<h2 id="通用命令："><a href="#通用命令：" class="headerlink" title="通用命令："></a>通用命令：</h2><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>描述</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>KEYS</td>
+<td>查看符合模板的所有key，不建议在生产环境使用</td>
+<td><code>KEYS mypattern*</code></td>
+</tr>
+<tr>
+<td>DEL</td>
+<td>删除一个指定的key</td>
+<td><code>DEL mykey</code></td>
+</tr>
+<tr>
+<td>EXISTS</td>
+<td>判断key是否存在</td>
+<td><code>EXISTS mykey</code></td>
+</tr>
+<tr>
+<td>EXPIRE</td>
+<td>给一个key设置有效期，到期该key会自动删除</td>
+<td><code>EXPIRE mykey 3600</code></td>
+</tr>
+<tr>
+<td>TTL</td>
+<td>查看key的剩余有效时间</td>
+<td><code>TTL mykey</code></td>
+</tr>
+</tbody></table>
+<h3 id="String"><a href="#String" class="headerlink" title="String:"></a>String:</h3><p>字符串类型，可分为3类：</p>
+<p>string:普通字符串 hello world</p>
+<p>int: 整数，自增自减 10 </p>
+<p>float:浮点数，自增自减 92.2</p>
+<p>底层都是字节数组，编码方式不同，最大空间：512m</p>
+<h4 id="常见命令："><a href="#常见命令：" class="headerlink" title="常见命令："></a>常见命令：</h4><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>描述</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>SET</td>
+<td>添加或修改已存在的String键值对</td>
+<td><code>SET mykey &quot;Hello, Redis!&quot;</code></td>
+</tr>
+<tr>
+<td>GET</td>
+<td>根据key获取对应的value</td>
+<td><code>GET mykey</code></td>
+</tr>
+<tr>
+<td>MSET</td>
+<td>批量插入键值对</td>
+<td><code>MSET key1 value1 key2 value2 key3 value3</code></td>
+</tr>
+<tr>
+<td>MGET</td>
+<td>根据key，批量获取value</td>
+<td><code>MGET key1 key2 key3</code></td>
+</tr>
+<tr>
+<td>INCR</td>
+<td>让整形key自增1</td>
+<td><code>INCR mycounter</code></td>
+</tr>
+<tr>
+<td>INCRBY</td>
+<td>让整形key按规定步长自增</td>
+<td><code>INCRBY mycounter 5</code></td>
+</tr>
+<tr>
+<td>INCRBYFLOAT</td>
+<td>让浮点型key按规定步长自增</td>
+<td><code>INCRBYFLOAT myfloat 0.5</code></td>
+</tr>
+<tr>
+<td>SETNX</td>
+<td>添加键值对，前提是不存在</td>
+<td><code>SETNX uniquekey &quot;This is a unique value&quot;</code></td>
+</tr>
+<tr>
+<td>SETEX</td>
+<td>添加键值对并指定有效期</td>
+<td><code>SETEX timedkey 3600 &quot;This will expire in 1 hour&quot;</code></td>
+</tr>
+</tbody></table>
+<h3 id="key的层级结构："><a href="#key的层级结构：" class="headerlink" title="key的层级结构："></a>key的层级结构：</h3><p>Redis中的key允许多个单词形成层级结构，多个单词之间:隔开，例如 项目名:业务名:类型:id</p>
+<p>举例子：若value是java对象，则可以将对象序列化为JSON字符串后存储。</p>
+<table>
+<thead>
+<tr>
+<th>KEY</th>
+<th>VALUE:</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>heima:user:1</td>
+<td>{“id”:1,”name”:”jack”,”age”:21}</td>
+</tr>
+<tr>
+<td>heima:product:1</td>
+<td>{“id”:1,”name”:”oneplus8T”,”price”:2599}</td>
+</tr>
+</tbody></table>
+<h3 id="Hash类型"><a href="#Hash类型" class="headerlink" title="Hash类型:"></a>Hash类型:</h3><p>散列，其value是一个无序字典，类似java中的HashMap结构</p>
+<p>相对于String转化为JSON字符串存储，当需要修改对象的某个字段很不方便</p>
+<p>Hash结构可以将对象的每个字段独立存储，可针对单个字段做CRUD</p>
+<table>
+<thead>
+<tr>
+<th>KEY</th>
+<th>VALUE</th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td>field</td>
+<td>value</td>
+</tr>
+<tr>
+<td>heima:user:1</td>
+<td>name</td>
+<td>jack</td>
+</tr>
+<tr>
+<td></td>
+<td>age</td>
+<td>21</td>
+</tr>
+<tr>
+<td>heima:user:2</td>
+<td>name</td>
+<td>Rose</td>
+</tr>
+<tr>
+<td></td>
+<td>age</td>
+<td>18</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>描述</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>HSET</td>
+<td>设置哈希表字段和值</td>
+<td><code>HSET heima:user:1 name jack</code></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><code>HSET heima:user:1 age 21</code></td>
+</tr>
+<tr>
+<td>HGET</td>
+<td>获取哈希表中指定字段的值</td>
+<td><code>HGET heima:user:1 name</code></td>
+</tr>
+<tr>
+<td>HMGET</td>
+<td>批量获取哈希表中多个字段的值</td>
+<td><code>HMGET heima:user:1 name age heima:user:2 name age</code></td>
+</tr>
+<tr>
+<td>HDEL</td>
+<td>删除哈希表中的一个或多个字段</td>
+<td><code>HDEL heima:user:1 age</code></td>
+</tr>
+<tr>
+<td>HGETALL</td>
+<td>获取哈希表中所有字段和值</td>
+<td><code>HGETALL heima:user:1</code></td>
+</tr>
+<tr>
+<td>HINCRBY</td>
+<td>为哈希表字段增加整数值</td>
+<td><code>HINCRBY heima:user:1 age 5</code></td>
+</tr>
+<tr>
+<td>HINCRBYFLOAT</td>
+<td>为哈希表字段增加浮点数值</td>
+<td><code>HINCRBYFLOAT heima:user:1 age 0.5</code></td>
+</tr>
+<tr>
+<td>HEXISTS</td>
+<td>判断哈希表中是否存在指定字段</td>
+<td><code>HEXISTS heima:user:1 name</code></td>
+</tr>
+<tr>
+<td>HKEYS</td>
+<td>获取哈希表中的所有字段名</td>
+<td><code>HKEYS heima:user:1</code></td>
+</tr>
+<tr>
+<td>HVALS</td>
+<td>获取哈希表中的所有字段值</td>
+<td><code>HVALS heima:user:1</code></td>
+</tr>
+</tbody></table>
+<h3 id="List类型："><a href="#List类型：" class="headerlink" title="List类型："></a>List类型：</h3><p>和java的LinkedList类似，常用来存储一个有序数据，可以看做一个双向链表结构，可正向和反向检索。</p>
+<p><em><strong>Redis的List类型通常用于存储具有时间顺序的数据，例如日志、消息队列等。</strong></em></p>
+<p>特征：</p>
+<ol>
+<li><strong>有序</strong>：Redis List是有序的数据结构，它按照元素插入的顺序来存储数据。你可以在列表的两端执行插入和删除操作。</li>
+<li><strong>元素可以重复</strong>：与集合（Set）不同，Redis List允许元素重复出现。这意味着你可以在同一个List中多次存储相同的元素。</li>
+<li><strong>插入和删除快</strong>：Redis List对于在列表的两端执行插入和删除操作非常快速。这是因为它是一个双向链表结构，使得在列表的头部或尾部添加或删除元素的时间复杂度是O(1)。</li>
+<li><strong>查询速度一般</strong>：虽然Redis List对于插入和删除操作非常高效，但对于随机访问（根据索引或值查找元素）而言，速度较慢。这是因为在链表中进行随机访问需要遍历链表，时间复杂度是O(n)。</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>描述</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>LPUSH</td>
+<td>在列表的头部插入一个或多个元素</td>
+<td><code>LPUSH mylist value1 value2</code></td>
+</tr>
+<tr>
+<td>RPUSH</td>
+<td>在列表的尾部插入一个或多个元素</td>
+<td><code>RPUSH mylist value3 value4</code></td>
+</tr>
+<tr>
+<td>LPOP</td>
+<td>移除并返回列表的头部元素</td>
+<td><code>LPOP mylist</code></td>
+</tr>
+<tr>
+<td>RPOP</td>
+<td>移除并返回列表的尾部元素</td>
+<td><code>RPOP mylist</code></td>
+</tr>
+<tr>
+<td>LINDEX</td>
+<td>根据索引获取列表中的元素</td>
+<td><code>LINDEX mylist 0</code></td>
+</tr>
+<tr>
+<td>LRANGE</td>
+<td>获取列表中指定范围内的元素</td>
+<td><code>LRANGE mylist 0 2</code></td>
+</tr>
+<tr>
+<td>LLEN</td>
+<td>获取列表的长度</td>
+<td><code>LLEN mylist</code></td>
+</tr>
+<tr>
+<td>BLPOP</td>
+<td>从左边（头部）阻塞弹出元素。</td>
+<td>BLPOP mylist 10</td>
+</tr>
+<tr>
+<td>BRPOP</td>
+<td>从右边（尾部）阻塞弹出元素。</td>
+<td>BLPOP mylist 10</td>
+</tr>
+</tbody></table>
+<h3 id="Set类型："><a href="#Set类型：" class="headerlink" title="Set类型："></a>Set类型：</h3><p>和java的HashSet类似，value为null的HashMap，因此也是一个Hash表</p>
+<p><em><strong>Redis的Set类型通常用于存储不重复的元素集合，例如用户的标签、喜好、关注列表等。</strong></em></p>
+<p>特征：</p>
+<ol>
+<li><strong>无序</strong>：Redis Set是无序的，这意味着元素在集合中的存储顺序不是固定的，与元素的插入顺序无关。</li>
+<li><strong>元素不可重复</strong>：与List不同，Set类型不允许重复元素，每个元素在集合中只能出现一次。</li>
+<li><strong>查找快</strong>：Redis Set内部是通过哈希表实现的，因此查找元素的速度非常快，时间复杂度是O(1)。</li>
+<li><strong>支持并集、差集和交集功能</strong>：Redis提供了一系列用于集合操作的命令，如并集（<code>SUNION</code>）、差集（<code>SDIFF</code>）和交集（<code>SINTER</code>）等，这些命令可以用于对多个集合进行操作，如合并、比较和筛选等</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>描述</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>SADD</td>
+<td>向集合中添加一个或多个元素</td>
+<td><code>SADD myset member1 member2</code></td>
+</tr>
+<tr>
+<td>SREM</td>
+<td>从集合中移除一个或多个元素</td>
+<td><code>SREM myset member1</code></td>
+</tr>
+<tr>
+<td>SMEMBERS</td>
+<td>获取集合中的所有元素</td>
+<td><code>SMEMBERS myset</code></td>
+</tr>
+<tr>
+<td>SISMEMBER</td>
+<td>检查元素是否存在于集合中</td>
+<td><code>SISMEMBER myset member1</code></td>
+</tr>
+<tr>
+<td>SCARD</td>
+<td>获取集合的基数（元素数量）</td>
+<td><code>SCARD myset</code></td>
+</tr>
+<tr>
+<td>SUNION</td>
+<td>计算多个集合的并集</td>
+<td><code>SUNION set1 set2 set3</code></td>
+</tr>
+<tr>
+<td>SDIFF</td>
+<td>计算多个集合的差集</td>
+<td><code>SDIFF set1 set2</code></td>
+</tr>
+<tr>
+<td>SINTER</td>
+<td>计算多个集合的交集</td>
+<td><code>SINTER set1 set2</code></td>
+</tr>
+</tbody></table>
+<h3 id="SortedSet类型："><a href="#SortedSet类型：" class="headerlink" title="SortedSet类型："></a>SortedSet类型：</h3><p>可排序的Set集合，和java的TreeSet类似，但TS底层是红黑树，而SortedSet中的每一个元素都带有一个score属性，可以基于score属性对元素排序，底层的实现是一个跳表（SkipList）加Hash表</p>
+<p>特征:</p>
+<ol>
+<li><strong>可排序</strong>：Redis Sorted Set是一个可排序的集合，它根据每个元素的分数（score）属性对元素进行排序。这允许你按照特定顺序访问元素，无论是升序还是降序。</li>
+<li><strong>元素不重复</strong>：与Set类型类似，Sorted Set中的元素是不重复的，每个元素只能出现一次。</li>
+<li><strong>查询速度快</strong>：Redis Sorted Set的底层实现是一个跳表（Skip List）和一个哈希表（Hash Table）的结合，这使得查找元素的速度非常快，时间复杂度是O(log(N))。</li>
+<li><strong>每个元素都有一个分数（score）属性</strong>：与普通Set不同，Sorted Set中的每个元素都关联有一个分数，这个分数可以是任意浮点数值，用于排序和比较元素。</li>
+</ol>
+<p><em><strong>Redis的Sorted Set常用于需要按分数排序的场景，如排行榜、计分系统、优先级队列等。</strong></em></p>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>描述</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ZADD</td>
+<td>向有序集合中添加一个或多个元素，每个元素关联一个分数</td>
+<td><code>ZADD myzset 1 &quot;member1&quot; 2 &quot;member2&quot;</code></td>
+</tr>
+<tr>
+<td>ZREM</td>
+<td>从有序集合中移除一个或多个元素</td>
+<td><code>ZREM myzset &quot;member1&quot;</code></td>
+</tr>
+<tr>
+<td>ZRANGE</td>
+<td>按照元素的分数范围获取元素</td>
+<td><code>ZRANGE myzset 0 -1</code> (获取所有元素)</td>
+</tr>
+<tr>
+<td>ZRANK</td>
+<td>按照元素的分数范围获取元素，以逆序返回</td>
+<td><code>ZRANK myzset member1</code> (获取元素对应的排名)</td>
+</tr>
+<tr>
+<td>ZSCORE</td>
+<td>获取指定元素的分数</td>
+<td><code>ZSCORE myzset &quot;member1&quot;</code></td>
+</tr>
+<tr>
+<td>ZINCRBY</td>
+<td>为指定元素的分数增加指定值</td>
+<td><code>ZINCRBY myzset 2 &quot;member1&quot;</code> (增加 member1 的分数 by 2)</td>
+</tr>
+<tr>
+<td>ZCARD</td>
+<td>获取有序集合的基数（元素数量）</td>
+<td><code>ZCARD myzset</code> (获取有序集合中元素的数量)</td>
+</tr>
+<tr>
+<td>ZCOUNT</td>
+<td>统计分数在指定范围内的元素数量</td>
+<td><code>ZCOUNT myzset 1 3</code> (统计分数在 1 到 3 范围内的元素数量)</td>
+</tr>
+<tr>
+<td>ZREVRANGEBYSCORE</td>
+<td>按照元素的分数范围获取元素，以逆序返回</td>
+<td><code>ZREVRANGEBYSCORE myzset max min</code> (逆序获取指定分数范围内的元素)</td>
+</tr>
+<tr>
+<td>ZDIFF</td>
+<td>计算多个有序集合的差集</td>
+<td><code>ZDIFF output-key input-key1 input-key2</code> (计算 input-key1 和 input-key2 的差集并将结果存储在 output-key 中)</td>
+</tr>
+<tr>
+<td>ZINTER</td>
+<td>计算多个有序集合的交集</td>
+<td><code>ZINTER output-key input-key1 input-key2 WEIGHTS 2 3</code> (计算 input-key1 和 input-key2 的交集并指定权重)</td>
+</tr>
+<tr>
+<td>ZUNION</td>
+<td>计算多个有序集合的并集</td>
+<td><code>ZUNION output-key input-key1 input-key2 AGGREGATE SUM</code> (计算 input-key1 和 input-key2 的并集并指定聚合方式)</td>
+</tr>
+</tbody></table>
+<h2 id="Java客户端："><a href="#Java客户端：" class="headerlink" title="Java客户端："></a>Java客户端：</h2><h3 id="Jedis"><a href="#Jedis" class="headerlink" title="Jedis:"></a>Jedis:</h3><p>实例线程是不安全的，多线程环境下需要基于连接池来使用</p>
+<ol>
+<li><p><strong>连接到Redis服务器</strong>：使用Jedis，你可以轻松地连接到Redis服务器。你需要提供Redis服务器的主机名（或IP地址）和端口号。</p>
+</li>
+<li><p><strong>执行Redis操作</strong>：Jedis库允许你执行各种Redis操作，包括字符串、列表、集合、有序集合、哈希表等。你可以使用Jedis提供的方法来执行这些操作。</p>
+</li>
+<li><p><strong>异常处理</strong>：Jedis处理了与Redis连接和操作相关的异常，这使得在Java应用程序中与Redis交互更加稳定。</p>
+</li>
+<li><p><strong>连接池</strong>：Jedis还提供了连接池的支持，这有助于在多个线程之间共享Redis连接，并且可以有效地管理和重用连接。</p>
+</li>
+<li><p><strong>支持Redis事务</strong>：Jedis支持Redis事务，你可以使用<code>MULTI</code>、<code>EXEC</code>、<code>WATCH</code>等命令来执行事务操作。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> redis.clients.jedis.Jedis;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">JedisExample</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="comment">// 创建Jedis客户端连接</span></span><br><span class="line">        <span class="type">Jedis</span> <span class="variable">jedis</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Jedis</span>(<span class="string">&quot;localhost&quot;</span>, <span class="number">6379</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 执行Redis操作</span></span><br><span class="line">        jedis.set(<span class="string">&quot;mykey&quot;</span>, <span class="string">&quot;Hello, Redis!&quot;</span>);</span><br><span class="line">        <span class="type">String</span> <span class="variable">value</span> <span class="operator">=</span> jedis.get(<span class="string">&quot;mykey&quot;</span>);</span><br><span class="line">        System.out.println(<span class="string">&quot;Value of &#x27;mykey&#x27;: &quot;</span> + value);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 关闭Jedis连接</span></span><br><span class="line">        jedis.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+<p> <em><strong>Jedis连接池</strong></em></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> redis.clients.jedis.Jedis;</span><br><span class="line"><span class="keyword">import</span> redis.clients.jedis.JedisPool;</span><br><span class="line"><span class="keyword">import</span> redis.clients.jedis.JedisPoolConfig;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">JedisPoolExample</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="comment">// 创建连接池配置</span></span><br><span class="line">        <span class="type">JedisPoolConfig</span> <span class="variable">poolConfig</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">JedisPoolConfig</span>();</span><br><span class="line">        poolConfig.setMaxTotal(<span class="number">10</span>); <span class="comment">// 设置最大连接数</span></span><br><span class="line">        poolConfig.setMaxIdle(<span class="number">5</span>);   <span class="comment">// 设置最大空闲连接数</span></span><br><span class="line">        poolConfig.setMinIdle(<span class="number">1</span>);   <span class="comment">// 设置最小空闲连接数</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 创建连接池</span></span><br><span class="line">        <span class="type">JedisPool</span> <span class="variable">jedisPool</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">JedisPool</span>(poolConfig, <span class="string">&quot;localhost&quot;</span>, <span class="number">6379</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 从连接池获取连接</span></span><br><span class="line">        <span class="keyword">try</span> (<span class="type">Jedis</span> <span class="variable">jedis</span> <span class="operator">=</span> jedisPool.getResource()) &#123;</span><br><span class="line">            <span class="comment">// 执行Redis操作</span></span><br><span class="line">            jedis.set(<span class="string">&quot;mykey&quot;</span>, <span class="string">&quot;Hello, Jedis Pool!&quot;</span>);</span><br><span class="line">            <span class="type">String</span> <span class="variable">value</span> <span class="operator">=</span> jedis.get(<span class="string">&quot;mykey&quot;</span>);</span><br><span class="line">            System.out.println(<span class="string">&quot;Value of &#x27;mykey&#x27;: &quot;</span> + value);</span><br><span class="line">        &#125; <span class="comment">// 连接会在此处自动关闭并返回连接池</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 关闭连接池</span></span><br><span class="line">        jedisPool.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Lettuce"><a href="#Lettuce" class="headerlink" title="Lettuce:"></a>Lettuce:</h3><p> Lettuce是一个Java编写的高性能、异步的Redis客户端库，用于与Redis服务器进行交互。它被设计成异步和非阻塞的，允许开发者在高并发应用中高效地与Redis数据库进行通信。</p>
+<ol>
+<li><p><strong>异步和非阻塞</strong>：Lettuce是一个异步、非阻塞的Redis客户端，它允许你执行Redis操作而不会阻塞应用程序的执行线程。这对于高并发的应用程序非常有用，因为它可以减少线程等待时间，提高性能。</p>
+</li>
+<li><p><strong>连接池</strong>：Lettuce内置了连接池支持，这使得在多个线程之间共享Redis连接变得容易，同时能够有效地管理和重用连接。</p>
+</li>
+<li><p><strong>集成Redis Sentinel和Cluster</strong>：Lettuce可以轻松地与Redis Sentinel和Redis Cluster一起工作，支持高可用性和分布式部署。</p>
+</li>
+<li><p><strong>支持SSL&#x2F;TLS</strong>：Lettuce支持通过SSL&#x2F;TLS加密与Redis服务器之间的通信，提供数据安全性。</p>
+</li>
+<li><p><strong>Reactive编程模型</strong>：Lettuce还提供了对响应式编程模型的支持，可以与Spring Framework的Project Reactor等库集成，允许开发者编写异步和响应式的Redis操作。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> io.lettuce.core.api.StatefulRedisConnection;</span><br><span class="line"><span class="keyword">import</span> io.lettuce.core.api.sync.RedisCommands;</span><br><span class="line"><span class="keyword">import</span> io.lettuce.core.RedisClient;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">LettuceExample</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="comment">// 创建RedisClient</span></span><br><span class="line">        <span class="type">RedisClient</span> <span class="variable">redisClient</span> <span class="operator">=</span> RedisClient.create(<span class="string">&quot;redis://localhost:6379&quot;</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 创建连接</span></span><br><span class="line">        StatefulRedisConnection&lt;String, String&gt; connection = redisClient.connect();</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 获取同步的Redis命令对象</span></span><br><span class="line">        RedisCommands&lt;String, String&gt; syncCommands = connection.sync();</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 执行Redis操作</span></span><br><span class="line">        syncCommands.set(<span class="string">&quot;mykey&quot;</span>, <span class="string">&quot;Hello, Lettuce!&quot;</span>);</span><br><span class="line">        <span class="type">String</span> <span class="variable">value</span> <span class="operator">=</span> syncCommands.get(<span class="string">&quot;mykey&quot;</span>);</span><br><span class="line">        System.out.println(<span class="string">&quot;Value of &#x27;mykey&#x27;: &quot;</span> + value);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 关闭连接和客户端</span></span><br><span class="line">        connection.close();</span><br><span class="line">        redisClient.shutdown();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="Redisson"><a href="#Redisson" class="headerlink" title="Redisson:"></a>Redisson:</h3><p>Redisson是一个基于Java的Redis客户端和分布式应用框架，它提供了一系列高级功能和工具，使得在Java应用程序中与Redis进行交互和利用分布式特性变得更加容易。</p>
+<ol>
+<li><strong>分布式数据结构</strong>：Redisson提供了丰富的分布式数据结构，如分布式集合、分布式映射、分布式队列、分布式锁等。这些数据结构可以直接在Java应用中使用，无需手动编写复杂的分布式代码。</li>
+<li><strong>Redis连接池</strong>：Redisson内置了连接池管理，使得连接到Redis服务器更加高效，可以有效地重用和管理连接。5</li>
+<li><strong>分布式锁和信号量</strong>：Redisson提供了分布式锁和信号量的支持，使得多个应用程序实例可以协调和同步访问共享资源。</li>
+<li><strong>发布&#x2F;订阅</strong>：Redisson支持发布&#x2F;订阅模式，允许应用程序通过Redis进行实时消息传递和事件通知。</li>
+<li><strong>集成Spring</strong>：Redisson可以轻松集成到Spring Framework中，以便更容易地与Spring应用程序一起使用。</li>
+<li><strong>Redis Sentinel和Redis Cluster支持</strong>：Redisson支持与Redis Sentinel和Redis Cluster一起工作，实现高可用性和分布式部署。</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> org.redisson.Redisson;</span><br><span class="line"><span class="keyword">import</span> org.redisson.api.RedissonClient;</span><br><span class="line"><span class="keyword">import</span> org.redisson.config.Config;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">RedissonExample</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="comment">// 创建Redisson配置</span></span><br><span class="line">        <span class="type">Config</span> <span class="variable">config</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Config</span>();</span><br><span class="line">        config.useSingleServer().setAddress(<span class="string">&quot;redis://localhost:6379&quot;</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 创建Redisson客户端连接</span></span><br><span class="line">        <span class="type">RedissonClient</span> <span class="variable">redisson</span> <span class="operator">=</span> Redisson.create(config);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 执行Redis操作</span></span><br><span class="line">        redisson.getBucket(<span class="string">&quot;mykey&quot;</span>).set(<span class="string">&quot;Hello, Redisson!&quot;</span>);</span><br><span class="line">        <span class="type">String</span> <span class="variable">value</span> <span class="operator">=</span> redisson.getBucket(<span class="string">&quot;mykey&quot;</span>).get();</span><br><span class="line">        System.out.println(<span class="string">&quot;Value of &#x27;mykey&#x27;: &quot;</span> + value);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 关闭Redisson客户端连接</span></span><br><span class="line">        redisson.shutdown();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="SpringDataRedis"><a href="#SpringDataRedis" class="headerlink" title="SpringDataRedis:"></a>SpringDataRedis:</h3><p>SpringData是Spring中数据操作的模块，包含多各种数据库的集成. Spring Data Redis是Spring框架的一部分，它提供了对Redis数据库的集成和支持。</p>
+<ol>
+<li><strong>注解驱动</strong>：Spring Data Redis提供了一组注解，可以用于在Java类中定义与Redis数据存储相关的操作。这些注解包括<code>@RedisHash</code>、<code>@RedisSet</code>、<code>@RedisList</code>等，可以帮助你将Java对象映射到Redis数据结构。</li>
+<li><strong>Redis模板</strong>：Spring Data Redis引入了<code>RedisTemplate</code>类，它提供了一种便捷的方式来执行Redis操作，如数据存储、检索、删除等。你可以使用<code>RedisTemplate</code>来与Redis数据库进行交互。</li>
+<li><strong>连接池管理</strong>：Spring Data Redis可以与连接池管理集成，以确保有效地管理和重用Redis连接。你可以配置连接池的参数，以满足性能和资源管理的需求。</li>
+<li><strong>事务支持</strong>：Spring Data Redis提供了事务支持，允许你在多个Redis操作中创建事务。你可以使用<code>@Transactional</code>注解来管理Redis事务。</li>
+<li><strong>Spring Boot集成</strong>：Spring Data Redis与Spring Boot紧密集成，使得在Spring Boot应用程序中使用Redis变得更加简单。Spring Boot自动配置了Redis连接池和<code>RedisTemplate</code>，你只需添加相关依赖即可。</li>
+</ol>
+<h4 id="RedisTemplate"><a href="#RedisTemplate" class="headerlink" title="RedisTemplate"></a>RedisTemplate</h4><p><code>RedisTemplate</code>是Spring Data Redis中的一个关键组件，它是一个通用的Redis操作模板，用于执行各种Redis操作，如数据存储、检索、删除等。<code>RedisTemplate</code>提供了一种便捷的方式来与Redis数据库进行交互，同时隐藏了与底层Redis客户端库的复杂性。</p>
+<ol>
+<li><strong>数据类型支持</strong>：<code>RedisTemplate</code>支持多种Redis数据类型，包括字符串、列表、集合、有序集合、散列表等。你可以根据需要选择适当的方法来执行不同类型的操作。</li>
+<li><strong>序列化和反序列化</strong>：<code>RedisTemplate</code>负责将Java对象序列化为Redis支持的格式，并在从Redis检索数据时进行反序列化。你可以配置使用的序列化器，或者使用默认的序列化器。</li>
+<li><strong>连接池管理</strong>：<code>RedisTemplate</code>可以与连接池管理集成，以确保有效地管理和重用Redis连接。你可以配置连接池的参数，以满足性能和资源管理的需求。</li>
+<li><strong>事务支持</strong>：<code>RedisTemplate</code>提供了事务支持，允许你在多个Redis操作中创建事务。你可以使用<code>multi()</code>和<code>exec()</code>方法来开启和提交Redis事务。</li>
+<li><strong>Pipeline支持</strong>：<code>RedisTemplate</code>支持Redis的Pipeline操作，允许你一次发送多个命令并一次接收多个响应，以提高性能。</li>
+</ol>
+<p>可读性差</p>
+<p>内存占用大</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://tk666ttkk.github.io">tk</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://tk666ttkk.github.io/2023/09/11/redis/">https://tk666ttkk.github.io/2023/09/11/redis/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://tk666ttkk.github.io" target="_blank">Hxtk_blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/redis/">redis</a></div><div class="post_share"><div class="social-share" data-image="/img/redis.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.png" target="_blank"><img class="post-qr-code-img" src="/img/wechat.png" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="/img/alipay.png" target="_blank"><img class="post-qr-code-img" src="/img/alipay.png" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2023/09/09/mst/" title="面试题"><img class="cover" src="/img/mst.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">面试题</div></div></a></div></nav><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="giscus-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Hxtk</div><div class="author-info__description">blogger</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">7</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">6</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/tk666ttkk?tab=repositories"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/tk666ttkk?tab=repositories" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:1711660323@qq.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">个人博客，仅供学习交流</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Redis"><span class="toc-text">Redis</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%EF%BC%9A"><span class="toc-text">数据结构：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%9A%E7%94%A8%E5%91%BD%E4%BB%A4%EF%BC%9A"><span class="toc-text">通用命令：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#String"><span class="toc-text">String:</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E5%91%BD%E4%BB%A4%EF%BC%9A"><span class="toc-text">常见命令：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#key%E7%9A%84%E5%B1%82%E7%BA%A7%E7%BB%93%E6%9E%84%EF%BC%9A"><span class="toc-text">key的层级结构：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Hash%E7%B1%BB%E5%9E%8B"><span class="toc-text">Hash类型:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#List%E7%B1%BB%E5%9E%8B%EF%BC%9A"><span class="toc-text">List类型：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Set%E7%B1%BB%E5%9E%8B%EF%BC%9A"><span class="toc-text">Set类型：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SortedSet%E7%B1%BB%E5%9E%8B%EF%BC%9A"><span class="toc-text">SortedSet类型：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Java%E5%AE%A2%E6%88%B7%E7%AB%AF%EF%BC%9A"><span class="toc-text">Java客户端：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Jedis"><span class="toc-text">Jedis:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Lettuce"><span class="toc-text">Lettuce:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Redisson"><span class="toc-text">Redisson:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SpringDataRedis"><span class="toc-text">SpringDataRedis:</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#RedisTemplate"><span class="toc-text">RedisTemplate</span></a></li></ol></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2023/09/11/redis/" title="redis"><img src="/img/redis.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="redis"/></a><div class="content"><a class="title" href="/2023/09/11/redis/" title="redis">redis</a><time datetime="2023-09-11T02:54:52.000Z" title="发表于 2023-09-11 10:54:52">2023-09-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/09/09/mst/" title="面试题"><img src="/img/mst.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="面试题"/></a><div class="content"><a class="title" href="/2023/09/09/mst/" title="面试题">面试题</a><time datetime="2023-09-09T06:17:32.000Z" title="发表于 2023-09-09 14:17:32">2023-09-09</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/09/08/rk/" title="rk"><img src="/img/rk.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="rk"/></a><div class="content"><a class="title" href="/2023/09/08/rk/" title="rk">rk</a><time datetime="2023-09-08T10:49:38.000Z" title="发表于 2023-09-08 18:49:38">2023-09-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/09/08/lq/" title="lqb"><img src="/img/lqb.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="lqb"/></a><div class="content"><a class="title" href="/2023/09/08/lq/" title="lqb">lqb</a><time datetime="2023-09-08T10:47:39.000Z" title="发表于 2023-09-08 18:47:39">2023-09-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/09/08/linux/" title="linux"><img src="/img/linux.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="linux"/></a><div class="content"><a class="title" href="/2023/09/08/linux/" title="linux">linux</a><time datetime="2023-09-08T10:31:58.000Z" title="发表于 2023-09-08 18:31:58">2023-09-08</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('/img/redis.png')"><div id="footer-wrap"><div class="copyright">&copy;2023 By Hxtk</div><div class="footer_custom_text"><a href= https://cloud.tencent.com/product/ba ><img class="icp-icon" src= /img/icp.jpg><span>湘ICP备2023009473号</span></a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><div class="js-pjax"><script>function getGiscusTheme (theme) {
+  return theme === 'dark' ? 'dark' : 'light'
+}
+
+function loadGiscus () {
+  const config = Object.assign({
+    src: 'https://giscus.app/client.js',
+    'data-repo': 'tk666ttkk/tk666ttkk.github.io',
+    'data-repo-id': 'R_kgDOKPLOqw',
+    'data-category-id': 'DIC_kwDOKPLOq84CZHfG',
+    'data-mapping': 'pathname',
+    'data-theme': getGiscusTheme(document.documentElement.getAttribute('data-theme')),
+    'data-reactions-enabled': '1',
+    crossorigin: 'anonymous',
+    async: true
+  },null)
+
+  let ele = document.createElement('script')
+  for (let key in config) {
+    ele.setAttribute(key, config[key])
+  }
+  document.getElementById('giscus-wrap').insertAdjacentElement('afterbegin',ele)
+}
+
+function changeGiscusTheme (theme) {
+  function sendMessage(message) {
+    const iframe = document.querySelector('iframe.giscus-frame')
+    if (!iframe) return
+    iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app')
+  }
+
+  sendMessage({
+    setConfig: {
+      theme: getGiscusTheme(theme)
+    }
+  });
+}
+
+btf.addModeChange('giscus', changeGiscusTheme)
+
+if ('Giscus' === 'Giscus' || !true) {
+  if (true) btf.loadComment(document.getElementById('giscus-wrap'), loadGiscus)
+  else loadGiscus()
+} else {
+  function loadOtherComment () {
+    loadGiscus()
+  }
+}</script></div><script defer="defer" id="fluttering_ribbon" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-fluttering-ribbon.min.js"></script><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/click-show-text.min.js" data-mobile="true" data-text="复,临,泰,大壮,夬,乾,姤,遯,否,观,剥,坤" data-fontsize="15px" data-random="true" async="async"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div class="no-result" id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div><!-- hexo injector body_end start --><script data-pjax>
+  function card_artitalk_injector_config(){
+    var parent_div_git = document.getElementsByClassName('sticky_layout')[0];
+    var item_html = '<div class="card-widget card-shuo"><div class="card-content" style="height:auto;min-height:280px;"><div class="item-headline"><i class="fas fa-comments"></i><span><a href="/artitalk/" title="artitalk page link">碎碎念</a></span><a id="cardVisual" style="cursor:pointer;float:right" onclick="cardVisual()">编辑</a></div><div id="artitalk_main" style="width:100%;height:100%;padding:1px"></div></div></div>';
+    console.log('已挂载card_artitalk');
+    parent_div_git.insertAdjacentHTML("afterbegin",item_html);
+    (()=>{
+      const init = () => {
+        new Artitalk(Object.assign({
+          appId: 'OkB15hnqeT37KHfurnrEnXIW-MdYXbMMI',
+          appKey: 'aljqMsJRItPGAnOMAw2H3I8b',
+        }, {"serverURL":"https://OkB15hnq.api.lncldglobal.com","lang":"zh","pageSize":1,"color1":"#49b1f5","color2":"#00c4b6","atEmoji":{"Mafumafu1":"https://cdn.jsdelivr.net/gh/GamerNoTitle/ValineCDN@master/Mafumafu/199749454.png","Mafumafu2":"https://cdn.jsdelivr.net/gh/GamerNoTitle/ValineCDN@master/Mafumafu/199749455.png"}} ))
+      }
+      if (typeof Artitalk === 'function') {
+        init()
+      } else {
+        getScript('https://npm.elemecdn.com/artitalk').then(init)
+      }
+    })()
+    }
+  var elist = '/artitalk/,/posts/'.split(',');
+  var cpage = location.pathname;
+  var epage = 'all';
+  var flag = 0;
+
+  for (var i=0;i<elist.length;i++){
+    if (cpage.includes(elist[i])){
+      flag++;
+    }
+  }
+
+  if ((epage ==='all')&&(flag == 0)){
+    card_artitalk_injector_config();
+  }
+  else if (epage === cpage){
+    card_artitalk_injector_config();
+  }
+  </script><script async src="https://npm.elemecdn.com/hexo-butterfly-artitalk-pro/lib/card_visual.js"></script><!-- hexo injector body_end end --></body></html>

@@ -349,6 +349,532 @@
       </tags>
   </entry>
   <entry>
+    <title>redis</title>
+    <url>/2023/09/11/redis/</url>
+    <content><![CDATA[<h1 id="Redis"><a href="#Redis" class="headerlink" title="Redis"></a>Redis</h1><p>Nosql，非结构化语言,无关联的，非SQL，BASE</p>
+<p>键值性：redis，文档：mangodb，列表：HBase；GRaph ：Neo4j</p>
+<p>SQL，结构化，关联，SQL查询，ACID</p>
+<p>REDIS:远程词典服务器：基于内存的键值型NoSQL数据库</p>
+<p>key-value，value支持不同的数据结构</p>
+<p>单线程，每个命令具备原子性，</p>
+<p>低延迟，速度快，（基于内存，io多路复用，良好的编码）</p>
+<p>支持数据持久化</p>
+<p>支持主从集群，分片集群</p>
+<p>支持多语言客户端</p>
+<h2 id="数据结构："><a href="#数据结构：" class="headerlink" title="数据结构："></a>数据结构：</h2><table>
+<thead>
+<tr>
+<th>String</th>
+<th>hello world</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Hash</td>
+<td>{name:”jack”,age:21}</td>
+</tr>
+<tr>
+<td>List</td>
+<td>[A-&gt;B-&gt;C-&gt;C]</td>
+</tr>
+<tr>
+<td>Set</td>
+<td>{A,B,C}</td>
+</tr>
+<tr>
+<td>SortedSet</td>
+<td>{A:1,B:2,C:3}</td>
+</tr>
+<tr>
+<td>GEO</td>
+<td>{A:(120.3,30.5)}</td>
+</tr>
+<tr>
+<td>BitMap</td>
+<td>0110110101110101011</td>
+</tr>
+<tr>
+<td>HyperLog</td>
+<td>0110110101110101011</td>
+</tr>
+</tbody></table>
+<h2 id="通用命令："><a href="#通用命令：" class="headerlink" title="通用命令："></a>通用命令：</h2><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>描述</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>KEYS</td>
+<td>查看符合模板的所有key，不建议在生产环境使用</td>
+<td><code>KEYS mypattern*</code></td>
+</tr>
+<tr>
+<td>DEL</td>
+<td>删除一个指定的key</td>
+<td><code>DEL mykey</code></td>
+</tr>
+<tr>
+<td>EXISTS</td>
+<td>判断key是否存在</td>
+<td><code>EXISTS mykey</code></td>
+</tr>
+<tr>
+<td>EXPIRE</td>
+<td>给一个key设置有效期，到期该key会自动删除</td>
+<td><code>EXPIRE mykey 3600</code></td>
+</tr>
+<tr>
+<td>TTL</td>
+<td>查看key的剩余有效时间</td>
+<td><code>TTL mykey</code></td>
+</tr>
+</tbody></table>
+<h3 id="String"><a href="#String" class="headerlink" title="String:"></a>String:</h3><p>字符串类型，可分为3类：</p>
+<p>string:普通字符串 hello world</p>
+<p>int: 整数，自增自减 10 </p>
+<p>float:浮点数，自增自减 92.2</p>
+<p>底层都是字节数组，编码方式不同，最大空间：512m</p>
+<h4 id="常见命令："><a href="#常见命令：" class="headerlink" title="常见命令："></a>常见命令：</h4><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>描述</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>SET</td>
+<td>添加或修改已存在的String键值对</td>
+<td><code>SET mykey &quot;Hello, Redis!&quot;</code></td>
+</tr>
+<tr>
+<td>GET</td>
+<td>根据key获取对应的value</td>
+<td><code>GET mykey</code></td>
+</tr>
+<tr>
+<td>MSET</td>
+<td>批量插入键值对</td>
+<td><code>MSET key1 value1 key2 value2 key3 value3</code></td>
+</tr>
+<tr>
+<td>MGET</td>
+<td>根据key，批量获取value</td>
+<td><code>MGET key1 key2 key3</code></td>
+</tr>
+<tr>
+<td>INCR</td>
+<td>让整形key自增1</td>
+<td><code>INCR mycounter</code></td>
+</tr>
+<tr>
+<td>INCRBY</td>
+<td>让整形key按规定步长自增</td>
+<td><code>INCRBY mycounter 5</code></td>
+</tr>
+<tr>
+<td>INCRBYFLOAT</td>
+<td>让浮点型key按规定步长自增</td>
+<td><code>INCRBYFLOAT myfloat 0.5</code></td>
+</tr>
+<tr>
+<td>SETNX</td>
+<td>添加键值对，前提是不存在</td>
+<td><code>SETNX uniquekey &quot;This is a unique value&quot;</code></td>
+</tr>
+<tr>
+<td>SETEX</td>
+<td>添加键值对并指定有效期</td>
+<td><code>SETEX timedkey 3600 &quot;This will expire in 1 hour&quot;</code></td>
+</tr>
+</tbody></table>
+<h3 id="key的层级结构："><a href="#key的层级结构：" class="headerlink" title="key的层级结构："></a>key的层级结构：</h3><p>Redis中的key允许多个单词形成层级结构，多个单词之间:隔开，例如 项目名:业务名:类型:id</p>
+<p>举例子：若value是java对象，则可以将对象序列化为JSON字符串后存储。</p>
+<table>
+<thead>
+<tr>
+<th>KEY</th>
+<th>VALUE:</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>heima:user:1</td>
+<td>{“id”:1,”name”:”jack”,”age”:21}</td>
+</tr>
+<tr>
+<td>heima:product:1</td>
+<td>{“id”:1,”name”:”oneplus8T”,”price”:2599}</td>
+</tr>
+</tbody></table>
+<h3 id="Hash类型"><a href="#Hash类型" class="headerlink" title="Hash类型:"></a>Hash类型:</h3><p>散列，其value是一个无序字典，类似java中的HashMap结构</p>
+<p>相对于String转化为JSON字符串存储，当需要修改对象的某个字段很不方便</p>
+<p>Hash结构可以将对象的每个字段独立存储，可针对单个字段做CRUD</p>
+<table>
+<thead>
+<tr>
+<th>KEY</th>
+<th>VALUE</th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td>field</td>
+<td>value</td>
+</tr>
+<tr>
+<td>heima:user:1</td>
+<td>name</td>
+<td>jack</td>
+</tr>
+<tr>
+<td></td>
+<td>age</td>
+<td>21</td>
+</tr>
+<tr>
+<td>heima:user:2</td>
+<td>name</td>
+<td>Rose</td>
+</tr>
+<tr>
+<td></td>
+<td>age</td>
+<td>18</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>描述</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>HSET</td>
+<td>设置哈希表字段和值</td>
+<td><code>HSET heima:user:1 name jack</code></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><code>HSET heima:user:1 age 21</code></td>
+</tr>
+<tr>
+<td>HGET</td>
+<td>获取哈希表中指定字段的值</td>
+<td><code>HGET heima:user:1 name</code></td>
+</tr>
+<tr>
+<td>HMGET</td>
+<td>批量获取哈希表中多个字段的值</td>
+<td><code>HMGET heima:user:1 name age heima:user:2 name age</code></td>
+</tr>
+<tr>
+<td>HDEL</td>
+<td>删除哈希表中的一个或多个字段</td>
+<td><code>HDEL heima:user:1 age</code></td>
+</tr>
+<tr>
+<td>HGETALL</td>
+<td>获取哈希表中所有字段和值</td>
+<td><code>HGETALL heima:user:1</code></td>
+</tr>
+<tr>
+<td>HINCRBY</td>
+<td>为哈希表字段增加整数值</td>
+<td><code>HINCRBY heima:user:1 age 5</code></td>
+</tr>
+<tr>
+<td>HINCRBYFLOAT</td>
+<td>为哈希表字段增加浮点数值</td>
+<td><code>HINCRBYFLOAT heima:user:1 age 0.5</code></td>
+</tr>
+<tr>
+<td>HEXISTS</td>
+<td>判断哈希表中是否存在指定字段</td>
+<td><code>HEXISTS heima:user:1 name</code></td>
+</tr>
+<tr>
+<td>HKEYS</td>
+<td>获取哈希表中的所有字段名</td>
+<td><code>HKEYS heima:user:1</code></td>
+</tr>
+<tr>
+<td>HVALS</td>
+<td>获取哈希表中的所有字段值</td>
+<td><code>HVALS heima:user:1</code></td>
+</tr>
+</tbody></table>
+<h3 id="List类型："><a href="#List类型：" class="headerlink" title="List类型："></a>List类型：</h3><p>和java的LinkedList类似，常用来存储一个有序数据，可以看做一个双向链表结构，可正向和反向检索。</p>
+<p><em><strong>Redis的List类型通常用于存储具有时间顺序的数据，例如日志、消息队列等。</strong></em></p>
+<p>特征：</p>
+<ol>
+<li><strong>有序</strong>：Redis List是有序的数据结构，它按照元素插入的顺序来存储数据。你可以在列表的两端执行插入和删除操作。</li>
+<li><strong>元素可以重复</strong>：与集合（Set）不同，Redis List允许元素重复出现。这意味着你可以在同一个List中多次存储相同的元素。</li>
+<li><strong>插入和删除快</strong>：Redis List对于在列表的两端执行插入和删除操作非常快速。这是因为它是一个双向链表结构，使得在列表的头部或尾部添加或删除元素的时间复杂度是O(1)。</li>
+<li><strong>查询速度一般</strong>：虽然Redis List对于插入和删除操作非常高效，但对于随机访问（根据索引或值查找元素）而言，速度较慢。这是因为在链表中进行随机访问需要遍历链表，时间复杂度是O(n)。</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>描述</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>LPUSH</td>
+<td>在列表的头部插入一个或多个元素</td>
+<td><code>LPUSH mylist value1 value2</code></td>
+</tr>
+<tr>
+<td>RPUSH</td>
+<td>在列表的尾部插入一个或多个元素</td>
+<td><code>RPUSH mylist value3 value4</code></td>
+</tr>
+<tr>
+<td>LPOP</td>
+<td>移除并返回列表的头部元素</td>
+<td><code>LPOP mylist</code></td>
+</tr>
+<tr>
+<td>RPOP</td>
+<td>移除并返回列表的尾部元素</td>
+<td><code>RPOP mylist</code></td>
+</tr>
+<tr>
+<td>LINDEX</td>
+<td>根据索引获取列表中的元素</td>
+<td><code>LINDEX mylist 0</code></td>
+</tr>
+<tr>
+<td>LRANGE</td>
+<td>获取列表中指定范围内的元素</td>
+<td><code>LRANGE mylist 0 2</code></td>
+</tr>
+<tr>
+<td>LLEN</td>
+<td>获取列表的长度</td>
+<td><code>LLEN mylist</code></td>
+</tr>
+<tr>
+<td>BLPOP</td>
+<td>从左边（头部）阻塞弹出元素。</td>
+<td>BLPOP mylist 10</td>
+</tr>
+<tr>
+<td>BRPOP</td>
+<td>从右边（尾部）阻塞弹出元素。</td>
+<td>BLPOP mylist 10</td>
+</tr>
+</tbody></table>
+<h3 id="Set类型："><a href="#Set类型：" class="headerlink" title="Set类型："></a>Set类型：</h3><p>和java的HashSet类似，value为null的HashMap，因此也是一个Hash表</p>
+<p><em><strong>Redis的Set类型通常用于存储不重复的元素集合，例如用户的标签、喜好、关注列表等。</strong></em></p>
+<p>特征：</p>
+<ol>
+<li><strong>无序</strong>：Redis Set是无序的，这意味着元素在集合中的存储顺序不是固定的，与元素的插入顺序无关。</li>
+<li><strong>元素不可重复</strong>：与List不同，Set类型不允许重复元素，每个元素在集合中只能出现一次。</li>
+<li><strong>查找快</strong>：Redis Set内部是通过哈希表实现的，因此查找元素的速度非常快，时间复杂度是O(1)。</li>
+<li><strong>支持并集、差集和交集功能</strong>：Redis提供了一系列用于集合操作的命令，如并集（<code>SUNION</code>）、差集（<code>SDIFF</code>）和交集（<code>SINTER</code>）等，这些命令可以用于对多个集合进行操作，如合并、比较和筛选等</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>描述</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>SADD</td>
+<td>向集合中添加一个或多个元素</td>
+<td><code>SADD myset member1 member2</code></td>
+</tr>
+<tr>
+<td>SREM</td>
+<td>从集合中移除一个或多个元素</td>
+<td><code>SREM myset member1</code></td>
+</tr>
+<tr>
+<td>SMEMBERS</td>
+<td>获取集合中的所有元素</td>
+<td><code>SMEMBERS myset</code></td>
+</tr>
+<tr>
+<td>SISMEMBER</td>
+<td>检查元素是否存在于集合中</td>
+<td><code>SISMEMBER myset member1</code></td>
+</tr>
+<tr>
+<td>SCARD</td>
+<td>获取集合的基数（元素数量）</td>
+<td><code>SCARD myset</code></td>
+</tr>
+<tr>
+<td>SUNION</td>
+<td>计算多个集合的并集</td>
+<td><code>SUNION set1 set2 set3</code></td>
+</tr>
+<tr>
+<td>SDIFF</td>
+<td>计算多个集合的差集</td>
+<td><code>SDIFF set1 set2</code></td>
+</tr>
+<tr>
+<td>SINTER</td>
+<td>计算多个集合的交集</td>
+<td><code>SINTER set1 set2</code></td>
+</tr>
+</tbody></table>
+<h3 id="SortedSet类型："><a href="#SortedSet类型：" class="headerlink" title="SortedSet类型："></a>SortedSet类型：</h3><p>可排序的Set集合，和java的TreeSet类似，但TS底层是红黑树，而SortedSet中的每一个元素都带有一个score属性，可以基于score属性对元素排序，底层的实现是一个跳表（SkipList）加Hash表</p>
+<p>特征:</p>
+<ol>
+<li><strong>可排序</strong>：Redis Sorted Set是一个可排序的集合，它根据每个元素的分数（score）属性对元素进行排序。这允许你按照特定顺序访问元素，无论是升序还是降序。</li>
+<li><strong>元素不重复</strong>：与Set类型类似，Sorted Set中的元素是不重复的，每个元素只能出现一次。</li>
+<li><strong>查询速度快</strong>：Redis Sorted Set的底层实现是一个跳表（Skip List）和一个哈希表（Hash Table）的结合，这使得查找元素的速度非常快，时间复杂度是O(log(N))。</li>
+<li><strong>每个元素都有一个分数（score）属性</strong>：与普通Set不同，Sorted Set中的每个元素都关联有一个分数，这个分数可以是任意浮点数值，用于排序和比较元素。</li>
+</ol>
+<p><em><strong>Redis的Sorted Set常用于需要按分数排序的场景，如排行榜、计分系统、优先级队列等。</strong></em></p>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>描述</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ZADD</td>
+<td>向有序集合中添加一个或多个元素，每个元素关联一个分数</td>
+<td><code>ZADD myzset 1 &quot;member1&quot; 2 &quot;member2&quot;</code></td>
+</tr>
+<tr>
+<td>ZREM</td>
+<td>从有序集合中移除一个或多个元素</td>
+<td><code>ZREM myzset &quot;member1&quot;</code></td>
+</tr>
+<tr>
+<td>ZRANGE</td>
+<td>按照元素的分数范围获取元素</td>
+<td><code>ZRANGE myzset 0 -1</code> (获取所有元素)</td>
+</tr>
+<tr>
+<td>ZRANK</td>
+<td>按照元素的分数范围获取元素，以逆序返回</td>
+<td><code>ZRANK myzset member1</code> (获取元素对应的排名)</td>
+</tr>
+<tr>
+<td>ZSCORE</td>
+<td>获取指定元素的分数</td>
+<td><code>ZSCORE myzset &quot;member1&quot;</code></td>
+</tr>
+<tr>
+<td>ZINCRBY</td>
+<td>为指定元素的分数增加指定值</td>
+<td><code>ZINCRBY myzset 2 &quot;member1&quot;</code> (增加 member1 的分数 by 2)</td>
+</tr>
+<tr>
+<td>ZCARD</td>
+<td>获取有序集合的基数（元素数量）</td>
+<td><code>ZCARD myzset</code> (获取有序集合中元素的数量)</td>
+</tr>
+<tr>
+<td>ZCOUNT</td>
+<td>统计分数在指定范围内的元素数量</td>
+<td><code>ZCOUNT myzset 1 3</code> (统计分数在 1 到 3 范围内的元素数量)</td>
+</tr>
+<tr>
+<td>ZREVRANGEBYSCORE</td>
+<td>按照元素的分数范围获取元素，以逆序返回</td>
+<td><code>ZREVRANGEBYSCORE myzset max min</code> (逆序获取指定分数范围内的元素)</td>
+</tr>
+<tr>
+<td>ZDIFF</td>
+<td>计算多个有序集合的差集</td>
+<td><code>ZDIFF output-key input-key1 input-key2</code> (计算 input-key1 和 input-key2 的差集并将结果存储在 output-key 中)</td>
+</tr>
+<tr>
+<td>ZINTER</td>
+<td>计算多个有序集合的交集</td>
+<td><code>ZINTER output-key input-key1 input-key2 WEIGHTS 2 3</code> (计算 input-key1 和 input-key2 的交集并指定权重)</td>
+</tr>
+<tr>
+<td>ZUNION</td>
+<td>计算多个有序集合的并集</td>
+<td><code>ZUNION output-key input-key1 input-key2 AGGREGATE SUM</code> (计算 input-key1 和 input-key2 的并集并指定聚合方式)</td>
+</tr>
+</tbody></table>
+<h2 id="Java客户端："><a href="#Java客户端：" class="headerlink" title="Java客户端："></a>Java客户端：</h2><h3 id="Jedis"><a href="#Jedis" class="headerlink" title="Jedis:"></a>Jedis:</h3><p>实例线程是不安全的，多线程环境下需要基于连接池来使用</p>
+<ol>
+<li><p><strong>连接到Redis服务器</strong>：使用Jedis，你可以轻松地连接到Redis服务器。你需要提供Redis服务器的主机名（或IP地址）和端口号。</p>
+</li>
+<li><p><strong>执行Redis操作</strong>：Jedis库允许你执行各种Redis操作，包括字符串、列表、集合、有序集合、哈希表等。你可以使用Jedis提供的方法来执行这些操作。</p>
+</li>
+<li><p><strong>异常处理</strong>：Jedis处理了与Redis连接和操作相关的异常，这使得在Java应用程序中与Redis交互更加稳定。</p>
+</li>
+<li><p><strong>连接池</strong>：Jedis还提供了连接池的支持，这有助于在多个线程之间共享Redis连接，并且可以有效地管理和重用连接。</p>
+</li>
+<li><p><strong>支持Redis事务</strong>：Jedis支持Redis事务，你可以使用<code>MULTI</code>、<code>EXEC</code>、<code>WATCH</code>等命令来执行事务操作。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> redis.clients.jedis.Jedis;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">JedisExample</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="comment">// 创建Jedis客户端连接</span></span><br><span class="line">        <span class="type">Jedis</span> <span class="variable">jedis</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Jedis</span>(<span class="string">&quot;localhost&quot;</span>, <span class="number">6379</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 执行Redis操作</span></span><br><span class="line">        jedis.set(<span class="string">&quot;mykey&quot;</span>, <span class="string">&quot;Hello, Redis!&quot;</span>);</span><br><span class="line">        <span class="type">String</span> <span class="variable">value</span> <span class="operator">=</span> jedis.get(<span class="string">&quot;mykey&quot;</span>);</span><br><span class="line">        System.out.println(<span class="string">&quot;Value of &#x27;mykey&#x27;: &quot;</span> + value);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 关闭Jedis连接</span></span><br><span class="line">        jedis.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+<p> <em><strong>Jedis连接池</strong></em></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> redis.clients.jedis.Jedis;</span><br><span class="line"><span class="keyword">import</span> redis.clients.jedis.JedisPool;</span><br><span class="line"><span class="keyword">import</span> redis.clients.jedis.JedisPoolConfig;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">JedisPoolExample</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="comment">// 创建连接池配置</span></span><br><span class="line">        <span class="type">JedisPoolConfig</span> <span class="variable">poolConfig</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">JedisPoolConfig</span>();</span><br><span class="line">        poolConfig.setMaxTotal(<span class="number">10</span>); <span class="comment">// 设置最大连接数</span></span><br><span class="line">        poolConfig.setMaxIdle(<span class="number">5</span>);   <span class="comment">// 设置最大空闲连接数</span></span><br><span class="line">        poolConfig.setMinIdle(<span class="number">1</span>);   <span class="comment">// 设置最小空闲连接数</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 创建连接池</span></span><br><span class="line">        <span class="type">JedisPool</span> <span class="variable">jedisPool</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">JedisPool</span>(poolConfig, <span class="string">&quot;localhost&quot;</span>, <span class="number">6379</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 从连接池获取连接</span></span><br><span class="line">        <span class="keyword">try</span> (<span class="type">Jedis</span> <span class="variable">jedis</span> <span class="operator">=</span> jedisPool.getResource()) &#123;</span><br><span class="line">            <span class="comment">// 执行Redis操作</span></span><br><span class="line">            jedis.set(<span class="string">&quot;mykey&quot;</span>, <span class="string">&quot;Hello, Jedis Pool!&quot;</span>);</span><br><span class="line">            <span class="type">String</span> <span class="variable">value</span> <span class="operator">=</span> jedis.get(<span class="string">&quot;mykey&quot;</span>);</span><br><span class="line">            System.out.println(<span class="string">&quot;Value of &#x27;mykey&#x27;: &quot;</span> + value);</span><br><span class="line">        &#125; <span class="comment">// 连接会在此处自动关闭并返回连接池</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 关闭连接池</span></span><br><span class="line">        jedisPool.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Lettuce"><a href="#Lettuce" class="headerlink" title="Lettuce:"></a>Lettuce:</h3><p> Lettuce是一个Java编写的高性能、异步的Redis客户端库，用于与Redis服务器进行交互。它被设计成异步和非阻塞的，允许开发者在高并发应用中高效地与Redis数据库进行通信。</p>
+<ol>
+<li><p><strong>异步和非阻塞</strong>：Lettuce是一个异步、非阻塞的Redis客户端，它允许你执行Redis操作而不会阻塞应用程序的执行线程。这对于高并发的应用程序非常有用，因为它可以减少线程等待时间，提高性能。</p>
+</li>
+<li><p><strong>连接池</strong>：Lettuce内置了连接池支持，这使得在多个线程之间共享Redis连接变得容易，同时能够有效地管理和重用连接。</p>
+</li>
+<li><p><strong>集成Redis Sentinel和Cluster</strong>：Lettuce可以轻松地与Redis Sentinel和Redis Cluster一起工作，支持高可用性和分布式部署。</p>
+</li>
+<li><p><strong>支持SSL&#x2F;TLS</strong>：Lettuce支持通过SSL&#x2F;TLS加密与Redis服务器之间的通信，提供数据安全性。</p>
+</li>
+<li><p><strong>Reactive编程模型</strong>：Lettuce还提供了对响应式编程模型的支持，可以与Spring Framework的Project Reactor等库集成，允许开发者编写异步和响应式的Redis操作。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> io.lettuce.core.api.StatefulRedisConnection;</span><br><span class="line"><span class="keyword">import</span> io.lettuce.core.api.sync.RedisCommands;</span><br><span class="line"><span class="keyword">import</span> io.lettuce.core.RedisClient;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">LettuceExample</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="comment">// 创建RedisClient</span></span><br><span class="line">        <span class="type">RedisClient</span> <span class="variable">redisClient</span> <span class="operator">=</span> RedisClient.create(<span class="string">&quot;redis://localhost:6379&quot;</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 创建连接</span></span><br><span class="line">        StatefulRedisConnection&lt;String, String&gt; connection = redisClient.connect();</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 获取同步的Redis命令对象</span></span><br><span class="line">        RedisCommands&lt;String, String&gt; syncCommands = connection.sync();</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 执行Redis操作</span></span><br><span class="line">        syncCommands.set(<span class="string">&quot;mykey&quot;</span>, <span class="string">&quot;Hello, Lettuce!&quot;</span>);</span><br><span class="line">        <span class="type">String</span> <span class="variable">value</span> <span class="operator">=</span> syncCommands.get(<span class="string">&quot;mykey&quot;</span>);</span><br><span class="line">        System.out.println(<span class="string">&quot;Value of &#x27;mykey&#x27;: &quot;</span> + value);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 关闭连接和客户端</span></span><br><span class="line">        connection.close();</span><br><span class="line">        redisClient.shutdown();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="Redisson"><a href="#Redisson" class="headerlink" title="Redisson:"></a>Redisson:</h3><p>Redisson是一个基于Java的Redis客户端和分布式应用框架，它提供了一系列高级功能和工具，使得在Java应用程序中与Redis进行交互和利用分布式特性变得更加容易。</p>
+<ol>
+<li><strong>分布式数据结构</strong>：Redisson提供了丰富的分布式数据结构，如分布式集合、分布式映射、分布式队列、分布式锁等。这些数据结构可以直接在Java应用中使用，无需手动编写复杂的分布式代码。</li>
+<li><strong>Redis连接池</strong>：Redisson内置了连接池管理，使得连接到Redis服务器更加高效，可以有效地重用和管理连接。5</li>
+<li><strong>分布式锁和信号量</strong>：Redisson提供了分布式锁和信号量的支持，使得多个应用程序实例可以协调和同步访问共享资源。</li>
+<li><strong>发布&#x2F;订阅</strong>：Redisson支持发布&#x2F;订阅模式，允许应用程序通过Redis进行实时消息传递和事件通知。</li>
+<li><strong>集成Spring</strong>：Redisson可以轻松集成到Spring Framework中，以便更容易地与Spring应用程序一起使用。</li>
+<li><strong>Redis Sentinel和Redis Cluster支持</strong>：Redisson支持与Redis Sentinel和Redis Cluster一起工作，实现高可用性和分布式部署。</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> org.redisson.Redisson;</span><br><span class="line"><span class="keyword">import</span> org.redisson.api.RedissonClient;</span><br><span class="line"><span class="keyword">import</span> org.redisson.config.Config;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">RedissonExample</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="comment">// 创建Redisson配置</span></span><br><span class="line">        <span class="type">Config</span> <span class="variable">config</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Config</span>();</span><br><span class="line">        config.useSingleServer().setAddress(<span class="string">&quot;redis://localhost:6379&quot;</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 创建Redisson客户端连接</span></span><br><span class="line">        <span class="type">RedissonClient</span> <span class="variable">redisson</span> <span class="operator">=</span> Redisson.create(config);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 执行Redis操作</span></span><br><span class="line">        redisson.getBucket(<span class="string">&quot;mykey&quot;</span>).set(<span class="string">&quot;Hello, Redisson!&quot;</span>);</span><br><span class="line">        <span class="type">String</span> <span class="variable">value</span> <span class="operator">=</span> redisson.getBucket(<span class="string">&quot;mykey&quot;</span>).get();</span><br><span class="line">        System.out.println(<span class="string">&quot;Value of &#x27;mykey&#x27;: &quot;</span> + value);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 关闭Redisson客户端连接</span></span><br><span class="line">        redisson.shutdown();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="SpringDataRedis"><a href="#SpringDataRedis" class="headerlink" title="SpringDataRedis:"></a>SpringDataRedis:</h3><p>SpringData是Spring中数据操作的模块，包含多各种数据库的集成. Spring Data Redis是Spring框架的一部分，它提供了对Redis数据库的集成和支持。</p>
+<ol>
+<li><strong>注解驱动</strong>：Spring Data Redis提供了一组注解，可以用于在Java类中定义与Redis数据存储相关的操作。这些注解包括<code>@RedisHash</code>、<code>@RedisSet</code>、<code>@RedisList</code>等，可以帮助你将Java对象映射到Redis数据结构。</li>
+<li><strong>Redis模板</strong>：Spring Data Redis引入了<code>RedisTemplate</code>类，它提供了一种便捷的方式来执行Redis操作，如数据存储、检索、删除等。你可以使用<code>RedisTemplate</code>来与Redis数据库进行交互。</li>
+<li><strong>连接池管理</strong>：Spring Data Redis可以与连接池管理集成，以确保有效地管理和重用Redis连接。你可以配置连接池的参数，以满足性能和资源管理的需求。</li>
+<li><strong>事务支持</strong>：Spring Data Redis提供了事务支持，允许你在多个Redis操作中创建事务。你可以使用<code>@Transactional</code>注解来管理Redis事务。</li>
+<li><strong>Spring Boot集成</strong>：Spring Data Redis与Spring Boot紧密集成，使得在Spring Boot应用程序中使用Redis变得更加简单。Spring Boot自动配置了Redis连接池和<code>RedisTemplate</code>，你只需添加相关依赖即可。</li>
+</ol>
+<h4 id="RedisTemplate"><a href="#RedisTemplate" class="headerlink" title="RedisTemplate"></a>RedisTemplate</h4><p><code>RedisTemplate</code>是Spring Data Redis中的一个关键组件，它是一个通用的Redis操作模板，用于执行各种Redis操作，如数据存储、检索、删除等。<code>RedisTemplate</code>提供了一种便捷的方式来与Redis数据库进行交互，同时隐藏了与底层Redis客户端库的复杂性。</p>
+<ol>
+<li><strong>数据类型支持</strong>：<code>RedisTemplate</code>支持多种Redis数据类型，包括字符串、列表、集合、有序集合、散列表等。你可以根据需要选择适当的方法来执行不同类型的操作。</li>
+<li><strong>序列化和反序列化</strong>：<code>RedisTemplate</code>负责将Java对象序列化为Redis支持的格式，并在从Redis检索数据时进行反序列化。你可以配置使用的序列化器，或者使用默认的序列化器。</li>
+<li><strong>连接池管理</strong>：<code>RedisTemplate</code>可以与连接池管理集成，以确保有效地管理和重用Redis连接。你可以配置连接池的参数，以满足性能和资源管理的需求。</li>
+<li><strong>事务支持</strong>：<code>RedisTemplate</code>提供了事务支持，允许你在多个Redis操作中创建事务。你可以使用<code>multi()</code>和<code>exec()</code>方法来开启和提交Redis事务。</li>
+<li><strong>Pipeline支持</strong>：<code>RedisTemplate</code>支持Redis的Pipeline操作，允许你一次发送多个命令并一次接收多个响应，以提高性能。</li>
+</ol>
+<p>可读性差</p>
+<p>内存占用大</p>
+]]></content>
+      <categories>
+        <category>redis</category>
+      </categories>
+      <tags>
+        <tag>redis</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>rk</title>
     <url>/2023/09/08/rk/</url>
     <content><![CDATA[<p>按照题型分类补充一些知识点：</p>
