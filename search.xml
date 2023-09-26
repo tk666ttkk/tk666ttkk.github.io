@@ -57,18 +57,6 @@
       </tags>
   </entry>
   <entry>
-    <title>rk</title>
-    <url>/2023/09/08/rk/</url>
-    <content><![CDATA[<p>按照题型分类补充一些知识点：</p>
-]]></content>
-      <categories>
-        <category>rk</category>
-      </categories>
-      <tags>
-        <tag>rk</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>面试题</title>
     <url>/2023/09/09/mst/</url>
     <content><![CDATA[<h1 id="学成在线项目的面试题："><a href="#学成在线项目的面试题：" class="headerlink" title="学成在线项目的面试题："></a>学成在线项目的面试题：</h1><h2 id="1-Maven："><a href="#1-Maven：" class="headerlink" title="1.Maven："></a>1.Maven：</h2><p>mvn clean compile test package install deploy 清除target 编译源代码 执行单元测试 打包 打包并保存到本地 打包并上传到服务器 </p>
@@ -337,6 +325,18 @@
       </categories>
       <tags>
         <tag>面试题</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>rk</title>
+    <url>/2023/09/08/rk/</url>
+    <content><![CDATA[<p>按照题型分类补充一些知识点：</p>
+]]></content>
+      <categories>
+        <category>rk</category>
+      </categories>
+      <tags>
+        <tag>rk</tag>
       </tags>
   </entry>
   <entry>
