@@ -1989,7 +1989,7 @@ public void coursePublishJobHandler() throws Exception &#123;
 </ol>
 <h5 id="OpenResty的快速入门"><a href="#OpenResty的快速入门" class="headerlink" title="OpenResty的快速入门"></a>OpenResty的快速入门</h5><p>即Windows上的nginx只是起到反向代理的作用，它里面配置了集群，这个集群由很多台nginx在虚拟机中，这些集群才是进行缓存的服务器。80端口的nginx本身没有处理请求和缓存的功能，只能反向代理到openresty服务器，里面接受请求运用lua脚本进行处理并返回数据。</p>
 <p>80端口配置多台本地缓存集群</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">http &#123;</span><br><span class="line">    upstream nginx-cluster&#123;</span><br><span class="line">        server <span class="number">192.168</span><span class="number">.101</span><span class="number">.65</span>:<span class="number">8081</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    server &#123;</span><br><span class="line">        listen       <span class="number">80</span>;</span><br><span class="line">        server_name  localhost;</span><br><span class="line">	location /api &#123;</span><br><span class="line">            proxy_pass http:<span class="comment">//nginx-cluster;</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">http &#123;</span><br><span class="line">    upstream nginx-cluster&#123;</span><br><span class="line">        server <span class="number">192.168</span><span class="number">.101</span><span class="number">.65</span>:<span class="number">8081</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    server &#123;</span><br><span class="line">        listen       <span class="number">80</span>;</span><br><span class="line">        server_name  localhost;</span><br><span class="line">	location /api &#123;</span><br><span class="line">            proxy_pass http:<span class="comment">//nginx-cluster;</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
 
@@ -2196,5 +2196,430 @@ public void coursePublishJobHandler() throws Exception &#123;
       <tags>
         <tag>Redis</tag>
       </tags>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2023/10/08/Redis%E9%9B%86%E7%BE%A4/</url>
+    <content><![CDATA[<h1 id="Redis集群"><a href="#Redis集群" class="headerlink" title="Redis集群"></a>Redis集群</h1><p>本章是基于CentOS7下的Redis集群教程，包括：</p>
+<ul>
+<li>单机安装Redis</li>
+<li>Redis主从</li>
+<li>Redis分片集群</li>
+</ul>
+<h1 id="1-单机安装Redis"><a href="#1-单机安装Redis" class="headerlink" title="1.单机安装Redis"></a>1.单机安装Redis</h1><p>首先需要安装Redis所需要的依赖：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">yum install -y gcc tcl</span><br></pre></td></tr></table></figure>
+
+
+
+<p>然后将课前资料提供的Redis安装包上传到虚拟机的任意目录：</p>
+<p><img src="/assets/image-20210629114325516.png" alt="image-20210629114325516"></p>
+<p>例如，我放到了&#x2F;tmp目录：</p>
+<p><img src="/assets/image-20210629114830642.png" alt="image-20210629114830642"></p>
+<p>解压缩：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">tar -xzf redis-6.2.4.tar.gz</span><br></pre></td></tr></table></figure>
+
+<p>解压后：</p>
+<p><img src="/assets/image-20210629114941810.png" alt="image-20210629114941810"></p>
+<p>进入redis目录：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> redis-6.2.4</span><br></pre></td></tr></table></figure>
+
+
+
+<p>运行编译命令：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
+
+<p>如果没有出错，应该就安装成功了。</p>
+<p>然后修改redis.conf文件中的一些配置：</p>
+<figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 绑定地址，默认是127.0.0.1，会导致只能在本地访问。修改为0.0.0.0则可以在任意IP访问</span></span><br><span class="line"><span class="attr">bind</span> <span class="string">0.0.0.0</span></span><br><span class="line"><span class="comment"># 保护模式，关闭保护模式</span></span><br><span class="line"><span class="attr">protected-mode</span> <span class="string">no</span></span><br><span class="line"><span class="comment"># 数据库数量，设置为1</span></span><br><span class="line"><span class="attr">databases</span> <span class="string">1</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>启动Redis：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">redis-server redis.conf</span><br></pre></td></tr></table></figure>
+
+<p>停止redis服务：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">redis-cli shutdown</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+<h1 id="2-Redis主从集群"><a href="#2-Redis主从集群" class="headerlink" title="2.Redis主从集群"></a>2.Redis主从集群</h1><h2 id="2-1-集群结构"><a href="#2-1-集群结构" class="headerlink" title="2.1.集群结构"></a>2.1.集群结构</h2><p>我们搭建的主从集群结构如图：</p>
+<p><img src="/assets/image-20210630111505799.png" alt="image-20210630111505799"></p>
+<p>共包含三个节点，一个主节点，两个从节点。</p>
+<p>这里我们会在同一台虚拟机中开启3个redis实例，模拟主从集群，信息如下：</p>
+<table>
+<thead>
+<tr>
+<th align="center">IP</th>
+<th align="center">PORT</th>
+<th align="center">角色</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">192.168.150.101</td>
+<td align="center">7001</td>
+<td align="center">master</td>
+</tr>
+<tr>
+<td align="center">192.168.150.101</td>
+<td align="center">7002</td>
+<td align="center">slave</td>
+</tr>
+<tr>
+<td align="center">192.168.150.101</td>
+<td align="center">7003</td>
+<td align="center">slave</td>
+</tr>
+</tbody></table>
+<h2 id="2-2-准备实例和配置"><a href="#2-2-准备实例和配置" class="headerlink" title="2.2.准备实例和配置"></a>2.2.准备实例和配置</h2><p>要在同一台虚拟机开启3个实例，必须准备三份不同的配置文件和目录，配置文件所在目录也就是工作目录。</p>
+<p>1）创建目录</p>
+<p>我们创建三个文件夹，名字分别叫7001、7002、7003：(我直接在&#x2F;data&#x2F;soft&#x2F;redis目录下创建了)</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 进入/tmp目录</span></span><br><span class="line"><span class="built_in">cd</span> /tmp</span><br><span class="line"><span class="comment"># 创建目录</span></span><br><span class="line"><span class="built_in">mkdir</span> 7001 7002 7003</span><br></pre></td></tr></table></figure>
+
+<p>如图：</p>
+<p><img src="/assets/image-20210630113929868.png" alt="image-20210630113929868"></p>
+<p>2）恢复原始配置</p>
+<p>修改redis-6.2.4&#x2F;redis.conf文件，将其中的持久化模式改为默认的RDB模式，AOF保持关闭状态。</p>
+<figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 开启RDB</span></span><br><span class="line"><span class="comment"># save &quot;&quot;</span></span><br><span class="line"><span class="attr">save</span> <span class="string">3600 1</span></span><br><span class="line"><span class="attr">save</span> <span class="string">300 100</span></span><br><span class="line"><span class="attr">save</span> <span class="string">60 10000</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment"># 关闭AOF</span></span><br><span class="line"><span class="attr">appendonly</span> <span class="string">no</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>3）拷贝配置文件到每个实例目录</p>
+<p>然后将redis-6.2.4&#x2F;redis.conf文件拷贝到三个目录中（在&#x2F;tmp目录执行下列命令）：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 方式一：逐个拷贝</span></span><br><span class="line"><span class="built_in">cp</span> redis-6.2.4/redis.conf 7001</span><br><span class="line"><span class="built_in">cp</span> redis-6.2.4/redis.conf 7002</span><br><span class="line"><span class="built_in">cp</span> redis-6.2.4/redis.conf 7003</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 方式二：管道组合命令，一键拷贝</span></span><br><span class="line"><span class="built_in">echo</span> 7001 7002 7003 | xargs -t -n 1 <span class="built_in">cp</span> redis-6.2.4/redis.conf</span><br><span class="line"><span class="built_in">echo</span> 7001 7002 7003 | xargs -t -n 1 <span class="built_in">cp</span> redis/redis.conf</span><br></pre></td></tr></table></figure>
+
+
+
+<p>4）修改每个实例的端口、工作目录</p>
+<p>修改每个文件夹内的配置文件，将端口分别修改为7001、7002、7003，将rdb文件保存位置都修改为自己所在目录（在&#x2F;tmp目录执行下列命令）：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> 7001 7002 7003</span><br><span class="line"><span class="built_in">cp</span> redis/redis.conf 7004</span><br><span class="line">sed -i -e <span class="string">&#x27;s/6379/7001/g&#x27;</span> -e <span class="string">&#x27;s/dir .\//dir \/tmp\/7001\//g&#x27;</span> 7001/redis.conf</span><br><span class="line">sed -i -e <span class="string">&#x27;s/6379/7002/g&#x27;</span> -e <span class="string">&#x27;s/dir .\//dir \/tmp\/7002\//g&#x27;</span> 7002/redis.conf</span><br><span class="line">sed -i -e <span class="string">&#x27;s/6379/7003/g&#x27;</span> -e <span class="string">&#x27;s/dir .\//dir \/tmp\/7003\//g&#x27;</span> 7003/redis.conf</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">sed -i -e <span class="string">&#x27;s/6379/7004/g&#x27;</span> -e <span class="string">&#x27;s/dir .\//dir \/tmp\/7004\//g&#x27;</span> 7004/redis.conf</span><br></pre></td></tr></table></figure>
+
+
+
+<p>5）修改每个实例的声明IP</p>
+<p>虚拟机本身有多个IP，为了避免将来混乱，我们需要在redis.conf文件中指定每一个实例的绑定ip信息，格式如下：</p>
+<figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="comment"># redis实例的声明 IP</span></span><br><span class="line"><span class="attr">replica-announce-ip</span> <span class="string">192.168.150.101</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>每个目录都要改，我们一键完成修改（在&#x2F;tmp目录执行下列命令）：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 逐一执行</span></span><br><span class="line"></span><br><span class="line">sed -i <span class="string">&#x27;1a replica-announce-ip 192.168.150.101&#x27;</span> 7001/redis.conf</span><br><span class="line">sed -i <span class="string">&#x27;1a replica-announce-ip 192.168.150.101&#x27;</span> 7002/redis.conf</span><br><span class="line">sed -i <span class="string">&#x27;1a replica-announce-ip 192.168.150.101&#x27;</span> 7003/redis.conf</span><br><span class="line"></span><br><span class="line"><span class="comment"># 或者一键修改</span></span><br><span class="line"><span class="built_in">printf</span> <span class="string">&#x27;%s\n&#x27;</span> 7001 7002 7003 | xargs -I&#123;&#125; -t sed -i <span class="string">&#x27;1a replica-announce-ip 192.168.150.101&#x27;</span> &#123;&#125;/redis.conf</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+<h2 id="2-3-启动"><a href="#2-3-启动" class="headerlink" title="2.3.启动"></a>2.3.启动</h2><p>为了方便查看日志，我们打开3个ssh窗口，分别启动3个redis实例，启动命令：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 第1个</span></span><br><span class="line">redis-server 7001/redis.conf</span><br><span class="line"><span class="comment"># 第2个</span></span><br><span class="line">redis-server 7002/redis.conf</span><br><span class="line"><span class="comment"># 第3个</span></span><br><span class="line">redis-server 7003/redis.conf</span><br></pre></td></tr></table></figure>
+
+
+
+<p>启动后：</p>
+<p><img src="/assets/image-20210630183914491.png" alt="image-20210630183914491"></p>
+<p>如果要一键停止，可以运行下面命令：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="built_in">printf</span> <span class="string">&#x27;%s\n&#x27;</span> 7001 7002 7003 | xargs -I&#123;&#125; -t redis-cli -p &#123;&#125; shutdown</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h2 id="2-4-开启主从关系"><a href="#2-4-开启主从关系" class="headerlink" title="2.4.开启主从关系"></a>2.4.开启主从关系</h2><p>现在三个实例还没有任何关系，要配置主从可以使用replicaof 或者slaveof（5.0以前）命令。</p>
+<p>有临时和永久两种模式：</p>
+<ul>
+<li><p>修改配置文件（永久生效）</p>
+<ul>
+<li>在redis.conf中添加一行配置：<code>slaveof &lt;masterip&gt; &lt;masterport&gt;</code></li>
+</ul>
+</li>
+<li><p>使用redis-cli客户端连接到redis服务，执行slaveof命令（重启后失效）：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">slaveof &lt;masterip&gt; &lt;masterport&gt;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<p><strong><font color='red'>注意</font></strong>：在5.0以后新增命令replicaof，与salveof效果一致。</p>
+<p>这里我们为了演示方便，使用方式二。</p>
+<p>通过redis-cli命令连接7002，执行下面命令：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 连接 7002</span></span><br><span class="line">redis-cli -p 7002</span><br><span class="line"><span class="comment"># 执行slaveof</span></span><br><span class="line">slaveof 192.168.150.101 7001</span><br></pre></td></tr></table></figure>
+
+
+
+<p>通过redis-cli命令连接7003，执行下面命令：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 连接 7003</span></span><br><span class="line">redis-cli -p 7003</span><br><span class="line"><span class="comment"># 执行slaveof</span></span><br><span class="line">slaveof 192.168.150.101 7001</span><br></pre></td></tr></table></figure>
+
+
+
+<p>然后连接 7001节点，查看集群状态：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 连接 7001</span></span><br><span class="line">redis-cli -p 7001</span><br><span class="line"><span class="comment"># 查看状态</span></span><br><span class="line">info replication</span><br></pre></td></tr></table></figure>
+
+<p>结果：</p>
+<p><img src="/assets/image-20210630201258802.png" alt="image-20210630201258802"></p>
+<h2 id="2-5-测试"><a href="#2-5-测试" class="headerlink" title="2.5.测试"></a>2.5.测试</h2><p>执行下列操作以测试：</p>
+<ul>
+<li><p>利用redis-cli连接7001，执行<code>set num 123</code></p>
+</li>
+<li><p>利用redis-cli连接7002，执行<code>get num</code>，再执行<code>set num 666</code></p>
+</li>
+<li><p>利用redis-cli连接7003，执行<code>get num</code>，再执行<code>set num 888</code></p>
+</li>
+</ul>
+<p>可以发现，只有在7001这个master节点上可以执行写操作，7002和7003这两个slave节点只能执行读操作。</p>
+<h1 id="3-搭建哨兵集群"><a href="#3-搭建哨兵集群" class="headerlink" title="3.搭建哨兵集群"></a>3.搭建哨兵集群</h1><h2 id="3-1-集群结构"><a href="#3-1-集群结构" class="headerlink" title="3.1.集群结构"></a>3.1.集群结构</h2><p>这里我们搭建一个三节点形成的Sentinel集群，来监管之前的Redis主从集群。如图：</p>
+<p><img src="/assets/image-20210701215227018.png" alt="image-20210701215227018"></p>
+<p>三个sentinel实例信息如下：</p>
+<table>
+<thead>
+<tr>
+<th>节点</th>
+<th align="center">IP</th>
+<th align="center">PORT</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>s1</td>
+<td align="center">192.168.150.101</td>
+<td align="center">27001</td>
+</tr>
+<tr>
+<td>s2</td>
+<td align="center">192.168.150.101</td>
+<td align="center">27002</td>
+</tr>
+<tr>
+<td>s3</td>
+<td align="center">192.168.150.101</td>
+<td align="center">27003</td>
+</tr>
+</tbody></table>
+<h2 id="3-2-准备实例和配置"><a href="#3-2-准备实例和配置" class="headerlink" title="3.2.准备实例和配置"></a>3.2.准备实例和配置</h2><p>要在同一台虚拟机开启3个实例，必须准备三份不同的配置文件和目录，配置文件所在目录也就是工作目录。</p>
+<p>我们创建三个文件夹，名字分别叫s1、s2、s3：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 进入/tmp目录</span></span><br><span class="line"><span class="built_in">cd</span> /tmp</span><br><span class="line"><span class="comment"># 创建目录</span></span><br><span class="line"><span class="built_in">mkdir</span> s1 s2 s3</span><br></pre></td></tr></table></figure>
+
+<p>如图：</p>
+<p><img src="/assets/image-20210701215534714.png" alt="image-20210701215534714"></p>
+<p>然后我们在s1目录创建一个sentinel.conf文件，添加下面的内容：</p>
+<figure class="highlight ini"><table><tr><td class="code"><pre><span class="line">port 27001</span><br><span class="line">sentinel announce-ip 192.168.150.101</span><br><span class="line">sentinel monitor mymaster 192.168.150.101 7001 2</span><br><span class="line">sentinel down-after-milliseconds mymaster 5000</span><br><span class="line">sentinel failover-timeout mymaster 60000</span><br><span class="line">dir &quot;/tmp/s1&quot;</span><br></pre></td></tr></table></figure>
+
+<p>解读：</p>
+<ul>
+<li><code>port 27001</code>：是当前sentinel实例的端口</li>
+<li><code>sentinel monitor mymaster 192.168.150.101 7001 2</code>：指定主节点信息<ul>
+<li><code>mymaster</code>：主节点名称，自定义，任意写</li>
+<li><code>192.168.150.101 7001</code>：主节点的ip和端口</li>
+<li><code>2</code>：选举master时的quorum值</li>
+</ul>
+</li>
+</ul>
+<p>然后将s1&#x2F;sentinel.conf文件拷贝到s2、s3两个目录中（在&#x2F;tmp目录执行下列命令）：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 方式一：逐个拷贝</span></span><br><span class="line"><span class="built_in">cp</span> s1/sentinel.conf s2</span><br><span class="line"><span class="built_in">cp</span> s1/sentinel.conf s3</span><br><span class="line"><span class="comment"># 方式二：管道组合命令，一键拷贝</span></span><br><span class="line"><span class="built_in">echo</span> s2 s3 | xargs -t -n 1 <span class="built_in">cp</span> s1/sentinel.conf</span><br></pre></td></tr></table></figure>
+
+
+
+<p>修改s2、s3两个文件夹内的配置文件，将端口分别修改为27002、27003：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">sed -i -e <span class="string">&#x27;s/27001/27002/g&#x27;</span> -e <span class="string">&#x27;s/s1/s2/g&#x27;</span> s2/sentinel.conf</span><br><span class="line">sed -i -e <span class="string">&#x27;s/27001/27003/g&#x27;</span> -e <span class="string">&#x27;s/s1/s3/g&#x27;</span> s3/sentinel.conf</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="3-3-启动"><a href="#3-3-启动" class="headerlink" title="3.3.启动"></a>3.3.启动</h2><p>为了方便查看日志，我们打开3个ssh窗口，分别启动3个redis实例，启动命令：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 第1个</span></span><br><span class="line">redis-sentinel s1/sentinel.conf</span><br><span class="line"><span class="comment"># 第2个</span></span><br><span class="line">redis-sentinel s2/sentinel.conf</span><br><span class="line"><span class="comment"># 第3个</span></span><br><span class="line">redis-sentinel s3/sentinel.conf</span><br></pre></td></tr></table></figure>
+
+
+
+<p>启动后：</p>
+<p><img src="/assets/image-20210701220714104.png" alt="image-20210701220714104"></p>
+<h2 id="3-4-测试"><a href="#3-4-测试" class="headerlink" title="3.4.测试"></a>3.4.测试</h2><p>尝试让master节点7001宕机，查看sentinel日志：</p>
+<p><img src="/assets/image-20210701222857997.png" alt="image-20210701222857997"></p>
+<p>查看7003的日志：</p>
+<p><img src="/assets/image-20210701223025709.png" alt="image-20210701223025709"></p>
+<p>查看7002的日志：</p>
+<p><img src="/assets/image-20210701223131264.png" alt="image-20210701223131264"></p>
+<h1 id="4-搭建分片集群"><a href="#4-搭建分片集群" class="headerlink" title="4.搭建分片集群"></a>4.搭建分片集群</h1><h2 id="4-1-集群结构"><a href="#4-1-集群结构" class="headerlink" title="4.1.集群结构"></a>4.1.集群结构</h2><p>分片集群需要的节点数量较多，这里我们搭建一个最小的分片集群，包含3个master节点，每个master包含一个slave节点，结构如下：</p>
+<p><img src="/assets/image-20210702164116027.png" alt="image-20210702164116027"></p>
+<p>这里我们会在同一台虚拟机中开启6个redis实例，模拟分片集群，信息如下：</p>
+<table>
+<thead>
+<tr>
+<th align="center">IP</th>
+<th align="center">PORT</th>
+<th align="center">角色</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">192.168.150.101</td>
+<td align="center">7001</td>
+<td align="center">master</td>
+</tr>
+<tr>
+<td align="center">192.168.150.101</td>
+<td align="center">7002</td>
+<td align="center">master</td>
+</tr>
+<tr>
+<td align="center">192.168.150.101</td>
+<td align="center">7003</td>
+<td align="center">master</td>
+</tr>
+<tr>
+<td align="center">192.168.150.101</td>
+<td align="center">8001</td>
+<td align="center">slave</td>
+</tr>
+<tr>
+<td align="center">192.168.150.101</td>
+<td align="center">8002</td>
+<td align="center">slave</td>
+</tr>
+<tr>
+<td align="center">192.168.150.101</td>
+<td align="center">8003</td>
+<td align="center">slave</td>
+</tr>
+</tbody></table>
+<h2 id="4-2-准备实例和配置"><a href="#4-2-准备实例和配置" class="headerlink" title="4.2.准备实例和配置"></a>4.2.准备实例和配置</h2><p>删除之前的7001、7002、7003这几个目录，重新创建出7001、7002、7003、8001、8002、8003目录：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 进入/tmp目录</span></span><br><span class="line"><span class="built_in">cd</span> /tmp</span><br><span class="line"><span class="comment"># 删除旧的，避免配置干扰</span></span><br><span class="line"><span class="built_in">rm</span> -rf 7001 7002 7003</span><br><span class="line"><span class="comment"># 创建目录</span></span><br><span class="line"><span class="built_in">mkdir</span> 7001 7002 7003 8001 8002 8003</span><br></pre></td></tr></table></figure>
+
+
+
+<p>在&#x2F;tmp下准备一个新的redis.conf文件，内容如下：</p>
+<figure class="highlight ini"><table><tr><td class="code"><pre><span class="line">port 6379</span><br><span class="line"><span class="comment"># 开启集群功能</span></span><br><span class="line">cluster-enabled yes</span><br><span class="line"><span class="comment"># 集群的配置文件名称，不需要我们创建，由redis自己维护</span></span><br><span class="line">cluster-config-file /tmp/6379/nodes.conf</span><br><span class="line"><span class="comment"># 节点心跳失败的超时时间</span></span><br><span class="line">cluster-node-timeout 5000</span><br><span class="line"><span class="comment"># 持久化文件存放目录</span></span><br><span class="line">dir /tmp/6379</span><br><span class="line"><span class="comment"># 绑定地址</span></span><br><span class="line">bind 0.0.0.0</span><br><span class="line"><span class="comment"># 让redis后台运行</span></span><br><span class="line">daemonize yes</span><br><span class="line"><span class="comment"># 注册的实例ip</span></span><br><span class="line">replica-announce-ip 192.168.150.101</span><br><span class="line"><span class="comment"># 保护模式</span></span><br><span class="line">protected-mode no</span><br><span class="line"><span class="comment"># 数据库数量</span></span><br><span class="line">databases 1</span><br><span class="line"><span class="comment"># 日志</span></span><br><span class="line">logfile /tmp/6379/run.log</span><br></pre></td></tr></table></figure>
+
+<p>将这个文件拷贝到每个目录下：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 进入/tmp目录</span></span><br><span class="line"><span class="built_in">cd</span> /tmp</span><br><span class="line"><span class="comment"># 执行拷贝</span></span><br><span class="line"><span class="built_in">echo</span> 7001 7002 7003 8001 8002 8003 | xargs -t -n 1 <span class="built_in">cp</span> redis.conf</span><br></pre></td></tr></table></figure>
+
+
+
+<p>修改每个目录下的redis.conf，将其中的6379修改为与所在目录一致：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 进入/tmp目录</span></span><br><span class="line"><span class="built_in">cd</span> /tmp</span><br><span class="line"><span class="comment"># 修改配置文件</span></span><br><span class="line"><span class="built_in">printf</span> <span class="string">&#x27;%s\n&#x27;</span> 7001 7002 7003 8001 8002 8003 | xargs -I&#123;&#125; -t sed -i <span class="string">&#x27;s/6379/&#123;&#125;/g&#x27;</span> &#123;&#125;/redis.conf</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="4-3-启动"><a href="#4-3-启动" class="headerlink" title="4.3.启动"></a>4.3.启动</h2><p>因为已经配置了后台启动模式，所以可以直接启动服务：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 进入/tmp目录</span></span><br><span class="line"><span class="built_in">cd</span> /tmp</span><br><span class="line"><span class="comment"># 一键启动所有服务</span></span><br><span class="line"><span class="built_in">printf</span> <span class="string">&#x27;%s\n&#x27;</span> 7001 7002 7003 8001 8002 8003 | xargs -I&#123;&#125; -t redis-server &#123;&#125;/redis.conf</span><br></pre></td></tr></table></figure>
+
+<p>通过ps查看状态：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">ps -ef | grep redis</span><br></pre></td></tr></table></figure>
+
+<p>发现服务都已经正常启动：</p>
+<p><img src="/assets/image-20210702174255799.png" alt="image-20210702174255799"></p>
+<p>如果要关闭所有进程，可以执行命令：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">ps -ef | grep redis | awk <span class="string">&#x27;&#123;print $2&#125;&#x27;</span> | xargs <span class="built_in">kill</span></span><br></pre></td></tr></table></figure>
+
+<p>或者（推荐这种方式）：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="built_in">printf</span> <span class="string">&#x27;%s\n&#x27;</span> 7001 7002 7003 8001 8002 8003 | xargs -I&#123;&#125; -t redis-cli -p &#123;&#125; shutdown</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h2 id="4-4-创建集群"><a href="#4-4-创建集群" class="headerlink" title="4.4.创建集群"></a>4.4.创建集群</h2><p>虽然服务启动了，但是目前每个服务之间都是独立的，没有任何关联。</p>
+<p>我们需要执行命令来创建集群，在Redis5.0之前创建集群比较麻烦，5.0之后集群管理命令都集成到了redis-cli中。</p>
+<p>1）Redis5.0之前</p>
+<p>Redis5.0之前集群命令都是用redis安装包下的src&#x2F;redis-trib.rb来实现的。因为redis-trib.rb是有ruby语言编写的所以需要安装ruby环境。</p>
+ <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 安装依赖</span></span><br><span class="line">yum -y install zlib ruby rubygems</span><br><span class="line">gem install redis</span><br></pre></td></tr></table></figure>
+
+
+
+<p>然后通过命令来管理集群：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 进入redis的src目录</span></span><br><span class="line"><span class="built_in">cd</span> /tmp/redis-6.2.4/src</span><br><span class="line"><span class="comment"># 创建集群</span></span><br><span class="line">./redis-trib.rb create --replicas 1 192.168.150.101:7001 192.168.150.101:7002 192.168.150.101:7003 192.168.150.101:8001 192.168.150.101:8002 192.168.150.101:8003</span><br></pre></td></tr></table></figure>
+
+
+
+<p>2）Redis5.0以后</p>
+<p>我们使用的是Redis6.2.4版本，集群管理以及集成到了redis-cli中，格式如下：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">redis-cli --cluster create --cluster-replicas 1 192.168.150.101:7001 192.168.150.101:7002 192.168.150.101:7003 192.168.150.101:8001 192.168.150.101:8002 192.168.150.101:8003</span><br></pre></td></tr></table></figure>
+
+<p>命令说明：</p>
+<ul>
+<li><code>redis-cli --cluster</code>或者<code>./redis-trib.rb</code>：代表集群操作命令</li>
+<li><code>create</code>：代表是创建集群</li>
+<li><code>--replicas 1</code>或者<code>--cluster-replicas 1</code> ：指定集群中每个master的副本个数为1，此时<code>节点总数 ÷ (replicas + 1)</code> 得到的就是master的数量。因此节点列表中的前n个就是master，其它节点都是slave节点，随机分配到不同master</li>
+</ul>
+<p>运行后的样子：</p>
+<p><img src="/assets/image-20210702181101969.png" alt="image-20210702181101969"></p>
+<p>这里输入yes，则集群开始创建：</p>
+<p><img src="/assets/image-20210702181215705.png" alt="image-20210702181215705"></p>
+<p>通过命令可以查看集群状态：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">redis-cli -p 7001 cluster nodes</span><br></pre></td></tr></table></figure>
+
+<p><img src="/assets/image-20210702181922809.png" alt="image-20210702181922809"></p>
+<h2 id="4-5-测试"><a href="#4-5-测试" class="headerlink" title="4.5.测试"></a>4.5.测试</h2><p>尝试连接7001节点，存储一个数据：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 连接</span></span><br><span class="line">redis-cli -p 7001</span><br><span class="line"><span class="comment"># 存储数据</span></span><br><span class="line"><span class="built_in">set</span> num 123</span><br><span class="line"><span class="comment"># 读取数据</span></span><br><span class="line">get num</span><br><span class="line"><span class="comment"># 再次存储</span></span><br><span class="line"><span class="built_in">set</span> a 1</span><br></pre></td></tr></table></figure>
+
+<p>结果悲剧了：</p>
+<p><img src="/assets/image-20210702182343979.png" alt="image-20210702182343979"></p>
+<p>集群操作时，需要给<code>redis-cli</code>加上<code>-c</code>参数才可以：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">redis-cli -c -p 7001</span><br></pre></td></tr></table></figure>
+
+<p>这次可以了：</p>
+<p><img src="/assets/image-20210702182602145.png" alt="image-20210702182602145"></p>
+<p>REDIS 集群结合微服务实战：</p>
+<p>1创建实例文件</p>
+<p>mkdir 7001 7002 7003<br>2拷贝配置文件</p>
+<p>cp redis.conf 7006<br>3修改配置文件</p>
+<p>sed -i -e ‘s&#x2F;6379&#x2F;7001&#x2F;g’ -e ‘s&#x2F;dir ./&#x2F;dir /tmp/7001/&#x2F;g’ 7001&#x2F;redis.conf<br>sed -i -e ‘s&#x2F;6379&#x2F;7006&#x2F;g’ -e ‘s&#x2F;dir ./&#x2F;dir /tmp/7006/&#x2F;g’ 7006&#x2F;redis.conf<br>sed -i -e ‘s&#x2F;6379&#x2F;7006&#x2F;g’ -e ‘s&#x2F;dir ./&#x2F;dir /tmp/7006&#x2F;&#x2F;g’ 7006&#x2F;redis.conf</p>
+<p>sed -i -e ‘s&#x2F;192.168.150.101&#x2F;192.168.101.65&#x2F;g’ 7001&#x2F;redis.conf<br>sed -i -e ‘s&#x2F;192.168.150.101&#x2F;192.168.101.65&#x2F;g’ 7002&#x2F;redis.conf</p>
+<p>sed -i -e ‘s&#x2F;192.168.150.101&#x2F;192.168.101.65&#x2F;g’ 7003&#x2F;redis.conf</p>
+<p>sed -i -e ‘s&#x2F;192.168.150.101&#x2F;192.168.101.65&#x2F;g’ 7004&#x2F;redis.conf</p>
+<p>sed -i -e ‘s&#x2F;192.168.150.101&#x2F;192.168.101.65&#x2F;g’ 7005&#x2F;redis.conf</p>
+<p>4声明实例属于哪个ip地址端口，在每个文件的第一行声明</p>
+<p>sed -i ‘1a replica-announce-ip 192.168.101.65’ 7001&#x2F;redis.conf<br>sed -i ‘1a replica-announce-ip 192.168.101.65’ 7002&#x2F;redis.conf<br>sed -i ‘1a replica-announce-ip 192.168.101.65’ 7006&#x2F;redis.conf</p>
+<p>5利用配置文件启动一个不存在的redis实例</p>
+<p>docker run -d –name redis-7006 –net host –privileged&#x3D;true -v &#x2F;data&#x2F;soft&#x2F;redis&#x2F;7006:&#x2F;data redis:6.2.7 redis-server –cluster-enabled yes –appendonly yes –port 7006</p>
+<p>6集群</p>
+<p>进入某个redis实例容器中</p>
+<p>docker exec -it redis &#x2F;bin&#x2F;bash</p>
+<p>创建集群</p>
+<p>redis-cli –cluster create 192.168.101.65:7001 192.168.101.65:7002 192.168.101.65:7003 192.168.101.65:7004 192.168.101.65:7005 192.168.101.65:7006 –cluster-replicas 1 </p>
+<p>安装完毕：</p>
+<p>1.在容器中启动一个已经存在的redis实例</p>
+<p>docker start redis-7001</p>
+<p>2.进入某个节点实例</p>
+<p>docker exec -it redis-7001 &#x2F;bin&#x2F;bash</p>
+<p>3.集群模式下的单个实例</p>
+<p>redis-cli -c -p 7001 </p>
+<p>每个主从都有固定的hash slot，0-5643等分，不同数据存储到不同实例的slot中</p>
+<p>3.集群信息和集群中节点的主从信息</p>
+<p>cluster info cluster nodes</p>
+<p>4.主从集群具体分布，你开启主从集群的时候一般是按照特定顺序分配主从关系的</p>
+<p>M -&gt; S</p>
+<p>1 -&gt;6 ; </p>
+<p>2 -&gt; 4;</p>
+<p>3 -&gt; 5</p>
+<p>5集群检查</p>
+<p>redis-cli –cluster check 192.168.101.65:7001 </p>
+<p>6.故障转移</p>
+<p>docker stop redis-7001,7006会自动切换为master,当restart 7001，则7001会自动slave of 7006,此时还能正常读取数据；</p>
+<p>7.主从恢复</p>
+<p>要想恢复只能停掉当前的master,让slave有上位的机会。再启动之前停掉的master就会变成slave。</p>
+<p>8.集群扩缩容</p>
+<p>9.jmeter</p>
+<p>1w异常率，10w并发	</p>
+<p>10.分布式缓存实战：</p>
+<p>项目中使用redis分布式集群，1.nacos修改redis配置，连接其中一个节点会自动连接其他节点2.java客户端编写redis-cluster.conf.yml配置文件3.redis虚拟机开启集群实例，</p>
+<p>当您在一个节点上设置缓存时，Redis会自动将数据复制到其他节点，以确保高可用性和数据一致性。(这样一个节点挂了还有五个节点存有相同的数据)，当其中的一个节点删除数据，集群中的其他节点也会删除数据</p>
+<p>Redis集群的主要优势是提供高可用性和负载均衡,但是会带来额外的内存开销，如果希望减少内存的多次复制，可以考虑分区，将不同内容存储到不同节点，但是这也会导致高可用和一致性受损。</p>
+<p>需要二者比较而考虑，重要的数据尽量备份多份不分区，某些数据可以考虑分区存储。</p>
+<p>11.实战测试样例，jmeter</p>
+<p>![](&#x2F;img&#x2F;old 10w.png)</p>
+<p><img src="/img/11cluster10w.png"></p>
+<p><img src="/img/cluster%E7%BC%93%E5%AD%98.png"></p>
+<p><img src="/img/%E5%86%85%E5%AD%98%E4%BD%BF%E7%94%A8%E6%83%85%E5%86%B5.png"></p>
+<p><img src="/img/cluster100w%E5%B9%B6%E5%8F%91.png"></p>
+<p>12.stop 7001,delte 缓存，10w并发</p>
+<p>7006充当新master,在7001重启期间数据读取正常,7001重启后变为slave,要想成为master只能主动stop 7006,再start 7006,不过实战一般不推荐这么做，会带来风险。</p>
+<p>docker stop redis-7001 &#x2F;&#x2F;模拟一个redis节点实例宕机的情况</p>
+<p>docker start redis-7001 &#x2F;&#x2F;假设运维人员修复了该节点</p>
+<p>docker exec -it redis-7001 &#x2F;bin&#x2F;bash</p>
+<p>redis-cli -c - p 7001 </p>
+<p>CLUSTER FAILOVER &#x2F;&#x2F;进入当前slave节点手动进行主从切换</p>
+<p>​	</p>
+<p><img src="/img/%E5%81%9C%E6%8E%897001,delete%E7%BC%93%E5%AD%98,10w%E5%B9%B6%E5%8F%91.png"></p>
+<p><img src="/img/java%E5%AE%A2%E6%88%B7%E7%AB%AF%E7%9A%84%E4%B8%BB%E4%BB%8E%E5%88%87%E6%8D%A2.png"></p>
+<ol start="13">
+<li></li>
+</ol>
+]]></content>
   </entry>
 </search>
