@@ -39,15 +39,21 @@
       </tags>
   </entry>
   <entry>
-    <title></title>
-    <url>/2023/10/14/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/</url>
-    <content><![CDATA[<p>navicat：强密码。</p>
+    <title>开发环境配置</title>
+    <url>/2023/10/21/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/</url>
+    <content><![CDATA[<h1 id="开发环境"><a href="#开发环境" class="headerlink" title="开发环境"></a>开发环境</h1><p>navicat：强密码。</p>
 <p>在开发环境进行后端相应软件的部署前，先保证网络安全性，注意防火墙和安全组开发，不是0.0.0.0</p>
 ]]></content>
+      <categories>
+        <category>开发环境</category>
+      </categories>
+      <tags>
+        <tag>开发环境</tag>
+      </tags>
   </entry>
   <entry>
-    <title></title>
-    <url>/2023/10/08/Redis%E9%9B%86%E7%BE%A4/</url>
+    <title>Redis集群</title>
+    <url>/2023/10/21/Redis%E9%9B%86%E7%BE%A4/</url>
     <content><![CDATA[<h1 id="Redis分布式集群企业开发实战"><a href="#Redis分布式集群企业开发实战" class="headerlink" title="Redis分布式集群企业开发实战"></a>Redis分布式集群企业开发实战</h1><p>REDIS 集群结合微服务实战：(分为本地开发环境和实际生产环境)</p>
 <h2 id="本地开发环境"><a href="#本地开发环境" class="headerlink" title="本地开发环境"></a>本地开发环境</h2><p>1创建实例文件</p>
 <p>mkdir 7001 7002 7003<br>2拷贝配置文件</p>
@@ -343,6 +349,12 @@ public void cleanup() &#123;
 <p>将客户端放在Windows上，减少云服务器内存，但是这就把redis实例集群放到了0.0.0.0上，所有ip都可以请求连接，所以需要密码</p>
 <p>但是如果把客户端安装在服务器上，会占用内存资源，虽然是安全的，因为redis和insight都在同一个局域网内，后续直接Windows 进行http访问即可。</p>
 ]]></content>
+      <categories>
+        <category>Redis集群</category>
+      </categories>
+      <tags>
+        <tag>Redis集群</tag>
+      </tags>
   </entry>
   <entry>
     <title>lqb</title>
