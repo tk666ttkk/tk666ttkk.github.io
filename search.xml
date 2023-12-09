@@ -43,6 +43,11 @@
     <url>/2023/10/21/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/</url>
     <content><![CDATA[<h1 id="开发环境"><a href="#开发环境" class="headerlink" title="开发环境"></a>开发环境</h1><p>navicat：强密码。</p>
 <p>在开发环境进行后端相应软件的部署前，先保证网络安全性，注意防火墙和安全组开发，不是0.0.0.0</p>
+<p>2023-11-22 17:31:19两台云服务器的云盘给我干满了，开始找不到，最后仔细查看就是docker日志的问题，docker的containers存储了大量的日志，一个日志文件18g，直接给我内存干满了，就在&#x2F;var&#x2F;lib&#x2F;docker&#x2F;xxxxx&#x2F;xxxx-json.log</p>
+<p>微服务技术栈分析</p>
+<p>后端：redis，mysql，spring boot，spring gateway，spring database, nginx,</p>
+<p>前端：vue,encharts,elmentui,axios,node.js</p>
+<p>中间件：postman,kibana,rabbitmq,minio,xxl-job,jmeter，ela，freemark,swagger ,nacos，</p>
 ]]></content>
       <categories>
         <category>开发环境</category>
@@ -2513,6 +2518,455 @@ public void coursePublishJobHandler() throws Exception &#123;
       </categories>
       <tags>
         <tag>Redis</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CET6</title>
+    <url>/2023/12/09/CET6/</url>
+    <content><![CDATA[<h1 id="CET6"><a href="#CET6" class="headerlink" title="CET6"></a>CET6</h1><h2 id="一-听力套路"><a href="#一-听力套路" class="headerlink" title="一.听力套路:"></a>一.听力套路:</h2><h3 id="1-原词重现"><a href="#1-原词重现" class="headerlink" title="(1).原词重现"></a>(1).原词重现</h3><p>1.简单的原词出现</p>
+<p>2.出现两个或多个，但是有先后顺序的，一般选择后者，这就是陷阱</p>
+<h3 id="2-同义替换"><a href="#2-同义替换" class="headerlink" title="(2).同义替换"></a>(2).同义替换</h3><p>1.程度上：</p>
+<p>程度上：关键词都是hamburger，但是喜爱程度不一样，only，constantly</p>
+<p>not entirly – partial    remain–preserve</p>
+<p>2.词义上：</p>
+<p>同义词有很多，听出来后或者选项里面有，这就看个人的词汇量了</p>
+<h3 id="3-否定："><a href="#3-否定：" class="headerlink" title="(3)否定："></a>(3)否定：</h3><p>previous but now   ;  not  but  这个句子就听后半段就行了</p>
+<h3 id="4-反反复复-全是套路"><a href="#4-反反复复-全是套路" class="headerlink" title="(4)反反复复 全是套路"></a>(4)反反复复 全是套路</h3><p>多出现在最后三篇讲座的最后一题，就是要把你往上拉，往下拽，给你看关键词头昏眼花，打乱做题思路和扰乱情绪，这时候我们不为所动，按照黄桷树般的坚定在每题固定区域听即可。</p>
+<p>这些题没有很明显的原词重现，甚至每个选项都能听出几个关键词。</p>
+<p>1.还没到该题的时间就先出现的关键词直接删除，最后会直接给出很明显的原词重现，最后最后才给出，别放弃。这种就直接选择最后听到的即可。</p>
+<h3 id="5-总结"><a href="#5-总结" class="headerlink" title="(5)总结"></a>(5)总结</h3><p>1.不听问题(在你大量训练，形成自己的做题技巧和习惯后)，假如不确定的题，可以先快速浏览下一题信息，等读到再回来听题目。</p>
+<p>2.按照每题的顺序来听，每一题都有固定的位置，切记不要返回去听，相信大叶榕。</p>
+<h2 id="二-阅读技巧"><a href="#二-阅读技巧" class="headerlink" title="二.阅读技巧"></a>二.阅读技巧</h2><p><strong>阅读我相信很多人都掌握的不错，痛点就是听力和写作。</strong></p>
+<h3 id="1-选填空"><a href="#1-选填空" class="headerlink" title="(1).选填空"></a>(1).选填空</h3><p>最基本的还是词汇积累，平时背的单词在这里是最有用的，假如单词都不认识，怎么拿分？哥哥们。</p>
+<p>1.单词分类，简单的句子结构的划分</p>
+<p>2.短语拼接，固定搭配 </p>
+<p>3.上下文逻辑，同义替换</p>
+<h3 id="2-仔细阅读"><a href="#2-仔细阅读" class="headerlink" title="(2)仔细阅读"></a>(2)仔细阅读</h3><p>（我觉得没什么特殊技巧，看懂文章最重要） </p>
+<p>首先多想一道，仅此一道。整片文章看起来很长，但是通过我们划分和排除之后，一段一段逐击破。阅读按照顺序来写，总共5题，每一题都在固定顺序的位置。</p>
+<p><strong>1.画题干问题的关键词（动词动作，名词人名，影响结果）</strong>，画关键词的作用就是快速定位到问题的发生段落。</p>
+<p>2.通过关键词到段落对比，快速阅读段落，理解大意，找完一题，在答案后面继续开始。  </p>
+<h3 id="3-信息匹配"><a href="#3-信息匹配" class="headerlink" title="(3)信息匹配"></a>(3)信息匹配</h3><p>这个题型就是耗费时间，难度并不难。</p>
+<p>1.先看10个选项，假如文中有15段，说明需要排除5段，有的段落一看就是不相关的段落，排除即可。</p>
+<p>2.快速了解每个选项的大意，在选项圈画<strong>重点单词（人名，开头名词，数量对比，趋势走势，动词动作，结果）</strong>，通过段落的开头结尾去对比，不确定的话就可以快速通读段落，理解大意后排除模糊的选项。</p>
+<h2 id="三-写作"><a href="#三-写作" class="headerlink" title="三.写作"></a>三.写作</h2><p><strong>这里插一句，我觉得要是字写的好看，至少卷面分多10分。别问我为什么就差这10分。</strong></p>
+<p><strong>第一段：引出主题 + 一方观点</strong></p>
+<p><strong>一.万能句型(可用在首句)：</strong></p>
+<p>1.What this thought-provoking drawing mirrors is the phenomenon that …</p>
+<p>1)“网络的利与弊” Most of individuals spend too much time on their computer terminal rather than relating to people in the real world。</p>
+<p>2)“环境污染” What this thought-provoking drawing mirrors is the  phenomenon that the environment of tourist areas is polluted by  tourists。</p>
+<p>2.The phenomenon of … has been known for years.( 某种现象或问题普遍存在或由来已久。)</p>
+<p>1)“旅游污染”The problem of tourist pollution has been known for years in today’s China。</p>
+<p>2)“追星” The phenomenon of idolatry has been known for years in today’s China。</p>
+<p>3)“过度开采”The phenomenon of overexploitation has been known for years in today’s China。</p>
+<p><strong>二.举一反三原则</strong></p>
+<p>1.There is no consensus of opinions among people regarding whether + 主题句。(……在人们之间没有达成共识。)</p>
+<p>2.“认为，想”怎么说?</p>
+<p>1)Some people hold the attitude that +主题句的肯定或否定。</p>
+<p>2)Some individuals are under the impression that +主题句的肯定或否定。</p>
+<p>3.原因如下：The reasons can be listed as follows。</p>
+<p>Firstly… Secondly… Thirdly…</p>
+<p><strong>第二段：另一方观点</strong></p>
+<p>1.观点对比之间的过渡句</p>
+<p>Just as an old Arab proverb says, “Every coin has its two sides”。</p>
+<p>(就像一句古老的阿拉伯谚语所说的，每个硬币都有两面。)</p>
+<p>Just as an old Arab proverb says, “Every sword has its two edges。”</p>
+<p>(就像一句古老的阿拉伯谚语所说的，每把剑都有两刃。)</p>
+<p>2.提出另一方观点：On the contrary, others are under the impression that…</p>
+<p>3.分论点：There are some reasons behind this attitude。</p>
+<p>For one thing… For another…</p>
+<p><strong>第三段：你的观点</strong></p>
+<p>1.表明立场</p>
+<p>From my point of view, it is more reasonable to support the former opinion rather than the latter one。</p>
+<p>2.得出结论</p>
+<p>From what has been discussed above, we may naturally arrive at the conclusion that…</p>
+<p>3.喊口号</p>
+<p>Generally speaking, it is high time that we placed great emphasis on  this issue. That is to say, further attention is to be paid to this  issue。</p>
+<p>4.谈措施</p>
+<p>Only through effective actions that has been taken can we prevent this trend。</p>
+<p>名言、警句类作文破题句&gt;&gt;</p>
+<p>\1. Reading this famous saying, we can naturally perceive its connotation that+名言警句内含的道理</p>
+<p>\2. This famous saying conveys a universal fact&#x2F;phenomenon that+名言警句内含的道理</p>
+<p>漫画类作文描述图画句&gt;&gt;</p>
+<p>\1. It is vividly&#x2F;clearly depicted in the picture</p>
+<p>that+图画中的人物、话语或事件</p>
+<p>\2. Given is a simple&#x2F;ironical but thought-provoking&#x2F;enlightening picture&#x2F;cartoon, in which+图画中的人物、话语或事件</p>
+<p>3.What is clearly described in the drawing above is that+图画中的人物、话语或事件</p>
+<p>4.The cartoon subtly and symbolically depicts a thought-provoking scenario in which+图画中的人物、话语或事件</p>
+<p>表达不同观点万能句&gt;&gt;</p>
+<p>\1. People’s views on……vary from person to person. Some hold that……However, others believe that……（人们对……的观点因人而异，有些人认为……然而其他人却认为……）</p>
+<p>\2. People may have different opinions on……（人们对……可能会持有不同见解）</p>
+<p>\3. Attitudes towards ……vary from person to person.&#x3D;&#x3D;Different people hold different attitudes towards……（人们对待……的态度因人而异）</p>
+<p>\4. There are different opinions among people as to……（对于……人们的观点大不相同）</p>
+<p>提出建议万能句&gt;&gt;</p>
+<p>\1. It is high time that we put an end to the (trend).（该是我们停止这一趋势的时候了） </p>
+<p>\2. There is no doubt that enough concern must be paid to the problem of……（毫无疑问，对……问题应予以足够重视） </p>
+<p>\3. Obviously ,if we want to do something … it is essential that……（显然，如果我们想要做某事，很重要的是……） </p>
+<p>\4. Only in this way can we ……（只有这样，我们才能……） 5：Spare no effort to + V （不遗余力的）</p>
+<p>采取措施万能句&gt;&gt;</p>
+<p>1.We should take some effective measures.我们应该采取有效措施 </p>
+<p>2.We should try our best to overcome&#x2F;conquer the difficulties.我们应该尽最大努力去克服困难 </p>
+<p>3.We should do our utmost in doing sth.我们应该尽力去做…… </p>
+<p>4.We should solve the problems that we are confronted&#x2F;faced with.我们应该解决我们面临的困难</p>
+<p>常用英语谚语&gt;&gt;</p>
+<p>\1. Actions speak louder than words.事实胜于雄辩</p>
+<p>\2. All is not gold that glitters.发光的未必都是金子 </p>
+<p>\3. All roads lead to Rome.条条大路通罗马</p>
+<p>\4. A good beginning is half done.良好的开端是成功的一半 </p>
+<p>\5. Every advantage has its disadvantage有利必有弊</p>
+<p>\6. A miss is as good as a mile.失之毫厘，差之千里 </p>
+<p>\7. Failure is the mother of success.失败是成功之母</p>
+<p>\8. Industry is the parent of success.勤奋是成功之母 </p>
+<p>\9. It is never too old to learn.活到老，学到老</p>
+<p>\10. Knowledge is power.知识就是力量 </p>
+<p>\11. Nothing in the world is difficult for one who sets his mind to it.世上无难事，只怕有心人</p>
+<h2 id="四-翻译"><a href="#四-翻译" class="headerlink" title="四.翻译"></a>四.翻译</h2><p><strong>逐字翻译，能写出来最重要，同义替换，短语，词句的表达积累</strong></p>
+<p>\1. 既……又…… both…and…<br>\2. 广泛存在于中国人的生活中 widely exist in the life of Chinese people<br>\3. 秦汉时代 the Qin and Han Dynasties<br>\4. 在魏晋南北朝时期 during the Wei, Jin, Southern and Northern Dynasties<br>\5. 灿烂的中华文明 brilliant Chinese culture<br>\6. 中国传统习俗&#x2F;文化 traditional Chinese custom&#x2F;culture<br>\7. 扮演重要角色 play an important role; play a significant role<br>\8. 公元前 5 世纪 the 5th century BC<br>\9. 世界不同民族 different nations in the world<br>\10. 作出独特贡献 make unique contributions to…<br>\11. 4,000 多年前 more than&#x2F;over 4,000 years ago<br>\12. 一些独特的发明 some unique inventions<br>\13. 革命性的变化 revolutionary changes<br>\14. 人类文明的标志 a symbol of human civilization<br>\15. 家庭教育 family education<br>\16. 世界经济发展 the development of global economy; global economic development<br>\17. 起源于…… derive&#x2F;stem&#x2F;originate&#x2F;spring from…<br>\18. 一位杰出的艺术家 a prominent artist<br>\19. 国际影响力 international influence<br>\20. 提升生活品质 enhance the quality of life<br>\21. 心灵世界 inner world<br>\22. 诗的国度 a country of poetry<br>\23. 优质的茶叶 high-quality tea<br>\24. 和谐的关系 harmonious relationship<br>\25. 据记载 according to the documents&#x2F;records<br>\26. 跨文化交流 cross-cultural communication<br>\27. 以更快的速度增长 increase at a higher speed&#x2F;rate<br>\28. 中国书法 Chinese calligraphy<br>\29. 全神贯注的 be highly concentrated<br>\30. 对身心大有裨益的 be highly beneficial to both the body and the mind<br>\31. 一位著名的哲学家&#x2F;旅行家&#x2F;探险家 an eminent philosopher&#x2F;traveler&#x2F;explorer<br>\32. 河谷地带 river valley<br>\33. 一个多民族国家 a multi-ethnic country<br>\34. 少数民族 ethnic group<br>\35. 傣族男女老少 all the Dai people<br>\36. 持续一个月 last one month<br>\37. 反而 on the contrary; instead<br>\38. 促进地区间的经济和文化交流 promote regional exchanges in economy and culture<br>\39. 戏剧冲突 dramatic conflicts<br>\40. 稀奇古怪的故事 odd stories<br>\41. 大城市之一 one of the major&#x2F;large cities<br>\42. 2,000 多年的历史 a history of over 2,000 years<br>\43. 深圳经济特区 Shenzhen Special Economic Zone<br>\44. 百姓的日常生活 common people’s daily life<br>\45. 越来越多的游客 more and more tourists&#x2F;an increasing number of tourists<br>\46. 越来越流行 more and more popular; increasingly popular<br>\47. 数千名工匠 thousands of craftsmen<br>\48. 给读者留下深刻印象 leave a deep impression upon&#x2F;on readers<br>\49. 对……意义重大的 be important&#x2F;significant&#x2F;essential to…<br>\50. 人类文明进步的象征 a symbol of human civilization progress<br>\51. 在工作和娱乐之间取得平衡 strike a balance between work and entertainment<br>\52. 生活的场所 places where people live<br>\53. 历史和文化发展的舞台 an arena&#x2F;a stage for historical and cultural development<br>\54. 不仅……而且…… not only…but (also)…; not just…but (also)…<br>\55. ……被代代相传 …be passed down from one generation to another; …be passed down<br>from generation to generation<br>\56. 各地都不同 be different from place to place; differ from place to place<br>\57. 记录着中国古老的历史 record a long Chinese history<br>\58. 随着……的不断改进 with the continuous improvement of…<br>\59. 中外&#x2F;国内外 at home and abroad; domestic and foreign<br>\60. 环境友好型社会 an environment-friendly society</p>
+<h2 id="五-如何正确背单词"><a href="#五-如何正确背单词" class="headerlink" title="五.如何正确背单词"></a>五.如何正确背单词</h2><p>1.背乱序单词，每天指定数量，刷app词汇</p>
+<p>2.大量的材料输入，语言的环境，多使用英语，多和英语交流。</p>
+<h2 id="六-如何正确刷题"><a href="#六-如何正确刷题" class="headerlink" title="六.如何正确刷题"></a>六.如何正确刷题</h2><p>首先要有全局的概念，整个卷子坐下来的感觉怎么样，套路都清楚了吗，分别复盘听力的技巧，这题丢分是没注意套路还是没听出来，同义替换是否看得出来等; 阅读技巧，关键词画对了吗，丢分是定位错误还是同义替换没看出来，是单词不了解还是上下文逻辑没有连接起来等。</p>
+<p>精写一套胜过乱写三套。</p>
+<h2 id="七-结语"><a href="#七-结语" class="headerlink" title="七.结语"></a>七.结语</h2><p><strong>最后还是要多练，同志们，革命尚未成功，仍需努力！</strong></p>
+<p><strong>以上是我总结的自己的做题方法和技巧，很多来源于B站英语泰迪老师（神犬泰迪，祝我过级！！，我宣布泰迪老师是我2023年12月的神!!!!），如果你的平时做题技巧和本文写的不一样，那就没不要看那部分，适合自己的才是最好的。</strong></p>
+<p><strong>我最后说一句，我做的一切我虽然不喜欢，也不逃避，但是我现在没得选择。</strong></p>
+]]></content>
+      <categories>
+        <category>CET6</category>
+      </categories>
+      <tags>
+        <tag>CET6</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>attacker</title>
+    <url>/2023/12/09/ruqin/</url>
+    <content><![CDATA[<h1 id="记录一次服务器被入侵"><a href="#记录一次服务器被入侵" class="headerlink" title="记录一次服务器被入侵"></a>记录一次服务器被入侵</h1><p>Linux.Trojan.Coinminer.Timw</p>
+<p>ftpuser设置的白名单查看导致的弱登录，然后直接往服务器里面投入病毒</p>
+<p>1.腾讯云立马文件查杀，清除病毒文件</p>
+<p>2.关机，关服务器</p>
+<p>3.关闭ftp服务.21端口关闭</p>
+<p>4.防火墙设置黑名单，拒绝该ip的所有入站连接</p>
+<p>要关闭 FTP 服务并删除用户，你需要按照以下步骤执行。请注意，以下步骤基于常见的 Linux 操作系统（例如 Ubuntu）的默认配置，实际操作可能因系统版本而异。</p>
+<h3 id="1-关闭-FTP-服务："><a href="#1-关闭-FTP-服务：" class="headerlink" title="1. 关闭 FTP 服务："></a>1. 关闭 FTP 服务：</h3><h4 id="对于-vsftpd（常见的-FTP-服务器）："><a href="#对于-vsftpd（常见的-FTP-服务器）：" class="headerlink" title="对于 vsftpd（常见的 FTP 服务器）："></a>对于 vsftpd（常见的 FTP 服务器）：</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo service vsftpd stop</span><br></pre></td></tr></table></figure>
+
+<p>或者</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo systemctl stop vsftpd</span><br></pre></td></tr></table></figure>
+
+<h4 id="对于-proftpd："><a href="#对于-proftpd：" class="headerlink" title="对于 proftpd："></a>对于 proftpd：</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo service proftpd stop</span><br></pre></td></tr></table></figure>
+
+<p>或者</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo systemctl stop proftpd</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-删除-FTP-用户（ftpuser）："><a href="#2-删除-FTP-用户（ftpuser）：" class="headerlink" title="2. 删除 FTP 用户（ftpuser）："></a>2. 删除 FTP 用户（ftpuser）：</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo deluser ftpuser</span><br></pre></td></tr></table></figure>
+
+<p>这会删除用户 <code>ftpuser</code>，但这仅仅是删除用户，不会删除用户的家目录。如果需要删除家目录，可以使用以下命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo deluser ftpuser --remove-home</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-禁用-FTP-服务的自动启动："><a href="#3-禁用-FTP-服务的自动启动：" class="headerlink" title="3. 禁用 FTP 服务的自动启动："></a>3. 禁用 FTP 服务的自动启动：</h3><h4 id="对于-vsftpd："><a href="#对于-vsftpd：" class="headerlink" title="对于 vsftpd："></a>对于 vsftpd：</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo systemctl <span class="built_in">disable</span> vsftpd</span><br></pre></td></tr></table></figure>
+
+<h4 id="对于-proftpd：-1"><a href="#对于-proftpd：-1" class="headerlink" title="对于 proftpd："></a>对于 proftpd：</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo systemctl <span class="built_in">disable</span> proftpd</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-确认服务已关闭："><a href="#4-确认服务已关闭：" class="headerlink" title="4. 确认服务已关闭："></a>4. 确认服务已关闭：</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo service vsftpd status</span><br></pre></td></tr></table></figure>
+
+<p>或者</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo service proftpd status</span><br></pre></td></tr></table></figure>
+
+<p>确认状态应该显示服务已经停止。</p>
+<h3 id="5-重启服务器："><a href="#5-重启服务器：" class="headerlink" title="5. 重启服务器："></a>5. 重启服务器：</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo reboot</span><br></pre></td></tr></table></figure>
+
+<p>请注意，在执行这些步骤之前，请确保你有替代的远程访问手段，以免因关闭 FTP 服务而失去对服务器的访问。</p>
+<p>请根据你使用的具体 FTP 服务器和 Linux 发行版进行适当的调整。如果你不确定如何执行这些步骤，建议查阅相关文档或寻求系统管理员的帮助。</p>
+<p><img src="/img/1.png"></p>
+<p><img src="/img/2.png"></p>
+<p><img src="/img/3.png"></p>
+]]></content>
+      <categories>
+        <category>attacker</category>
+      </categories>
+      <tags>
+        <tag>attacker</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>ruoyi</title>
+    <url>/2023/12/09/Ruoyi/</url>
+    <content><![CDATA[<h1 id="若依熟悉和再次开发"><a href="#若依熟悉和再次开发" class="headerlink" title="若依熟悉和再次开发"></a>若依熟悉和再次开发</h1><h2 id="前端："><a href="#前端：" class="headerlink" title="前端："></a>前端：</h2><h3 id="一-在vue中使用encharts"><a href="#一-在vue中使用encharts" class="headerlink" title="一.在vue中使用encharts"></a>一.在vue中使用encharts</h3><p>1.在main.js导包，</p>
+<p>2.目录下创建各种&#x2F;views&#x2F;dashboard&#x2F;xx.vue    </p>
+<p>3.最后index.vue调用生成的几个图表.vue</p>
+<h3 id="二-怎么在左边侧边栏创建一个新的功能"><a href="#二-怎么在左边侧边栏创建一个新的功能" class="headerlink" title="二.怎么在左边侧边栏创建一个新的功能"></a>二.怎么在左边侧边栏创建一个新的功能</h3><p>1.src&#x2F;api里面封装方法</p>
+<p>2.可能需要再router里面配置路由</p>
+<p>3.src&#x2F;views&#x2F;一级功能名&#x2F;二级功能名.vue</p>
+<h3 id="三-修改一些外观："><a href="#三-修改一些外观：" class="headerlink" title="三.修改一些外观："></a>三.修改一些外观：</h3><h3 id="http-681314-com-A-chyMqLRVJF"><a href="#http-681314-com-A-chyMqLRVJF" class="headerlink" title="http://681314.com/A/chyMqLRVJF"></a><a href="http://681314.com/A/chyMqLRVJF">http://681314.com/A/chyMqLRVJF</a></h3><h3 id="四：滑块登录"><a href="#四：滑块登录" class="headerlink" title="四：滑块登录"></a>四：滑块登录</h3><p><a href="https://doc.ruoyi.vip/ruoyi/document/cjjc.html#%E9%9B%86%E6%88%90aj-captcha%E5%AE%9E%E7%8E%B0%E6%BB%91%E5%9D%97%E9%AA%8C%E8%AF%81%E7%A0%81">https://doc.ruoyi.vip/ruoyi/document/cjjc.html#%E9%9B%86%E6%88%90aj-captcha%E5%AE%9E%E7%8E%B0%E6%BB%91%E5%9D%97%E9%AA%8C%E8%AF%81%E7%A0%81</a></p>
+<p><a href="https://blog.csdn.net/w13966597931/article/details/125949640">https://blog.csdn.net/w13966597931/article/details/125949640</a></p>
+<p><a href="https://blog.csdn.net/qq_35542689/article/details/127391996">https://blog.csdn.net/qq_35542689/article/details/127391996</a></p>
+<h2 id="后端："><a href="#后端：" class="headerlink" title="后端："></a>后端：</h2><h3 id="一-开注册"><a href="#一-开注册" class="headerlink" title="一.开注册"></a>一.开注册</h3><h3 id="二-多种登录方式"><a href="#二-多种登录方式" class="headerlink" title="二.多种登录方式"></a>二.多种登录方式</h3><h3 id="三-左侧侧边栏实现一个功能"><a href="#三-左侧侧边栏实现一个功能" class="headerlink" title="三.左侧侧边栏实现一个功能"></a>三.左侧侧边栏实现一个功能</h3><h3 id="http-wed-xjx100-cn-news-191394-html-action-onClick"><a href="#http-wed-xjx100-cn-news-191394-html-action-onClick" class="headerlink" title="http://wed.xjx100.cn/news/191394.html?action=onClick"></a><a href="http://wed.xjx100.cn/news/191394.html?action=onClick">http://wed.xjx100.cn/news/191394.html?action=onClick</a></h3><p><a href="https://blog.csdn.net/weixin_44226181/article/details/127805791">https://blog.csdn.net/weixin_44226181/article/details/127805791</a></p>
+<p>1.首先创建数据库，自定义字段和数据类型</p>
+<p>2.菜单栏创建一个新的目录在主类目下，填写路由地址。</p>
+<p>2.代码生成&#x2F;导入表&#x2F;(预览、编辑)&#x2F;</p>
+<p>必填项：必须填，否则报错</p>
+<p>显示类型：文本框，日期控件还是下拉框，</p>
+<p>字典类型：就是下拉框的数据源</p>
+<p>3.字典管理&#x2F;新增字典</p>
+<p>点击对应的字典进行数据的CRUD</p>
+<p>4.回到代码生成&#x2F;编辑</p>
+<p>1.基本信息填写表描述</p>
+<p>2.字段信息选择对应的字典类型</p>
+<p>3.模块名，就是moudle名，生成的包路径，业务名，功能名，上级菜单</p>
+<p>4.新建一个maven moudle,删掉properties，添加dependencies，</p>
+<pre><code>&lt;dependencies&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;com.ruoyi&lt;/groupId&gt;
+        &lt;artifactId&gt;ruoyi-common&lt;/artifactId&gt;
+    &lt;/dependency&gt;
+&lt;/dependencies&gt;
+</code></pre>
+<p>在ruoyi-admin中导入新建的moudle，因为需要使用通用的CRUD。</p>
+<pre><code>    &lt;!--    活动信息管理    --&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;com.ruoyi&lt;/groupId&gt;
+        &lt;artifactId&gt;ruoyi-activity&lt;/artifactId&gt;
+        &lt;version&gt;$&#123;ruoyi.version&#125;&lt;/version&gt;
+    &lt;/dependency&gt;
+</code></pre>
+<p>5.下载zip，解压打开。</p>
+<p>6.导入代码到工程目录</p>
+<p>后端：</p>
+<p>main&#x2F;java&#x2F;com&#x2F;ruoyi&#x2F;system&#x2F;controller –&gt; ruoyi-admin&#x2F;src&#x2F;java&#x2F;com.ruoyi&#x2F;web&#x2F;controller&#x2F;system </p>
+<p>main&#x2F;java&#x2F;com&#x2F;ruoyi&#x2F;system&#x2F;domain –&gt; ruoyi-system&#x2F;src&#x2F;main&#x2F;java&#x2F;com.ruoyi.system&#x2F;domain</p>
+<p>main&#x2F;java&#x2F;com&#x2F;ruoyi&#x2F;system&#x2F;mapper –&gt;  ruoyi-system&#x2F;src&#x2F;main&#x2F;java&#x2F;com.ruoyi.system&#x2F;domain</p>
+<p>main&#x2F;java&#x2F;com&#x2F;ruoyi&#x2F;system&#x2F;service –&gt; ruoyi-system&#x2F;src&#x2F;main&#x2F;java&#x2F;com.ruoyi.system&#x2F;domain</p>
+<p>main&#x2F;resources&#x2F;mapper&#x2F;system –&gt; ruoyi-system&#x2F;src&#x2F;main&#x2F;resources&#x2F;mappe&#x2F;system</p>
+<p>前端：</p>
+<p>vue&#x2F;api&#x2F;system –&gt; vue-ui&#x2F;src&#x2F;api&#x2F;system&#x2F;</p>
+<p>vue&#x2F;views&#x2F;system&#x2F;xx表名&#x2F;index.vue –&gt; vue-ui&#x2F;src&#x2F;views&#x2F;system&#x2F;新建文件夹(表名)&#x2F;index.vue</p>
+<p>最后将sql文件再运行一遍，重启即可。</p>
+<h2 id="UI："><a href="#UI：" class="headerlink" title="UI："></a>UI：</h2><p>logo抠图</p>
+]]></content>
+      <categories>
+        <category>ruoyi</category>
+      </categories>
+      <tags>
+        <tag>ruoyi</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2023/10/27/leetcode/</url>
+    <content><![CDATA[<h1 id="leetcode题解"><a href="#leetcode题解" class="headerlink" title="leetcode题解"></a>leetcode题解</h1><h2 id="面试经典150问"><a href="#面试经典150问" class="headerlink" title="面试经典150问"></a>面试经典150问</h2><p>我就不按照顺序发布了，先暂时不做统计，刷完在做统计和分类。</p>
+<h3 id="1-最长公共前缀"><a href="#1-最长公共前缀" class="headerlink" title="1.最长公共前缀"></a>1.最长公共前缀</h3><p>编写一个函数来查找字符串数组中的最长公共前缀。</p>
+<p>如果不存在公共前缀，返回空字符串 <code>&quot;&quot;</code>。</p>
+<p><strong>示例 1：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入：strs = [&quot;flower&quot;,&quot;flow&quot;,&quot;flight&quot;]</span><br><span class="line">输出：&quot;fl&quot;</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例 2：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入：strs = [&quot;dog&quot;,&quot;racecar&quot;,&quot;car&quot;]</span><br><span class="line">输出：&quot;&quot;</span><br><span class="line">解释：输入不存在公共前缀。</span><br></pre></td></tr></table></figure>
+
+<p><strong>提示：</strong></p>
+<ul>
+<li><code>1 &lt;= strs.length &lt;= 200</code></li>
+<li><code>0 &lt;= strs[i].length &lt;= 200</code></li>
+<li><code>strs[i]</code> 仅由小写英文字母组成</li>
+</ul>
+<p>1.1分治法</p>
+<p>方法一：分治</p>
+<p>注意到 LCP\textit{LCP}LCP 的计算满足结合律，有以下结论：<br>LCP(S1…Sn)&#x3D;LCP(LCP(S1…Sk),LCP(Sk+1…Sn))\textit{LCP}(S_1 \ldots S_n) &#x3D; \textit{LCP}(\textit{LCP}(S_1 \ldots S_k), \textit{LCP} (S_{k+1} \ldots S_n))LCP(S1…Sn)&#x3D;LCP(LCP(S1…Sk),LCP(Sk+1…Sn))</p>
+<p>其中 LCP(S1…Sn)\textit{LCP}(S_1 \ldots S_n)LCP(S1…Sn) 是字符串 S1…SnS_1 \ldots S_nS1…Sn 的最长公共前缀，1&lt;k&lt;n1 &lt; k &lt; n1&lt;k&lt;n。</p>
+<p>基于上述结论，可以使用分治法得到字符串数组中的最长公共前缀。对于问题 LCP(Si⋯Sj)\textit{LCP}(S_i\cdots S_j)LCP(Si⋯Sj)，可以分解成两个子问题 LCP(Si…Smid)\textit{LCP}(S_i \ldots S_{mid})LCP(Si…Smid) 与 LCP(Smid+1…Sj)\textit{LCP}(S_{mid+1} \ldots S_j)LCP(Smid+1…Sj)，其中 mid&#x3D;i+j2mid&#x3D;\frac{i+j}{2}mid&#x3D;2i+j。对两个子问题分别求解，然后对两个子问题的解计算最长公共前缀，即为原问题的解。</p>
+<p><img src="/img/lcp.png"></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">//判空，进行字符串的递归处理</span><br><span class="line">class Solution &#123;</span><br><span class="line">    public String longestCommonPrefix(String[] strs) &#123;</span><br><span class="line">        if(strs == null || strs.length == 0)&#123;</span><br><span class="line">            return &quot;&quot;;</span><br><span class="line">        &#125;else&#123;</span><br><span class="line">            return longestCommonPrefix(strs,0,strs.length - 1);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    //分治法,先分别求前面和后面的一半的公共前缀，每次计算都会分半来求，当出现空串或者没有共同前缀时，即可求出字符串数组中的LCP</span><br><span class="line">    public String longestCommonPrefix(String[] strs,int start,int end)&#123;</span><br><span class="line">        if(start == end)&#123;</span><br><span class="line">            return strs[start];</span><br><span class="line">        &#125;else&#123;</span><br><span class="line">            int mid = (end - start) / 2  + start;</span><br><span class="line">            String lcpleft = longestCommonPrefix(strs,start,mid);</span><br><span class="line">            String lcpright = longestCommonPrefix(strs,mid+1,end);</span><br><span class="line">            return commonPrefix(lcpleft,lcpright);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    //求两个串的公共前缀，用最短的来求即可</span><br><span class="line">    public String commonPrefix(String lcpleft,String lcpright)&#123;</span><br><span class="line">        int midlength = Math.min(lcpleft.length(),lcpright.length());</span><br><span class="line">        for(int i =0;i&lt;midlength;i++)&#123;</span><br><span class="line">         if (lcpLeft.charAt(i) != lcpRight.charAt(i)) &#123;</span><br><span class="line">                return lcpLeft.substring(0, i);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return lcpleft.substring(0,midlength);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>方法二：二分查找</p>
+<p>显然，最长公共前缀的长度不会超过字符串数组中的最短字符串的长度。用 minLength\textit{minLength}minLength 表示字符串数组中的最短字符串的长度，则可以在 [0,minLength][0,\textit{minLength}][0,minLength] 的范围内通过二分查找得到最长公共前缀的长度。每次取查找范围的中间值 mid\textit{mid}mid，判断每个字符串的长度为 mid\textit{mid}mid 的前缀是否相同，如果相同则最长公共前缀的长度一定大于或等于 mid\textit{mid}mid，如果不相同则最长公共前缀的长度一定小于 mid\textit{mid}mid，通过上述方式将查找范围缩小一半，直到得到最长公共前缀的长度。</p>
+<p><img src="/img/lcp1.png"></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">    public String longestCommonPrefix(String[] strs) &#123;</span><br><span class="line">        if (strs == null || strs.length == 0) &#123;</span><br><span class="line">            return &quot;&quot;;</span><br><span class="line">        &#125;</span><br><span class="line">        //找到最小的子串，最长的前缀子串肯定不会超过这个子串</span><br><span class="line">        int minLength = Integer.MAX_VALUE;</span><br><span class="line">        for (String str : strs) &#123;</span><br><span class="line">            minLength = Math.min(minLength, str.length());</span><br><span class="line">        &#125;</span><br><span class="line">        //二分基本逻辑，在if中()处理需要的逻辑</span><br><span class="line">        int low = 0, high = minLength;</span><br><span class="line">        while (low &lt; high) &#123;</span><br><span class="line">            int mid = (high - low + 1) / 2 + low;</span><br><span class="line">            if (isCommonPrefix(strs, mid)) &#123;</span><br><span class="line">                low = mid;</span><br><span class="line">            &#125; else &#123;</span><br><span class="line">                high = mid - 1;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return strs[0].substring(0, low);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">	//和所有的字符串进行比较。先用最短串的mid,都匹配成功则low = mid,否则 high = mid -1,继续进行匹配。</span><br><span class="line">    public boolean isCommonPrefix(String[] strs, int length) &#123;</span><br><span class="line">        String str0 = strs[0].substring(0, length);</span><br><span class="line">        int count = strs.length;</span><br><span class="line">        for (int i = 1; i &lt; count; i++) &#123;</span><br><span class="line">        	//比较count个字符串</span><br><span class="line">            String str = strs[i];</span><br><span class="line">            for (int j = 0; j &lt; length; j++) &#123;</span><br><span class="line">                //每次进来比较当前字符串和当前最长前缀是否相同,相同则 low = mid,否则 high  = mid -1,往后移动一个或者向前移动一个</span><br><span class="line">                if (str0.charAt(j) != str.charAt(j)) &#123;</span><br><span class="line">                    return false;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return true;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-单词规律"><a href="#2-单词规律" class="headerlink" title="2.单词规律"></a>2.单词规律</h3><p>给定一种规律 <code>pattern</code> 和一个字符串 <code>s</code> ，判断 <code>s</code> 是否遵循相同的规律。</p>
+<p>这里的 <strong>遵循</strong> 指完全匹配，例如， <code>pattern</code> 里的每个字母和字符串 <code>s</code> 中的每个非空单词之间存在着双向连接的对应规律。</p>
+<p><strong>示例1:</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入: pattern = &quot;abba&quot;, s = &quot;dog cat cat dog&quot;</span><br><span class="line">输出: true</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例 2:</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入:pattern = &quot;abba&quot;, s = &quot;dog cat cat fish&quot;</span><br><span class="line">输出: false</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例 3:</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入: pattern = &quot;aaaa&quot;, s = &quot;dog cat cat dog&quot;</span><br><span class="line">输出: false</span><br></pre></td></tr></table></figure>
+
+<p><strong>提示:</strong></p>
+<ul>
+<li><code>1 &lt;= pattern.length &lt;= 300</code></li>
+<li><code>pattern</code> 只包含小写英文字母</li>
+<li><code>1 &lt;= s.length &lt;= 3000</code></li>
+<li><code>s</code> 只包含小写英文字母和 <code>&#39; &#39;</code></li>
+<li><code>s</code> <strong>不包含</strong> 任何前导或尾随对空格</li>
+<li><code>s</code> 中每个单词都被 <strong>单个空格</strong> 分隔</li>
+</ul>
+<p>方法一：哈希表</p>
+<p>思路及解法</p>
+<p>在本题中，我们需要判断字符与字符串之间是否恰好一一对应。即任意一个字符都对应着唯一的字符串，任意一个字符串也只被唯一的一个字符对应。在集合论中，这种关系被称为「双射」。</p>
+<p>想要解决本题，我们可以利用哈希表记录每一个字符对应的字符串，以及每一个字符串对应的字符。然后我们枚举每一对字符与字符串的配对过程，不断更新哈希表，如果发生了冲突，则说明给定的输入不满足双射关系。</p>
+<p>在实际代码中，我们枚举 pattern\textit{pattern}pattern 中的每一个字符，利用双指针来均摊线性地找到该字符在 str\textit{str}str 中对应的字符串。每次确定一个字符与字符串的组合，我们就检查是否出现冲突，最后我们再检查两字符串是否比较完毕即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">    public boolean wordPattern(String pattern, String str) &#123;</span><br><span class="line">        Map&lt;String, Character&gt; str2ch = new HashMap&lt;String, Character&gt;();</span><br><span class="line">        Map&lt;Character, String&gt; ch2str = new HashMap&lt;Character, String&gt;();</span><br><span class="line">        int m = str.length();</span><br><span class="line">        int i = 0;</span><br><span class="line">        for (int p = 0; p &lt; pattern.length(); ++p) &#123;</span><br><span class="line">            char ch = pattern.charAt(p);</span><br><span class="line">            if (i &gt;= m) &#123;</span><br><span class="line">                return false;</span><br><span class="line">            &#125;</span><br><span class="line">            int j = i;</span><br><span class="line">            while (j &lt; m &amp;&amp; str.charAt(j) != &#x27; &#x27;) &#123;</span><br><span class="line">                j++;</span><br><span class="line">            &#125;</span><br><span class="line">            String tmp = str.substring(i, j);</span><br><span class="line">            if (str2ch.containsKey(tmp) &amp;&amp; str2ch.get(tmp) != ch) &#123;</span><br><span class="line">                return false;</span><br><span class="line">            &#125;</span><br><span class="line">            if (ch2str.containsKey(ch) &amp;&amp; !tmp.equals(ch2str.get(ch))) &#123;</span><br><span class="line">                return false;</span><br><span class="line">            &#125;</span><br><span class="line">            str2ch.put(tmp, ch);</span><br><span class="line">            ch2str.put(ch, tmp);</span><br><span class="line">            i = j + 1;</span><br><span class="line">        &#125;</span><br><span class="line">        return i &gt;= m;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>复杂度分析</p>
+<pre><code>时间复杂度：O(n+m)O(n + m)O(n+m)，其中 nnn 为 pattern\textit&#123;pattern&#125;pattern 的长度，mmm 为 str\textit&#123;str&#125;str 的长度。插入和查询哈希表的均摊时间复杂度均为 O(n+m)O(n + m)O(n+m)。每一个字符至多只被遍历一次。
+
+空间复杂度：O(n+m)O(n + m)O(n+m)，其中 nnn 为 pattern\textit&#123;pattern&#125;pattern 的长度，mmm 为 str\textit&#123;str&#125;str 的长度。最坏情况下，我们需要存储 pattern\textit&#123;pattern&#125;pattern 中的每一个字符和 str\textit&#123;str&#125;str 中的每一个字符串
+</code></pre>
+<h3 id="3-68-30困难没有写"><a href="#3-68-30困难没有写" class="headerlink" title="3.68 30困难没有写"></a>3.68 30困难没有写</h3><h3 id="4-205-同构字符串"><a href="#4-205-同构字符串" class="headerlink" title="4.205 同构字符串"></a>4.205 同构字符串</h3><p>给定两个字符串 <code>s</code> 和 <code>t</code> ，判断它们是否是同构的。</p>
+<p>如果 <code>s</code> 中的字符可以按某种映射关系替换得到 <code>t</code> ，那么这两个字符串是同构的。</p>
+<p>每个出现的字符都应当映射到另一个字符，同时不改变字符的顺序。不同字符不能映射到同一个字符上，相同字符只能映射到同一个字符上，字符可以映射到自己本身。</p>
+<p><strong>示例 1:</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入：s = &quot;egg&quot;, t = &quot;add&quot;</span><br><span class="line">输出：true</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例 2：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入：s = &quot;foo&quot;, t = &quot;bar&quot;</span><br><span class="line">输出：false</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例 3：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入：s = &quot;paper&quot;, t = &quot;title&quot;</span><br><span class="line">输出：true</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">isIsomorphic</span><span class="params">(String s, String t)</span> &#123;</span><br><span class="line">        Map&lt;Character,Character&gt; s2t = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;Character,Character&gt;();</span><br><span class="line">        Map&lt;Character,Character&gt; t2s = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;Character,Character&gt;();</span><br><span class="line">        <span class="type">int</span> <span class="variable">len</span> <span class="operator">=</span> s.length();</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span><span class="number">0</span>; i &lt; len; ++i)&#123;</span><br><span class="line">            <span class="type">char</span> <span class="variable">x</span> <span class="operator">=</span> s.charAt(i);</span><br><span class="line">            <span class="type">char</span> <span class="variable">y</span> <span class="operator">=</span> t.charAt(i);</span><br><span class="line">            <span class="comment">//出现冲突，当前下标的对应的字符已经存在映射且不为当前对应的字符,不是同构</span></span><br><span class="line">            <span class="keyword">if</span>(</span><br><span class="line">                (s2t.containsKey(x) &amp;&amp; s2t.get(x) != y) </span><br><span class="line">                 || </span><br><span class="line">                (t2s.containsKey(y) &amp;&amp; t2s.get(y) != x)</span><br><span class="line">            ) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            s2t.put(x,y);</span><br><span class="line">            t2s.put(y,x);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>方法一：哈希表</p>
+<p>此题是「290. 单词规律」的简化版，需要我们判断 sss 和 ttt 每个位置上的字符是否都一一对应，即 s的任意一个字符被 t中唯一的字符对应，同时 t 的任意一个字符被 s中唯一的字符对应。这也被称为「双射」的关系。</p>
+<p>以示例 2 为例，t中的字符 a 和 r虽然有唯一的映射 o，但对于 s 中的字符 o 来说其存在两个映射 {a,r},故不满足条件。</p>
+<p>因此，我们维护两张哈希表，第一张哈希表 s2t以 s 中字符为键，映射至 t 的字符为值，第二张哈希表 t2s以 tt中字符为键，映射至 s 的字符为值。从左至右遍历两个字符串的字符，不断更新两张哈希表，如果出现冲突（即当前下标 index 对应的字符 s[index] 已经存在映射且不为 t[index] 或当前下标 index 对应的字符 t[index]已经存在映射且不为 s[index]）时说明两个字符串无法构成同构，返回 false。</p>
+<p>如果遍历结束没有出现冲突，则表明两个字符串是同构的，返回 true\rm truetrue 即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">时间复杂度：O(n)O(n)O(n)，其中 nnn 为字符串的长度。我们只需同时遍历一遍字符串 sss 和 ttt 即可。</span><br><span class="line">空间复杂度：O(∣Σ∣)O(|\Sigma|)O(∣Σ∣)，其中 Σ\SigmaΣ 是字符串的字符集。哈希表存储字符的空间取决于字符串的字符集大小，最坏情况下每个字符均不相同，需要 O(∣Σ∣)O(|\Sigma|)O(∣Σ∣) 的空间</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-242-有效的字母异位词"><a href="#5-242-有效的字母异位词" class="headerlink" title="5.242 有效的字母异位词"></a>5.242 有效的字母异位词</h3><p>给定两个字符串 <code>*s*</code> 和 <code>*t*</code> ，编写一个函数来判断 <code>*t*</code> 是否是 <code>*s*</code> 的字母异位词。</p>
+<p><strong>注意：</strong>若 <code>*s*</code> 和 <code>*t*</code> 中每个字符出现的次数都相同，则称 <code>*s*</code> 和 <code>*t*</code> 互为字母异位词。</p>
+<p><strong>示例 1:</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入: s = &quot;anagram&quot;, t = &quot;nagaram&quot;</span><br><span class="line">输出: true</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例 2:</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入: s = &quot;rat&quot;, t = &quot;car&quot;</span><br><span class="line">输出: false</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>一个数组维护第一个单词所有字母出现的次数，每次++；遍历第二个单词所有字母，每次–；如果次数小于0，说明不相等。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">    public boolean isAnagram(String s, String t) &#123;</span><br><span class="line">        if (s.length() != t.length()) &#123;</span><br><span class="line">            return false;</span><br><span class="line">        &#125;</span><br><span class="line">        int[] table = new int[26];</span><br><span class="line">        for (int i = 0; i &lt; s.length(); i++) &#123;</span><br><span class="line">            table[s.charAt(i) - &#x27;a&#x27;]++;</span><br><span class="line">        &#125;</span><br><span class="line">        for (int i = 0; i &lt; t.length(); i++) &#123;</span><br><span class="line">            table[t.charAt(i) - &#x27;a&#x27;]--;</span><br><span class="line">            if (table[t.charAt(i) - &#x27;a&#x27;] &lt; 0) &#123;</span><br><span class="line">                return false;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return true;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>进阶:</strong> 如果输入字符串包含 unicode 字符怎么办？你能否调整你的解法来应对这种情况？</p>
+<p>用HashMap来解决</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">    public boolean isAnagram(String s, String t) &#123;</span><br><span class="line">        if (s.length() != t.length()) &#123;</span><br><span class="line">            return false;</span><br><span class="line">        &#125;</span><br><span class="line">        Map&lt;Character, Integer&gt; table = new HashMap&lt;Character, Integer&gt;();</span><br><span class="line">        for (int i = 0; i &lt; s.length(); i++) &#123;</span><br><span class="line">            char ch = s.charAt(i);</span><br><span class="line">            table.put(ch, table.getOrDefault(ch, 0) + 1);</span><br><span class="line">        &#125;</span><br><span class="line">        for (int i = 0; i &lt; t.length(); i++) &#123;</span><br><span class="line">            char ch = t.charAt(i);</span><br><span class="line">            table.put(ch, table.getOrDefault(ch, 0) - 1);</span><br><span class="line">            if (table.get(ch) &lt; 0) &#123;</span><br><span class="line">                return false;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return true;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="6-快乐数"><a href="#6-快乐数" class="headerlink" title="6.快乐数"></a>6.快乐数</h3><p>编写一个算法来判断一个数 <code>n</code> 是不是快乐数。</p>
+<p><strong>「快乐数」</strong> 定义为：</p>
+<ul>
+<li>对于一个正整数，每一次将该数替换为它每个位置上的数字的平方和。</li>
+<li>然后重复这个过程直到这个数变为 1，也可能是 <strong>无限循环</strong> 但始终变不到 1。</li>
+<li>如果这个过程 <strong>结果为</strong> 1，那么这个数就是快乐数。</li>
+</ul>
+<p>如果 <code>n</code> 是 <em>快乐数</em> 就返回 <code>true</code> ；不是，则返回 <code>false</code> 。</p>
+<p><strong>示例 1：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入：n = 19</span><br><span class="line">输出：true</span><br><span class="line">解释：</span><br><span class="line">12 + 92 = 82</span><br><span class="line">82 + 22 = 68</span><br><span class="line">62 + 82 = 100</span><br><span class="line">12 + 02 + 02 = 1</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li></li>
+</ol>
+<p>9-81</p>
+<p>99-162</p>
+<p>999-243</p>
+<p>9999-324</p>
+<p>9999999999999-1053</p>
+<p>2.陷入循环中，不断的循环。</p>
+<p>3.解法：</p>
+<p>数位拆分求每次的平方和，加入到set集合中，保证每次都是不重复的，有重复说明进入循环永远得不到1，否则判断到最后。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">getNext</span><span class="params">(<span class="type">int</span> n)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">totalSum</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>(n&gt;<span class="number">0</span>)&#123;</span><br><span class="line">            <span class="type">int</span> <span class="variable">d</span> <span class="operator">=</span> n%<span class="number">10</span>;</span><br><span class="line">            n= n /<span class="number">10</span>;</span><br><span class="line">            totalSum += d*d;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> totalSum;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">isHappy</span><span class="params">(<span class="type">int</span> n)</span>&#123;</span><br><span class="line">        Set&lt;Integer&gt; seen = <span class="keyword">new</span> <span class="title class_">HashSet</span>&lt;&gt;();</span><br><span class="line">        <span class="keyword">while</span>(n != <span class="number">1</span> &amp;&amp; !seen.contains(n))&#123;</span><br><span class="line">            seen.add(n);</span><br><span class="line">            n = getNext(n);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> n==<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">第 1 部分我们按照题目的要求做数位分离，求平方和。</span><br><span class="line">第 2 部分可以使用哈希集合完成。每次生成链中的下一个数字时，我们都会检查它是否已经在哈希集合中。</span><br><span class="line">如果它不在哈希集合中，我们应该添加它。</span><br><span class="line">如果它在哈希集合中，这意味着我们处于一个循环中，因此应该返回 false。</span><br><span class="line">哈希查找元素是O（1），其他是O（N）</span><br></pre></td></tr></table></figure>
+
+<p>解法2：快慢指针法</p>
+<p>实际上，我们每次平方后的数据会形成一个链表，所以用快慢指针来进行更加高级的判断。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">我们不是只跟踪链表中的一个值，而是跟踪两个值，称为快跑者和慢跑者。在算法的每一步中，慢速在链表中前进 1 个节点，快跑者前进 2 个节点（对 getNext(n) 函数的嵌套调用）。</span><br><span class="line">如果 n 是一个快乐数，即没有循环，那么快跑者最终会比慢跑者先到达数字 1。</span><br><span class="line">如果 n 不是一个快乐的数字，那么最终快跑者和慢跑者将在同一个数字上相遇。</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">getNext</span><span class="params">(<span class="type">int</span> n)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">totalSum</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>(n&gt;<span class="number">0</span>)&#123;</span><br><span class="line">            <span class="type">int</span> <span class="variable">d</span> <span class="operator">=</span> n%<span class="number">10</span>;</span><br><span class="line">            n= n /<span class="number">10</span>;</span><br><span class="line">            totalSum += d*d;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> totalSum;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">isHappy</span><span class="params">(<span class="type">int</span> n)</span>&#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">slowR</span> <span class="operator">=</span> n;</span><br><span class="line">        <span class="type">int</span> <span class="variable">fastR</span> <span class="operator">=</span> getNext(n);</span><br><span class="line">        <span class="keyword">while</span>(fastR != <span class="number">1</span> &amp;&amp; slowR != fastR)&#123;</span><br><span class="line">            slowR = getNext(slowR);</span><br><span class="line">            fastR = getNext(getNext(fastR));</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> fastR ==<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>7.环形链表</p>
+<p>给你一个链表的头节点 <code>head</code> ，判断链表中是否有环。</p>
+<p>如果链表中有某个节点，可以通过连续跟踪 <code>next</code> 指针再次到达，则链表中存在环。 为了表示给定链表中的环，评测系统内部使用整数 <code>pos</code> 来表示链表尾连接到链表中的位置（索引从 0 开始）。<strong>注意：<code>pos</code> 不作为参数进行传递</strong> 。仅仅是为了标识链表的实际情况。</p>
+<p><em>如果链表中存在环</em> ，则返回 <code>true</code> 。 否则，返回 <code>false</code> 。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入：head = [3,2,0,-4], pos = 1</span><br><span class="line">输出：true</span><br><span class="line">解释：链表中有一个环，其尾部连接到第二个节点。</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">hasCycle</span><span class="params">(ListNode head)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span>(head ==<span class="literal">null</span> || head.next == <span class="literal">null</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">ListNode</span> <span class="variable">slow</span> <span class="operator">=</span> head;</span><br><span class="line">        <span class="type">ListNode</span> <span class="variable">fast</span> <span class="operator">=</span> head.next;</span><br><span class="line">        <span class="keyword">while</span>(slow != fast)&#123;</span><br><span class="line">            <span class="keyword">if</span>(fast == <span class="literal">null</span> || fast.next == <span class="literal">null</span>)&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            slow = slow.next;<span class="comment">//走一步</span></span><br><span class="line">            fast = fast.next.next;<span class="comment">//走两步</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>依旧是快慢指针，slow初始在第一个，fast在slow前面，slow每次一个，fast每次两个。相遇即是有环，否则说明没有环。O(N)&#x2F;O(1);</p>
+<h3 id="7-存在重复元素"><a href="#7-存在重复元素" class="headerlink" title="7.存在重复元素||"></a>7.存在重复元素||</h3><p>给你一个整数数组 <code>nums</code> 和一个整数 <code>k</code> ，判断数组中是否存在两个 <strong>不同的索引</strong> <code>i</code> 和 <code>j</code> ，满足 <code>nums[i] == nums[j]</code> 且 <code>abs(i - j) &lt;= k</code> 。如果存在，返回 <code>true</code> ；否则，返回 <code>false</code> 。</p>
+<p><strong>示例 1：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入：nums = [1,2,3,1], k = 3</span><br><span class="line">输出：true</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例 2：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入：nums = [1,0,1,1], k = 1</span><br><span class="line">输出：true</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">containsNearbyDuplicate</span><span class="params">(<span class="type">int</span>[] nums, <span class="type">int</span> k)</span> &#123;</span><br><span class="line">       Set&lt;Integer&gt; set = <span class="keyword">new</span> <span class="title class_">HashSet</span>&lt;&gt;();</span><br><span class="line">       <span class="type">int</span> <span class="variable">len</span> <span class="operator">=</span> nums.length;</span><br><span class="line">       <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;len;i++)&#123;</span><br><span class="line">	<span class="keyword">if</span>( i &gt; k )&#123;</span><br><span class="line">		set.remove(nums[i - k - <span class="number">1</span>]);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span>(!set.add(nums[i]))&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">false</span>;			</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>滑动窗口的解法:</p>
+<p>每次判断的窗口大小的范围不超过k+1,同时下表绝对值之差不超过k，这样就维持了i &amp; j 的下表不超过k的限制条件，同时每次将数据保存到set集合中，需要判断集合是否存在相同元素，能存在相同元素即可返回true；</p>
+<p>关键点，当 i &gt;k 时，需要更新窗口，将i-k-1的值移除窗口，这个值就相当于当前窗口的第一个值。</p>
+<h3 id="8-有效的括号"><a href="#8-有效的括号" class="headerlink" title="8.有效的括号"></a>8.有效的括号</h3><p>给定一个只包括 <code>&#39;(&#39;</code>，<code>&#39;)&#39;</code>，<code>&#39;&#123;&#39;</code>，<code>&#39;&#125;&#39;</code>，<code>&#39;[&#39;</code>，<code>&#39;]&#39;</code> 的字符串 <code>s</code> ，判断字符串是否有效。</p>
+<p><strong>示例 2：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入：s = &quot;()[]&#123;&#125;&quot;</span><br><span class="line">输出：true</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例 3：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入：s = &quot;(]&quot;</span><br><span class="line">输出：false</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">isValid</span><span class="params">(String s)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">n</span> <span class="operator">=</span> s.length();</span><br><span class="line">        <span class="keyword">if</span> ( n % <span class="number">2</span> ==<span class="number">1</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        Map&lt;Character,Character&gt; pairs = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;&gt;()&#123;&#123;</span><br><span class="line">            put(<span class="string">&#x27;)&#x27;</span>,<span class="string">&#x27;(&#x27;</span>);</span><br><span class="line">            put(<span class="string">&#x27;]&#x27;</span>,<span class="string">&#x27;[&#x27;</span>);</span><br><span class="line">            put(<span class="string">&#x27;&#125;&#x27;</span>,<span class="string">&#x27;&#123;&#x27;</span>);</span><br><span class="line">        &#125;&#125;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        Deque&lt;Character&gt; stack = <span class="keyword">new</span> <span class="title class_">LinkedList</span>&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">            <span class="type">char</span> <span class="variable">ch</span> <span class="operator">=</span> s.charAt(i);</span><br><span class="line">            <span class="keyword">if</span>(pairs.containsKey(ch))&#123;</span><br><span class="line">                <span class="keyword">if</span>(stack.isEmpty() || stack.peek() != pairs.get(ch))&#123;</span><br><span class="line">                        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                stack.pop();</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span>&#123;</span><br><span class="line">                stack.push(ch);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> stack.isEmpty();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>栈：</p>
+<p>使用栈来匹配括号，先把需要匹配的括号的类型保存到Map中,key为右括号，value为左括号，</p>
+<p>遍历每个字符串，首先将左括号则入栈，右括号则判断Map中该key对应的value是否是stack的栈顶元素，如果是则说明这二者是可以匹配的括号，将栈顶元素pop掉，最后如果stack是空则说明这个字符串是有效的括号。</p>
+<h3 id="9-汇总区间"><a href="#9-汇总区间" class="headerlink" title="9.汇总区间"></a>9.汇总区间</h3><p>给定一个  <strong>无重复元素</strong> 的 <strong>有序</strong> 整数数组 <code>nums</code> 。</p>
+<p>返回 <em><strong>恰好覆盖数组中所有数字</strong> 的 <strong>最小有序</strong> 区间范围列表</em> 。也就是说，<code>nums</code> 的每个元素都恰好被某个区间范围所覆盖，并且不存在属于某个范围但不属于 <code>nums</code> 的数字 <code>x</code> 。</p>
+<p>列表中的每个区间范围 <code>[a,b]</code> 应该按如下格式输出：</p>
+<ul>
+<li><code>&quot;a-&gt;b&quot;</code> ，如果 <code>a != b</code></li>
+<li><code>&quot;a&quot;</code> ，如果 <code>a == b</code>、</li>
+</ul>
+<p><strong>示例 2：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入：nums = [0,2,3,4,6,8,9]</span><br><span class="line">输出：[&quot;0&quot;,&quot;2-&gt;4&quot;,&quot;6&quot;,&quot;8-&gt;9&quot;]</span><br><span class="line">解释：区间范围是：</span><br><span class="line">[0,0] --&gt; &quot;0&quot;</span><br><span class="line">[2,4] --&gt; &quot;2-&gt;4&quot;</span><br><span class="line">[6,6] --&gt; &quot;6&quot;</span><br><span class="line">[8,9] --&gt; &quot;8-&gt;9&quot;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> List&lt;String&gt; <span class="title function_">summaryRanges</span><span class="params">(<span class="type">int</span>[] nums)</span> &#123;</span><br><span class="line">        List&lt;String&gt; ret = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">        <span class="type">int</span> i=<span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> <span class="variable">n</span> <span class="operator">=</span> nums.length;</span><br><span class="line">        <span class="keyword">while</span>(i &lt; n)&#123;</span><br><span class="line">                <span class="type">int</span> <span class="variable">low</span> <span class="operator">=</span> i;</span><br><span class="line">                i++;</span><br><span class="line">                <span class="keyword">while</span>(i &lt; n &amp;&amp; nums[i] == nums[i-<span class="number">1</span>] + <span class="number">1</span> )&#123;</span><br><span class="line">                        i++;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="type">int</span> <span class="variable">high</span> <span class="operator">=</span> i-<span class="number">1</span>;</span><br><span class="line">                <span class="type">StringBuffer</span> <span class="variable">temp</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">StringBuffer</span>(Integer.toString(nums[low]));</span><br><span class="line">                <span class="keyword">if</span>(low &lt; high)&#123;</span><br><span class="line">                    temp.append(<span class="string">&quot;-&gt;&quot;</span>);</span><br><span class="line">                    temp.append(Integer.toString(nums[high]));</span><br><span class="line">                &#125;</span><br><span class="line">                ret.add(temp.toString());</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ret;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>思路就是遍历每个区间，用链表存储结果，当发现前一个数据和后一个数据的差值大于1时，就说明找到了一个合适的区间，输出low-&gt;high,若是 0 2 3 4 6,输出0,2-&gt;4,6，low&#x3D;high情况直接输出low</p>
+<h3 id="10-合并两个有序列表"><a href="#10-合并两个有序列表" class="headerlink" title="10.合并两个有序列表"></a>10.合并两个有序列表</h3><p>将两个升序链表合并为一个新的 <strong>升序</strong> 链表并返回。新链表是通过拼接给定的两个链表的所有节点组成的。 </p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入：l1 = [1,2,4], l2 = [1,3,4]</span><br><span class="line">输出：[1,1,2,3,4,4]</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例 2：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入：l1 = [], l2 = []</span><br><span class="line">输出：[]</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例 3：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入：l1 = [], l2 = [0]</span><br><span class="line">输出：[0]</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/**</span><br><span class="line"> * Definition for singly-linked list.</span><br><span class="line"> * public class ListNode &#123;</span><br><span class="line"> *     int val;</span><br><span class="line"> *     ListNode next;</span><br><span class="line"> *     ListNode() &#123;&#125;</span><br><span class="line"> *     ListNode(int val) &#123; this.val = val; &#125;</span><br><span class="line"> *     ListNode(int val, ListNode next) &#123; this.val = val; this.next = next; &#125;</span><br><span class="line"> * &#125;</span><br><span class="line"> */</span><br><span class="line">class Solution &#123;</span><br><span class="line">    public ListNode mergeTwoLists(ListNode l1, ListNode l2) &#123;</span><br><span class="line">        if (l1 == null) &#123;</span><br><span class="line">            return l2;</span><br><span class="line">        &#125; else if (l2 == null) &#123;</span><br><span class="line">            return l1;</span><br><span class="line">        &#125; else if (l1.val &lt; l2.val) &#123;</span><br><span class="line">            l1.next = mergeTwoLists(l1.next, l2);</span><br><span class="line">            return l1;</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            l2.next = mergeTwoLists(l1, l2.next);</span><br><span class="line">            return l2;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>递归：</p>
+<p>看样例分析吧，输入：l1 &#x3D; [1,2,4], l2 &#x3D; [1,3,4] 。输出：[1,1,2,3,4,4]。</p>
+<p>比较流程：1,1; 1,3; 2,3, 4,3; 4,4</p>
+<p>最终链表：1,  1, 2,  3 ,  4 , 4</p>
+<p>1&#x3D;1，进入l2;</p>
+<p>1&amp;3，上一个递归方法就是1, 1.1;</p>
+<p>2&amp;3,  上一个递归方法就是2, 1.1.2；</p>
+<p>4&amp;3，是一个递归方法就是3, 1.1.2.3；</p>
+<p>4&amp;4，是一个递归方法就是4, 1.1.2.3.4；</p>
+<p>返回4；1.1.2.3.4；</p>
+<h3 id="11-两个数相加"><a href="#11-两个数相加" class="headerlink" title="11.两个数相加"></a>11.两个数相加</h3><p>给你两个 <strong>非空</strong> 的链表，表示两个非负的整数。它们每位数字都是按照 <strong>逆序</strong> 的方式存储的，并且每个节点只能存储 <strong>一位</strong> 数字。</p>
+<p>请你将两个数相加，并以相同形式返回一个表示和的链表。</p>
+<p>你可以假设除了数字 0 之外，这两个数都不会以 0 开头</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入：l1 = [2,4,3], l2 = [5,6,4]</span><br><span class="line">输出：[7,0,8]</span><br><span class="line">解释：342 + 465 = 807.</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例 2：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入：l1 = [0], l2 = [0]</span><br><span class="line">输出：[0]</span><br></pre></td></tr></table></figure>
+
+<p>模拟法:</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * public class ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     ListNode next;</span></span><br><span class="line"><span class="comment"> *     ListNode() &#123;&#125;</span></span><br><span class="line"><span class="comment"> *     ListNode(int val) &#123; this.val = val; &#125;</span></span><br><span class="line"><span class="comment"> *     ListNode(int val, ListNode next) &#123; this.val = val; this.next = next; &#125;</span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> ListNode <span class="title function_">addTwoNumbers</span><span class="params">(ListNode l1, ListNode l2)</span> &#123;</span><br><span class="line">        <span class="type">ListNode</span> <span class="variable">head</span> <span class="operator">=</span> <span class="literal">null</span>,tail = <span class="literal">null</span>;</span><br><span class="line">        <span class="type">int</span> <span class="variable">carry</span> <span class="operator">=</span><span class="number">0</span> ;</span><br><span class="line">        <span class="keyword">while</span>(l1 != <span class="literal">null</span> || l2!= <span class="literal">null</span> )&#123;</span><br><span class="line">            <span class="type">int</span> <span class="variable">n1</span> <span class="operator">=</span> l1 !=<span class="literal">null</span> ?l1.val : <span class="number">0</span>;</span><br><span class="line">            <span class="type">int</span> <span class="variable">n2</span> <span class="operator">=</span> l2 !=<span class="literal">null</span> ?l2.val : <span class="number">0</span>;</span><br><span class="line">            <span class="type">int</span> <span class="variable">sum</span> <span class="operator">=</span> n1 + n2 + carry;</span><br><span class="line">            <span class="keyword">if</span>(head == <span class="literal">null</span>)&#123;</span><br><span class="line">                head = tail =<span class="keyword">new</span> <span class="title class_">ListNode</span>(sum % <span class="number">10</span>);</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                tail.next = <span class="keyword">new</span> <span class="title class_">ListNode</span>(sum% <span class="number">10</span>);</span><br><span class="line">                tail = tail.next;</span><br><span class="line">            &#125;</span><br><span class="line">            carry = sum /<span class="number">10</span>;</span><br><span class="line">            <span class="keyword">if</span>(l1 != <span class="literal">null</span>)&#123;</span><br><span class="line">                l1 = l1.next;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(l2!=<span class="literal">null</span>)&#123;</span><br><span class="line">                l2 = l2.next;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(carry&gt;<span class="number">0</span>)&#123;</span><br><span class="line">            tail.next = <span class="keyword">new</span> <span class="title class_">ListNode</span>(carry);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> head;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>输入：l1 &#x3D; [2,4,3], l2 &#x3D; [5,6,4]<br>输出：[7,0,8]<br>解释：342 + 465 &#x3D; 807.</p>
+<p>遍历链表：当前位置两个数为n1,n2,进位值为carry,和为n1+n2+carry,答案链表处：(n1+n2+carry) mod 10 ; carry &#x3D; (n1+n2+carry) &#x2F;10;</p>
+<p>如果两个链表的长度不同，则可以认为长度短的链表的后面有若干个 000 。</p>
+<p>此外，如果链表遍历结束后，有 carry&gt;0，还需要在答案链表的后面附加一个节点，节点的值carry。</p>
+]]></content>
+      <categories>
+        <category>Leetcode</category>
+      </categories>
+      <tags>
+        <tag>Leetcode</tag>
       </tags>
   </entry>
 </search>
